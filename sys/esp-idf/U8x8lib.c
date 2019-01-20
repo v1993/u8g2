@@ -273,24 +273,50 @@ uint8_t u8x8_byte_espidf_hw_vspi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, voi
 /*=============================================*/
 /*=== HARDWARE I2C ===*/
 
-//typedef struct {
-//	i2c_cmd_handle_t cmd;
-//} u8x8_i2c_info;
+typedef struct {
+	void* memory;
+	void* next;
+} u8x8_i2c_memory;
+
+typedef struct {
+	i2c_cmd_handle_t cmd;
+	u8x8_i2c_memory* first;
+	u8x8_i2c_memory* last;
+} u8x8_i2c_info;
 
 static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr, i2c_port_t port)
 {
     switch(msg)
     {
-    case U8X8_MSG_BYTE_SEND:
-		i2c_master_write(u8x8->user_ptr, arg_ptr, arg_int, true);
+    case U8X8_MSG_BYTE_SEND: {
+		u8x8_i2c_info* info = u8x8->user_ptr;
+		if (info->first) {
+			u8x8_i2c_memory* oldlast = info->last;
+			info->last  = malloc(sizeof(u8x8_i2c_info));
+			oldlast->next = info->last;
+		} else {
+			info->first = malloc(sizeof(u8x8_i2c_info));
+			info->last  = info->first;
+		}
+		info->last->next = NULL;
+		info->last->memory = malloc(arg_int);
+		memcpy(info->last->memory, arg_ptr, arg_int);
+		i2c_master_write(info->cmd, info->last->memory, arg_int, true); }
         break;
     case U8X8_MSG_BYTE_INIT:
+		u8x8->user_ptr = malloc(sizeof(u8x8_i2c_info));
+		u8x8_i2c_info* info = u8x8->user_ptr;
+		info->first = NULL;
+		info->last  = NULL;
+
         if ( u8x8->bus_clock == 0 ) 	/* issue 769 */
             u8x8->bus_clock = u8x8->display_info->i2c_bus_clock_100kHz * 100000UL;
         /* for ESP8266/ESP32, Wire.begin has two more arguments: clock and data */
             // second argument for the wire lib is the clock pin. In u8g2, the first argument of the  clock pin in the clock/data pair
 		//Wire.begin(u8x8->pins[U8X8_PIN_I2C_DATA], u8x8->pins[U8X8_PIN_I2C_CLOCK]);
 		//break;
+		gpio_reset_pin(u8x8->pins[U8X8_PIN_I2C_DATA]);
+		gpio_reset_pin(u8x8->pins[U8X8_PIN_I2C_CLOCK]);
 		i2c_config_t busconf;
 		busconf.mode = I2C_MODE_MASTER;
 		busconf.sda_io_num = u8x8->pins[U8X8_PIN_I2C_DATA];
@@ -298,24 +324,40 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
 		busconf.scl_io_num = u8x8->pins[U8X8_PIN_I2C_CLOCK];
 		busconf.scl_pullup_en = GPIO_PULLUP_ENABLE;
 		busconf.master.clk_speed = u8x8->bus_clock; // FIXME: hug this hugging units
-		i2c_param_config(port, &busconf);
-		i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0);
+		if (i2c_param_config(port, &busconf) != ESP_OK) ESP_LOGE("U8G2", "i2c_param_config failed");
+		if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) ESP_LOGE("U8G2", "i2c_driver_install failed");
+		ESP_LOGI("U8G2", "HW I2C init complete");
 		break;
     case U8X8_MSG_BYTE_SET_DC:
         break;
-    case U8X8_MSG_BYTE_START_TRANSFER:
+    case U8X8_MSG_BYTE_START_TRANSFER: {
         /* not sure when the setClock function was introduced, but it is there since 1.6.0 */
         /* if there is any error with Wire.setClock() just remove this function call */
         //Wire.setClock(u8x8->bus_clock);
         //Wire.beginTransmission(u8x8_GetI2CAddress(u8x8)>>1);
-        u8x8->user_ptr = i2c_cmd_link_create();
-        i2c_master_write_byte(u8x8->user_ptr, u8x8_GetI2CAddress(u8x8) >> 1 | I2C_MASTER_WRITE, true);
+        ((u8x8_i2c_info*)u8x8->user_ptr)->cmd = i2c_cmd_link_create();
+        i2c_master_start(((u8x8_i2c_info*)u8x8->user_ptr)->cmd);
+        i2c_master_write_byte(((u8x8_i2c_info*)u8x8->user_ptr)->cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
+        ESP_LOGI("U8G2", "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
         break;
-    case U8X8_MSG_BYTE_END_TRANSFER:
-        i2c_master_stop(u8x8->user_ptr);
-        i2c_master_cmd_begin(port, u8x8->user_ptr, portMAX_DELAY);
-        i2c_cmd_link_delete(u8x8->user_ptr);
+    case U8X8_MSG_BYTE_END_TRANSFER: {
+		u8x8_i2c_info* info = u8x8->user_ptr;
+		ESP_LOGI("U8G2", "HW I2C sending");
+        i2c_master_stop(info->cmd);
+        esp_err_t err = i2c_master_cmd_begin(port, info->cmd, portMAX_DELAY);
+        if (err != ESP_OK) ESP_LOGE("U8G2", "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
+        ESP_LOGI("U8G2", "HW I2C sending completed");
+        i2c_cmd_link_delete(info->cmd);
+        u8x8_i2c_memory* mem = info->first;
+        while (mem) {
+			free(mem->memory);
+			u8x8_i2c_memory* oldmem = mem;
+			mem = mem->next;
+			free(oldmem);
+        }
         
+        info->first = NULL;
+        }
         break;
     default:
         return 0;
