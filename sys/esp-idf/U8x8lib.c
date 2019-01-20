@@ -51,6 +51,8 @@
 #include "driver/spi_master.h"
 #include "driver/i2c.h"
 
+#include "esp_log.h"
+
 /*=============================================*/
 /*=== GPIO & DELAY ===*/
 
@@ -92,20 +94,22 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
     switch(msg)
     {
     case U8X8_MSG_GPIO_AND_DELAY_INIT:
-        for( i = 0; i < U8X8_PIN_CNT; i++ )
+        for( i = 0; i < U8X8_PIN_CNT; i++ ) {
             if ( u8x8->pins[i] != U8X8_PIN_NONE )
             {
-            bool success;
+				bool success = false;
                 if ( i < U8X8_PIN_OUTPUT_CNT )
                 {
+					ESP_LOGW("U8G2", "output pin setting"); 
 					success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
                 }
                 else
                 {
+					ESP_LOGW("U8G2", "input pin setting"); 
 					success = u8x8_setpininput_espidf(u8x8->pins[i]);
                 }
-                if (!success) return 0;
-            }
+                if (!success) {ESP_LOGW("U8G2", "pin error"); return 0;};
+            }}
 
         break;
 
@@ -131,6 +135,7 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
     case U8X8_MSG_GPIO_I2C_CLOCK:
     case U8X8_MSG_GPIO_I2C_DATA: ;
 		uint8_t pin = u8x8_GetPinValue(u8x8, msg);
+		/*
         if ( arg_int == 0 )
         {
             if (
@@ -142,6 +147,8 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
         {
             if (!u8x8_setpininput_espidf(pin)) return 0;
         }
+        break;*/
+        gpio_set_level(pin, arg_int);
         break;
     default:
         if ( msg >= U8X8_MSG_GPIO(0) )
