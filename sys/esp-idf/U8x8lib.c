@@ -274,14 +274,9 @@ uint8_t u8x8_byte_espidf_hw_vspi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, voi
 /*=== HARDWARE I2C ===*/
 
 typedef struct {
-	void* memory;
-	void* next;
-} u8x8_i2c_memory;
-
-typedef struct {
 	i2c_cmd_handle_t cmd;
-	u8x8_i2c_memory* first;
-	u8x8_i2c_memory* last;
+	uint8_t* bufstart; // Always points to same place
+	uint8_t* bufptr;
 } u8x8_i2c_info;
 
 static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr, i2c_port_t port)
@@ -290,24 +285,14 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
     {
     case U8X8_MSG_BYTE_SEND: {
 		u8x8_i2c_info* info = u8x8->user_ptr;
-		if (info->first) {
-			u8x8_i2c_memory* oldlast = info->last;
-			info->last  = malloc(sizeof(u8x8_i2c_info));
-			oldlast->next = info->last;
-		} else {
-			info->first = malloc(sizeof(u8x8_i2c_info));
-			info->last  = info->first;
-		}
-		info->last->next = NULL;
-		info->last->memory = malloc(arg_int);
-		memcpy(info->last->memory, arg_ptr, arg_int);
-		i2c_master_write(info->cmd, info->last->memory, arg_int, true); }
+		memcpy(info->bufptr, arg_ptr, arg_int);
+		i2c_master_write(info->cmd, info->bufptr, arg_int, true);
+		info->bufptr += arg_int;}
         break;
     case U8X8_MSG_BYTE_INIT:
 		u8x8->user_ptr = malloc(sizeof(u8x8_i2c_info));
 		u8x8_i2c_info* info = u8x8->user_ptr;
-		info->first = NULL;
-		info->last  = NULL;
+		info->bufstart = malloc(32); // It should be enough
 
         if ( u8x8->bus_clock == 0 ) 	/* issue 769 */
             u8x8->bus_clock = u8x8->display_info->i2c_bus_clock_100kHz * 100000UL;
@@ -323,10 +308,10 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
 		busconf.sda_pullup_en = GPIO_PULLUP_ENABLE;
 		busconf.scl_io_num = u8x8->pins[U8X8_PIN_I2C_CLOCK];
 		busconf.scl_pullup_en = GPIO_PULLUP_ENABLE;
-		busconf.master.clk_speed = u8x8->bus_clock; // FIXME: hug this hugging units
+		busconf.master.clk_speed = u8x8->bus_clock;
 		if (i2c_param_config(port, &busconf) != ESP_OK) ESP_LOGE("U8G2", "i2c_param_config failed");
 		if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) ESP_LOGE("U8G2", "i2c_driver_install failed");
-		ESP_LOGI("U8G2", "HW I2C init complete");
+		ESP_LOGV("U8G2", "HW I2C init complete");
 		break;
     case U8X8_MSG_BYTE_SET_DC:
         break;
@@ -335,28 +320,21 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
         /* if there is any error with Wire.setClock() just remove this function call */
         //Wire.setClock(u8x8->bus_clock);
         //Wire.beginTransmission(u8x8_GetI2CAddress(u8x8)>>1);
-        ((u8x8_i2c_info*)u8x8->user_ptr)->cmd = i2c_cmd_link_create();
-        i2c_master_start(((u8x8_i2c_info*)u8x8->user_ptr)->cmd);
-        i2c_master_write_byte(((u8x8_i2c_info*)u8x8->user_ptr)->cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
-        ESP_LOGI("U8G2", "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
+        u8x8_i2c_info* info = u8x8->user_ptr;
+        info->cmd = i2c_cmd_link_create();
+        i2c_master_start(info->cmd);
+        i2c_master_write_byte(info->cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
+        info->bufptr = info->bufstart;
+        ESP_LOGV("U8G2", "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
         break;
     case U8X8_MSG_BYTE_END_TRANSFER: {
 		u8x8_i2c_info* info = u8x8->user_ptr;
-		ESP_LOGI("U8G2", "HW I2C sending");
+		ESP_LOGV("U8G2", "HW I2C sending");
         i2c_master_stop(info->cmd);
         esp_err_t err = i2c_master_cmd_begin(port, info->cmd, portMAX_DELAY);
         if (err != ESP_OK) ESP_LOGE("U8G2", "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
-        ESP_LOGI("U8G2", "HW I2C sending completed");
+        ESP_LOGV("U8G2", "HW I2C sending completed");
         i2c_cmd_link_delete(info->cmd);
-        u8x8_i2c_memory* mem = info->first;
-        while (mem) {
-			free(mem->memory);
-			u8x8_i2c_memory* oldmem = mem;
-			mem = mem->next;
-			free(oldmem);
-        }
-        
-        info->first = NULL;
         }
         break;
     default:
