@@ -38,7 +38,6 @@
 
 */
 
-// FIXME: add includes here
 #include <stdbool.h>
 #include <string.h>
 
@@ -52,6 +51,8 @@
 #include "driver/i2c.h"
 
 #include "esp_log.h"
+
+static const char* TAG = "U8G2";
 
 /*=============================================*/
 /*=== GPIO & DELAY ===*/
@@ -100,15 +101,15 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
 				bool success = false;
                 if ( i < U8X8_PIN_OUTPUT_CNT )
                 {
-					ESP_LOGW("U8G2", "output pin setting"); 
+					ESP_LOGI(TAG, "setting %u as output pin", i); 
 					success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
                 }
                 else
                 {
-					ESP_LOGW("U8G2", "input pin setting"); 
+					ESP_LOGI(TAG, "setting %u as input pin", i); 
 					success = u8x8_setpininput_espidf(u8x8->pins[i]);
                 }
-                if (!success) {ESP_LOGW("U8G2", "pin error"); return 0;};
+                if (!success) {ESP_LOGE(TAG, "pin error"); return 0;};
             }}
 
         break;
@@ -315,9 +316,9 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
 		busconf.scl_io_num = u8x8->pins[U8X8_PIN_I2C_CLOCK];
 		busconf.scl_pullup_en = GPIO_PULLUP_ENABLE;
 		busconf.master.clk_speed = u8x8->bus_clock;
-		if (i2c_param_config(port, &busconf) != ESP_OK) ESP_LOGE("U8G2", "i2c_param_config failed");
-		if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) ESP_LOGE("U8G2", "i2c_driver_install failed");
-		ESP_LOGV("U8G2", "HW I2C init complete");
+		if (i2c_param_config(port, &busconf) != ESP_OK) ESP_LOGE(TAG, "i2c_param_config failed");
+		if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) ESP_LOGE(TAG, "i2c_driver_install failed");
+		ESP_LOGV(TAG, "HW I2C init complete");
 		break;
     case U8X8_MSG_BYTE_SET_DC:
         break;
@@ -331,15 +332,15 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
         i2c_master_start(info->cmd);
         i2c_master_write_byte(info->cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
         info->bufptr = info->bufstart;
-        ESP_LOGV("U8G2", "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
+        ESP_LOGV(TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
         break;
     case U8X8_MSG_BYTE_END_TRANSFER: {
 		u8x8_i2c_info* info = u8x8->user_ptr;
-		ESP_LOGV("U8G2", "HW I2C sending");
+		ESP_LOGV(TAG, "HW I2C sending");
         i2c_master_stop(info->cmd);
         esp_err_t err = i2c_master_cmd_begin(port, info->cmd, portMAX_DELAY);
-        if (err != ESP_OK) ESP_LOGE("U8G2", "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
-        ESP_LOGV("U8G2", "HW I2C sending completed");
+        if (err != ESP_OK) ESP_LOGE(TAG, "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
+        ESP_LOGV(TAG, "HW I2C sending completed");
         i2c_cmd_link_delete(info->cmd);
         }
         break;
