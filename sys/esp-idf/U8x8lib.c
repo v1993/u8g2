@@ -188,22 +188,24 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint
 // It can work with any of two SPIs
 {
 //#ifdef U8X8_HAVE_HW_SPI
+	u8x8_spi_info* info = u8x8->user_ptr;
     switch(msg)
     {
     case U8X8_MSG_BYTE_SEND: ;
 
 		// We add stuff into buffer and then send it in one transaction
-		size_t oldsize = ((u8x8_spi_info*)u8x8->user_ptr)->bufsiz;
-		((u8x8_spi_info*)u8x8->user_ptr)->bufsiz += arg_int;
-		((u8x8_spi_info*)u8x8->user_ptr)->buffer = heap_caps_realloc(((u8x8_spi_info*)u8x8->user_ptr)->buffer, ((u8x8_spi_info*)u8x8->user_ptr)->bufsiz, MALLOC_CAP_DMA); // FIXME: MALLOC_CAP_32BIT may crash stuff
-		memcpy(((u8x8_spi_info*)u8x8->user_ptr)->buffer + oldsize, arg_ptr, arg_int);
+		size_t oldsize = info->bufsiz;
+		info->bufsiz += arg_int;
+		info->buffer = heap_caps_realloc(info->buffer, info->bufsiz, MALLOC_CAP_DMA); // FIXME: MALLOC_CAP_32BIT may crash stuff
+		memcpy(info->buffer + oldsize, arg_ptr, arg_int);
 
         break;
     case U8X8_MSG_BYTE_INIT:
 		u8x8->user_ptr = malloc(sizeof(u8x8_spi_info)); // FIXME: free in destructor
-		((u8x8_spi_info*)u8x8->user_ptr)->device = NULL;
-		((u8x8_spi_info*)u8x8->user_ptr)->buffer = NULL;
-		((u8x8_spi_info*)u8x8->user_ptr)->bufsiz = 0;
+		info = u8x8->user_ptr;
+		info->device = NULL;
+		info->buffer = NULL;
+		info->bufsiz = 0;
 		spi_bus_config_t busconf;
 		busconf.mosi_io_num = u8x8->pins[U8X8_PIN_I2C_DATA];
 		busconf.miso_io_num = -1;
@@ -228,9 +230,10 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint
 		conf.clock_speed_hz = APB_CLK_FREQ / u8x8->bus_clock; // TODO: add setting to overclock displays :)
 		conf.input_delay_ns = 0;
 		conf.spics_io_num = u8x8->pins[U8X8_MSG_GPIO_CS];
-		conf.flags  = SPI_DEVICE_POSITIVE_CS | SPI_DEVICE_NO_DUMMY; // FIXME: SPI_DEVICE_POSITIVE_CS may be wrong
+		conf.flags = SPI_DEVICE_POSITIVE_CS | SPI_DEVICE_NO_DUMMY;
+		if (u8x8->display_info->chip_enable_level) conf.flags |= SPI_DEVICE_POSITIVE_CS; // FIXME: may be right in complete reverse
 		conf.queue_size = 0; // Polling only
-		spi_bus_add_device(u8x8_spibuses[host], &conf, &((u8x8_spi_info*)u8x8->user_ptr)->device); // FIXME: remove in destructor
+		spi_bus_add_device(u8x8_spibuses[host], &conf, &(info->device)); // FIXME: remove in destructor
 
 		break;
 
@@ -244,15 +247,18 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint
         break;
 
     case U8X8_MSG_BYTE_END_TRANSFER: ;
+		// Docs says that it's better to have 32-bit aligned memory
+		// Doing it here should make stuff faster
+		info->buffer = heap_caps_realloc(info->buffer, info->bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
 		spi_transaction_t transaction;
 		transaction.flags = SPI_TRANS_MODE_DIO;
-		transaction.length = (((u8x8_spi_info*)u8x8->user_ptr)->bufsiz)*8; // Bits
-		transaction.tx_buffer = ((u8x8_spi_info*)u8x8->user_ptr)->buffer;
+		transaction.length = (info->bufsiz)*8; // Bits
+		transaction.tx_buffer = info->buffer;
 		transaction.rx_buffer = NULL; // U8g2 don't care about feedback, bad guys!
-		spi_device_polling_transmit(((u8x8_spi_info*)u8x8->user_ptr)->device, &transaction);
-		free(((u8x8_spi_info*)u8x8->user_ptr)->buffer);
-		((u8x8_spi_info*)u8x8->user_ptr)->buffer = NULL;
-		((u8x8_spi_info*)u8x8->user_ptr)->bufsiz = 0;
+		spi_device_polling_transmit(info->device, &transaction);
+		free(info->buffer);
+		info->buffer = NULL;
+		info->bufsiz = 0;
 
         break;
     default:
