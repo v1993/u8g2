@@ -85,6 +85,30 @@ static bool u8x8_setpinoutput_espidf(unsigned long long pin) {
 	return gpio_config(&io_conf) == ESP_OK;
 };
 
+typedef enum {
+	UNKNOWN,
+	SPI,
+	I2C
+} u8x8_device_type;
+
+typedef struct {
+	u8x8_device_type type;
+	union {
+		// SPI
+		struct {
+			spi_device_handle_t device;
+			uint8_t* buffer;
+			size_t bufsiz;
+		} spi;
+		// I2C
+		struct {
+			i2c_cmd_handle_t cmd;
+			uint8_t* bufstart; // Always points to same place
+			uint8_t* bufptr;
+		} i2c;
+	};
+} u8x8_device_info;
+
 uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U8X8_UNUSED void *arg_ptr)
 {
     uint8_t i;
@@ -107,7 +131,9 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
                 }
                 if (!success) {ESP_LOGE(TAG, "pin error"); return 0;};
             }}
-
+		u8x8->user_ptr = malloc(sizeof(u8x8_device_info)); // FIXME: free it!
+		if (!u8x8->user_ptr) {ESP_LOGE(TAG, "no memory"); return 0;};
+		((u8x8_device_info*)u8x8->user_ptr)->type = UNKNOWN;
         break;
 
     case U8X8_MSG_DELAY_NANO:
@@ -175,34 +201,27 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, U
 
 static const spi_host_device_t u8x8_spibuses[2] = {HSPI_HOST, VSPI_HOST};
 
-typedef struct {
-	spi_device_handle_t device;
-	uint8_t* buffer;
-	size_t bufsiz;
-} u8x8_spi_info;
-
 static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr, uint8_t host)
 // It can work with any of two SPIs
 {
 //#ifdef U8X8_HAVE_HW_SPI
-	u8x8_spi_info* info = u8x8->user_ptr;
+	u8x8_device_info* info = u8x8->user_ptr;
     switch(msg)
     {
     case U8X8_MSG_BYTE_SEND: ;
 
 		// We add stuff into buffer and then send it in one transaction
-		size_t oldsize = info->bufsiz;
-		info->bufsiz += arg_int;
-		info->buffer = heap_caps_realloc(info->buffer, info->bufsiz, MALLOC_CAP_DMA); // FIXME: MALLOC_CAP_32BIT may crash stuff
-		memcpy(info->buffer + oldsize, arg_ptr, arg_int);
+		size_t oldsize = info->spi.bufsiz;
+		info->spi.bufsiz += arg_int;
+		info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA); // FIXME: MALLOC_CAP_32BIT may crash stuff
+		memcpy(info->spi.buffer + oldsize, arg_ptr, arg_int);
 
         break;
-    case U8X8_MSG_BYTE_INIT:
-		u8x8->user_ptr = malloc(sizeof(u8x8_spi_info)); // FIXME: free in destructor
-		info = u8x8->user_ptr;
-		info->device = NULL;
-		info->buffer = NULL;
-		info->bufsiz = 0;
+    case U8X8_MSG_BYTE_INIT: ;
+		info->type = SPI;
+		info->spi.device = NULL;
+		info->spi.buffer = NULL;
+		info->spi.bufsiz = 0;
 		spi_bus_config_t busconf;
 		busconf.mosi_io_num = u8x8->pins[U8X8_PIN_I2C_DATA];
 		busconf.miso_io_num = -1;
@@ -230,7 +249,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint
 		conf.flags = SPI_DEVICE_POSITIVE_CS | SPI_DEVICE_NO_DUMMY;
 		if (u8x8->display_info->chip_enable_level) conf.flags |= SPI_DEVICE_POSITIVE_CS; // FIXME: may be right in complete reverse
 		conf.queue_size = 0; // Polling only
-		spi_bus_add_device(u8x8_spibuses[host], &conf, &(info->device)); // FIXME: remove in destructor
+		spi_bus_add_device(u8x8_spibuses[host], &conf, &(info->spi.device)); // FIXME: remove in destructor
 
 		break;
 
@@ -246,16 +265,16 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t *u8x8, uint8_t msg, uint
     case U8X8_MSG_BYTE_END_TRANSFER: ;
 		// Docs says that it's better to have 32-bit aligned memory
 		// Doing it here should make stuff faster
-		info->buffer = heap_caps_realloc(info->buffer, info->bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
+		info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
 		spi_transaction_t transaction;
 		transaction.flags = SPI_TRANS_MODE_DIO;
-		transaction.length = (info->bufsiz)*8; // Bits
-		transaction.tx_buffer = info->buffer;
+		transaction.length = (info->spi.bufsiz)*8; // Bits
+		transaction.tx_buffer = info->spi.buffer;
 		transaction.rx_buffer = NULL; // U8g2 don't care about feedback, bad guys!
-		spi_device_polling_transmit(info->device, &transaction);
-		free(info->buffer);
-		info->buffer = NULL;
-		info->bufsiz = 0;
+		spi_device_polling_transmit(info->spi.device, &transaction);
+		free(info->spi.buffer);
+		info->spi.buffer = NULL;
+		info->spi.bufsiz = 0;
 
         break;
     default:
@@ -276,26 +295,19 @@ uint8_t u8x8_byte_espidf_hw_vspi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, voi
 /*=============================================*/
 /*=== HARDWARE I2C ===*/
 
-typedef struct {
-	i2c_cmd_handle_t cmd;
-	uint8_t* bufstart; // Always points to same place
-	uint8_t* bufptr;
-} u8x8_i2c_info;
-
 static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr, i2c_port_t port)
 {
+	u8x8_device_info* info = u8x8->user_ptr;
     switch(msg)
     {
-    case U8X8_MSG_BYTE_SEND: {
-		u8x8_i2c_info* info = u8x8->user_ptr;
-		memcpy(info->bufptr, arg_ptr, arg_int);
-		i2c_master_write(info->cmd, info->bufptr, arg_int, true);
-		info->bufptr += arg_int;}
+    case U8X8_MSG_BYTE_SEND:
+		memcpy(info->i2c.bufptr, arg_ptr, arg_int);
+		i2c_master_write(info->i2c.cmd, info->i2c.bufptr, arg_int, true);
+		info->i2c.bufptr += arg_int;
         break;
     case U8X8_MSG_BYTE_INIT:
-		u8x8->user_ptr = malloc(sizeof(u8x8_i2c_info));
-		u8x8_i2c_info* info = u8x8->user_ptr;
-		info->bufstart = malloc(32); // It should be enough
+		info->type = I2C;
+		info->i2c.bufstart = malloc(32); // It should be enough
 
         if ( u8x8->bus_clock == 0 ) 	/* issue 769 */
             u8x8->bus_clock = u8x8->display_info->i2c_bus_clock_100kHz * 100000UL;
@@ -318,27 +330,24 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t *u8x8, uint8_t msg, uint
 		break;
     case U8X8_MSG_BYTE_SET_DC:
         break;
-    case U8X8_MSG_BYTE_START_TRANSFER: {
+    case U8X8_MSG_BYTE_START_TRANSFER:
         /* not sure when the setClock function was introduced, but it is there since 1.6.0 */
         /* if there is any error with Wire.setClock() just remove this function call */
         //Wire.setClock(u8x8->bus_clock);
         //Wire.beginTransmission(u8x8_GetI2CAddress(u8x8)>>1);
-        u8x8_i2c_info* info = u8x8->user_ptr;
-        info->cmd = i2c_cmd_link_create();
-        i2c_master_start(info->cmd);
-        i2c_master_write_byte(info->cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
-        info->bufptr = info->bufstart;
-        ESP_LOGV(TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1); }
+        info->i2c.cmd = i2c_cmd_link_create();
+        i2c_master_start(info->i2c.cmd);
+        i2c_master_write_byte(info->i2c.cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
+        info->i2c.bufptr = info->i2c.bufstart;
+        ESP_LOGV(TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1);
         break;
-    case U8X8_MSG_BYTE_END_TRANSFER: {
-		u8x8_i2c_info* info = u8x8->user_ptr;
+    case U8X8_MSG_BYTE_END_TRANSFER: 
 		ESP_LOGV(TAG, "HW I2C sending");
-        i2c_master_stop(info->cmd);
-        esp_err_t err = i2c_master_cmd_begin(port, info->cmd, portMAX_DELAY);
+        i2c_master_stop(info->i2c.cmd);
+        esp_err_t err = i2c_master_cmd_begin(port, info->i2c.cmd, portMAX_DELAY);
         if (err != ESP_OK) ESP_LOGE(TAG, "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
         ESP_LOGV(TAG, "HW I2C sending completed");
-        i2c_cmd_link_delete(info->cmd);
-        }
+        i2c_cmd_link_delete(info->i2c.cmd);
         break;
     default:
         return 0;
