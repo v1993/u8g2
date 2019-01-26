@@ -1,12 +1,10 @@
 /*
 
-  Serial.ino
-
-  Read from Serial, output to display.
+  Devanagari.ino
 
   Universal 8bit Graphics Library (https://github.com/olikraus/u8g2/)
 
-  Copyright (c) 2018, olikraus@gmail.com
+  Copyright (c) 2019, olikraus@gmail.com
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without modification, 
@@ -32,7 +30,25 @@
   STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
-
+  
+  27 Oct 2018:
+  
+  U8G2_SSD1306_128X64_NONAME_1_4W_HW_SPI u8g2
+  make -f Makefile.184.uno
+  
+   text	   
+   8732	    					default, all active
+   8500	    -232	    -2.65%		no U8G2_WITH_CLIP_WINDOW_SUPPORT
+   8316	    -416	    -4.76%		no U8G2_WITH_FONT_ROTATION
+   8606	    -126	    -1.44%	 	no U8G2_WITH_UNICODE
+   8692	    -40	    -0.45%		no U8G2_WITH_INTERSECTION
+   8328	    -404	    -4.62%	  	no U8G2_WITH_INTERSECTION  no U8G2_WITH_CLIP_WINDOW_SUPPORT
+   8718	    -14	    -4.86%		no U8G2_WITH_HVLINE_SPEED_OPTIMIZATION
+   8026	    -706	    -8.08%		no U8G2_WITH_FONT_ROTATION   no U8G2_WITH_INTERSECTION  no U8G2_WITH_CLIP_WINDOW_SUPPORT
+   
+   Some flags depend on each other: `U8G2_WITH_INTERSECTION` is required for `U8G2_WITH_CLIP_WINDOW_SUPPORT`, so `U8G2_WITH_INTERSECTION` is partly active as long
+   as `U8G2_WITH_CLIP_WINDOW_SUPPORT` is requested.
+   
 */
 
 #include <Arduino.h>
@@ -241,13 +257,56 @@
 // End of constructor list
 
 
-// setup the terminal (U8G2LOG) and connect to u8g2 for automatic refresh of the display
-// The size (width * height) depends on the selected font and the display
+/*
+  draw unicode for https://en.wikipedia.org/wiki/Devanagari
+  Adjust the glyph position as good as possible for the unicode font.
 
-#define U8LOG_WIDTH 20
-#define U8LOG_HEIGHT 8
-uint8_t u8log_buffer[U8LOG_WIDTH*U8LOG_HEIGHT];
-U8G2LOG u8g2log;
+  Report missing or wrong glyph adjustments here:
+  https://github.com/olikraus/u8g2/issues/584
+  
+  precondition: 
+    u8g2_SetFont(&u8g2, u8g2_font_unifont_t_devanagari);
+    u8g2_SetFontMode(&u8g2, 1);
+    Font direction command is NOT supported
+*/
+u8g2_uint_t u8g2_draw_unifont_devanagari(u8g2_uint_t x, u8g2_uint_t y, const char *str)
+{
+  uint16_t e;
+  u8g2_uint_t delta, sum;
+  u8g2.getU8g2()->u8x8.next_cb = u8x8_utf8_next;
+  u8x8_utf8_init(u8g2.getU8x8());
+  sum = 0;
+  for(;;)
+  {
+    e = u8g2.getU8g2()->u8x8.next_cb(u8g2.getU8x8(), (uint8_t)*str);
+    if ( e == 0x0ffff )
+      break;
+    str++;
+    if ( e != 0x0fffe )
+    {
+      
+      switch(e)
+      {
+	/* many more glyphs and corrections are missing */
+	/* please report to https://github.com/olikraus/u8g2/issues/584 */
+	case 0x093e: x-= 12; break;
+	case 0x093f: x-= 19; break;
+	case 0x0941: x-= 14; break;
+	case 0x0947: x-= 12; break;
+	case 0x094d: x-= 10; break;
+      }
+      delta = u8g2.drawGlyph(x, y, e);    
+      switch(e)
+      {
+	case 0x094d: x-= 8; break;
+      }
+      x += delta;
+      sum += delta;    
+    }
+  }
+  return sum;
+}
+
 
 
 void setup(void) {
@@ -274,20 +333,21 @@ void setup(void) {
   //pinMode(6, OUTPUT);
   //digitalWrite(6, 0);	
 
-  Serial.begin(9600);				// Start reading from Serial communication interface
-
   u8g2.begin();  
-  u8g2.setFont(u8g2_font_5x7_tr);	// set the font for the terminal window
-  u8g2log.begin(u8g2, U8LOG_WIDTH, U8LOG_HEIGHT, u8log_buffer);
-  u8g2log.setLineHeightOffset(0);	// set extra space between lines in pixel, this can be negative
-  u8g2log.setRedrawMode(1);		// 0: Update screen with newline, 1: Update screen for every char  
 }
 
 void loop(void) {
-  char c;
-  while (Serial.available() > 0) {
-    c = Serial.read();			// read from Serial Monitor
-    u8g2log.print(c);               // print to display
-    Serial.print(c);                // and print back to monitor
-  }
+
+  /* Set the unifont with Devanagari glyphs */
+  u8g2.setFont(u8g2_font_unifont_t_devanagari);
+  
+  /* Important: do not write background pixel */
+  u8g2.setFontMode(1);
+
+  u8g2.firstPage();
+  do {
+    u8g2_draw_unifont_devanagari(0,24,"नमस्ते दुनिया");	
+  } while ( u8g2.nextPage() );
+  //delay(1000);
 }
+
