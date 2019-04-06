@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdint.h>
+#include <assert.h>
 #ifdef BUILD2
 #include "u8g2.h"
 #endif
@@ -178,9 +179,20 @@ struct groupinfo gi[] = {
   { "Wqy (Chinese Font)", 	"fntgrpwqy", 		"../../../../u8g2.wiki/fntgrpwqy.md", 		"fntgrpwqy.pre" }, 		/* 21 */  
   { "Open Iconic", 	"fntgrpiconic", 		"../../../../u8g2.wiki/fntgrpiconic.md", 		"fntgrpiconic.pre" }, 		/* 22 */  
   { "Persian", 	"fntgrppersian", 		"../../../../u8g2.wiki/fntgrppersian.md", 		"fntgrppersian.pre" }, 		/* 23 */  
-  { "Tom-Thumb", 	"fntgrptomthumb", 		"../../../../u8g2.wiki/fntgrptomthumb.md", 		"fntgrptomthumb.pre" }, 		/* 24 */  
+  { "Tom-Thumb", 	"fntgrptomthumb", 		"../../../../u8g2.wiki/fntgrptomthumb.md", 		"fntgrptomthumb.pre" }, 	/* 24 */  
+  { "Extant", 	"fntgrpextant", 		"../../../../u8g2.wiki/fntgrpextant.md", 		"fntgrpextant.pre" }, 		/* 25 */  
+  { "MistressEllipsis", "fntgrpmistressellipsis", "../../../../u8g2.wiki/fntgrpmistressellipsis.md", 		"fntgrpmistressellipsis.pre" }, 		/* 26 */ 
+  { "JayWright", "fntgrpjaywright", "../../../../u8g2.wiki/fntgrpjaywright.md", 		"fntgrpjaywright.pre" }, 		/* 27 */ 
+  { "Angel", "fntgrpangel", "../../../../u8g2.wiki/fntgrpangel.md", 		"fntgrpangel.pre" }, 		/* 28 */ 
+  { "JosephKnightcom", "fntgrpjosephknightcom", "../../../../u8g2.wiki/fntgrpjosephknightcom.md", 		"fntgrpjosephknightcom.pre" }, 		/* 29 */ 
+  { "ChristinaAntoinetteNeofotistou", "fntgrpchristinaneofotistou", "../../../../u8g2.wiki/fntgrpchristinaneofotistou.md", 		"fntgrpchristinaneofotistou.pre" }, 		/* 30 */ 
+  { "Geoff", "fntgrpgeoff", "../../../../u8g2.wiki/fntgrpgeoff.md", 		"fntgrpgeoff.pre" }, 		/* 31 */ 
+  { "Tulamide", "fntgrptulamide", "../../../../u8g2.wiki/fntgrptulamide.md", 		"fntgrptulamide.pre" }, 		/* 32 */ 
+  { "GilesBooth", "fntgrpgilesbooth", "../../../../u8g2.wiki/fntgrpgilesbooth.md", 		"fntgrpgilesbooth.pre" }, 		/* 33 */ 
+  { "bitfontmaker2", "fntgrpbitfontmaker2", "../../../../u8g2.wiki/fntgrpbitfontmaker2.md", 		"fntgrpbitfontmaker2.pre" }, 		/* 34 */ 
+  { "JapanYoshi", "fntgrpjapanyoshi", "../../../../u8g2.wiki/fntgrpjapanyoshi.md", 		"fntgrpjapanyoshi.pre" }, 		/* 35 */ 
 
-
+  
   
 };
 
@@ -196,7 +208,7 @@ struct groupinfo gi[] = {
 #define MM_N	8	/* numbers */
 #define MM_C	16	/* custom */
 #define MM_M	32	/* map file */
-#define MM_E	64	/* extended 32-701,7838	 */
+#define MM_E	64	/* extended 32-701,7838 fb00..fb07	 */
 
 
 /*
@@ -335,6 +347,13 @@ Greek Extended	1F00–1FFF
   { 0,  0, "open_iconic_thing_1x.bdf", "open_iconic_thing_1x",  22, 0, BM_T, FM_C, MM_C, "32-300", "" },
   { 0,  0, "open_iconic_weather_1x.bdf", "open_iconic_weather_1x",  22, 0, BM_T, FM_C, MM_C, "32-300", "" },
   { 0,  0, "open_iconic_www_1x.bdf", "open_iconic_www_1x",  22, 0, BM_T, FM_C, MM_C, "32-300", "" },
+
+  { "-th 1 -tv 1",  0, "open_iconic_arrow_1x.bdf",		"open_iconic_arrow_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
+  { "-th 1 -tv 1",  0, "open_iconic_check_1x.bdf",		"open_iconic_check_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
+  { "-th 1 -tv 1",  0, "open_iconic_embedded_1x.bdf",	"open_iconic_embedded_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
+  { "-th 1 -tv 1",  0, "open_iconic_play_1x.bdf",		"open_iconic_play_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
+  { "-th 1 -tv 1",  0, "open_iconic_thing_1x.bdf",		"open_iconic_thing_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
+  { "-th 1 -tv 1",  0, "open_iconic_weather_1x.bdf",		"open_iconic_weather_1x1",	22, 0, BM_8, FM_8, MM_C, "32-255", "" },  
 
   
   { 0,  0, "open_iconic_all_2x.bdf", "open_iconic_all_2x",  22, 0, BM_T, FM_C, MM_C, "32-400", "" },
@@ -489,14 +508,106 @@ Greek Extended	1F00–1FFF
   { 0,  "-r 72 -p 16", "GUILD_0.ttf", "guildenstern_nbp",		18, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
   { 0,  "-r 72 -p 16", "astra0.ttf",	"astragal_nbp",			18, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
 
-  { "-y -1 -th 1 -tv 2",  "-r 72 -p 16", "shylock_nbp.ttf",	"shylock_nbp_1x2",	18, 0, BM_8, FM_8, MM_F|MM_R|MM_N, "" , ""},
+    /* Extant, 25 */
+  { 0,  "-r 72 -p 16", "HabsburgChancery.ttf",	"habsburgchancery",	25, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "HabsburgChancery.ttf",	"habsburgchancery",	25, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "MissingPlanet.ttf",	"missingplanet",	25, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "MissingPlanet.ttf",	"missingplanet",	25, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "OrdinaryBasis.ttf",	"ordinarybasis",	25, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "OrdinaryBasis.ttf",	"ordinarybasis",	25, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "PixelMordred.ttf",	"pixelmordred",	25, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "PixelMordred.ttf",	"pixelmordred",	25, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "SecretaryHand.ttf",	"secretaryhand",	25, 0, BM_T, FM_C, MM_F|MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "SecretaryHand.ttf",	"secretaryhand",	25, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+
+
+  /* MistressEllipsis, 26 */
+  { 0,  "-r 72 -p 16", "Beanstalk.ttf",	"beanstalk_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "Cube.ttf",	"cube_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "Mademoiselle.ttf",	"mademoiselle_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "PieceOfCake.ttf",	"pieceofcake_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "Press.ttf",	"press_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "RePress.ttf",	"repress_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "Sticker.ttf",	"sticker_mel",	26, 0, BM_T, FM_C, MM_R|MM_N, "", "" },
+
+
+  /* JayWright, 27 */
+  { 0,  "-r 72 -p 16", "CelibateMonk.ttf",	"celibatemonk",		27, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "DisrespectfulTeenager.ttf",	"disrespectfulteenager",	27, 0, BM_T, FM_C, MM_U, "", "" },
+  { 0,  "-r 72 -p 16", "MichaelMouse.ttf",	"michaelmouse",		27, 0, BM_T, FM_C, MM_U, "", "" },
+  { 0,  "-r 72 -p 16", "SandyForest.ttf",	"sandyforest",			27, 0, BM_T, FM_C, MM_R|MM_U|MM_N, "", "" },
+
+  /* Angel, 28 */
+  { 0,  "-r 72 -p 16", "CupcakeMeToYourLeader.ttf",	"cupcakemetoyourleader",	28, 0, BM_T, FM_C, MM_R|MM_U|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "OldWizard.ttf",			"oldwizard",				28, 0, BM_T, FM_C, MM_F|MM_R|MM_U|MM_N, "", "" },
+  { 0,  "-r 72 -p 16", "Squirrel.ttf",				"squirrel",				28, 0, BM_T, FM_C, MM_R|MM_U|MM_N, "", "" },
   
+  /* JosephKnightcom, 29 */
+  { 0,  "-r 72 -p 16", "DiodeSemiMono.ttf",	"diodesemimono",	29, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Questgiver.ttf",		"questgiver",		29, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Seraphimb1.ttf",		"seraphimb1",		29, 0, BM_T, FM_C, MM_R, "", "" },
+
+  /* ChristinaAntoinetteNeofotistou, 30 */
+  { 0,  "-r 72 -p 16", "JinxedWizards.ttf",	"jinxedwizards",	30, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "LastPriestess.ttf",	"lastpriestess",		30, 0, BM_T, FM_C, MM_U|MM_R, "", "" },
+
+  /* Geoff, 31 */
+  { 0,  "-r 72 -p 16", "BitCasual.ttf",			"bitcasual",	31, 0, BM_T, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "BitCasual.ttf",			"bitcasual",	31, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "Koleeko.ttf",			"koleeko",	31, 0, BM_T, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TenFatGuys.ttf",		"tenfatguys",	31, 0, BM_T, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TenFatGuys.ttf",		"tenfatguys",	31, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "TenStamps.ttf",		"tenstamps",	31, 0, BM_M, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TenThinGuys.ttf",		"tenthinguys",	31, 0, BM_T, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TenThinGuys.ttf",		"tenthinguys",	31, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "TenThinnerGuys.ttf",	"tenthinnerguys",	31, 0, BM_T, FM_C, MM_N|MM_U|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TenThinnerGuys.ttf",	"tenthinnerguys",	31, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "TwelveDings.ttf",		"twelvedings",	31, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+
+  /* tulamide, 32 */
+  { 0,  "-r 72 -p 16", "Fewture.ttf",			"fewture",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "Halftone.ttf",			"halftone",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "Nerhoe.ttf",			"nerhoe",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "Oskool.ttf",			"oskool",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TinyTim.ttf",			"tinytim",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "TooseOrnament.ttf",	"tooseornament",	32, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  
+  /* GilesBooth, 33*/
+  { 0,  "-r 72 -p 16", "Bauhaus2015.ttf",			"bauhaus2015",	33, 0, BM_T, FM_C, MM_N|MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "FindersKeepers.ttf",			"finderskeepers",	33, 0, BM_T, FM_C, MM_N|MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "SirClivetheBold.ttf",			"sirclivethebold",	33, 0, BM_T, FM_C, MM_N|MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "SirClive.ttf",				"sirclive",	33, 0, BM_T, FM_C, MM_N|MM_R, "", "" },
+  
+  /* bm2, 34*/
+  { 0,  "-r 72 -p 16", "Adventurer.ttf",			"adventurer",	34, 0, BM_T, FM_C, MM_R|MM_F, "", "" },
+  { 0,  "-r 72 -p 16", "Adventurer.ttf",			"adventurer",	34, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "BracketedBabies.ttf",		"bracketedbabies",	34, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Frikativ.ttf",				"frikativ",	34, 0, BM_T, FM_C, MM_F|MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Frikativ.ttf",				"frikativ",	34, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "FancyPixels.ttf",			"fancypixels",	34, 0, BM_T, FM_C, MM_F|MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "HEAVYBOTTOM.ttf",			"heavybottom",	34, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "IconQuadPix.ttf",			"iconquadpix",	34, 0, BM_M, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "LastApprenticeBold.ttf",		"lastapprenticebold",	34, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "LastApprenticeThin.ttf",		"lastapprenticethin",	34, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Tallpix.ttf",				"tallpix",	34, 0, BM_T, FM_C, MM_R, "", "" },
+  
+
+  /* JapanYoshi, 35*/
+  { 0,  "-r 72 -p 16", "BBSesque.ttf",			"BBSesque",			35, 0, BM_T, FM_C, MM_R|MM_F|MM_E, "", "" },
+  { 0,  "-r 72 -p 16", "Born2bSportySlab.ttf",		"Born2bSportySlab",	35, 0, BM_T, FM_C, MM_R|MM_F|MM_E, "", "" },
+  { 0,  "-r 72 -p 16", "Born2bSportySlab.ttf",		"Born2bSportySlab",	35, 0, BM_T, FM_C, MM_C, "32-$ffff", "_all" },
+  { 0,  "-r 72 -p 16", "Born2bSportyV2.ttf",		"Born2bSportyV2",		35, 0, BM_T, FM_C, MM_R|MM_F|MM_E, "", "" },
+  { 0,  "-r 72 -p 16", "CursivePixel.ttf",			"CursivePixel",	35, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "Engrish.ttf",				"Engrish",	35, 0, BM_T, FM_C, MM_F|MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "ImpactBits.ttf",			"ImpactBits",	35, 0, BM_T, FM_C, MM_R, "", "" },
+  { 0,  "-r 72 -p 16", "IPAandRUSLCD.ttf",			"IPAandRUSLCD",	35, 0, BM_T, FM_C, MM_R|MM_F|MM_E, "", "" },
 
   
   /* thai fonts are not unicode encoded, so map the thai chars to their correct unicode position 128-255>3552 */
   { 0,  0, "etl14-thai.bdf", 		"etl14thai", 		17, 0, BM_T, FM_C, MM_C, "32-127,128-255>3552", "" },
   { 0,  0, "etl16-thai.bdf", 		"etl16thai", 		17, 0, BM_T, FM_C, MM_C, "32-127,128-255>3552", "" },
   { 0,  0, "etl24-thai.bdf", 		"etl24thai", 		17, 0, BM_T, FM_C, MM_C, "32-127,128-255>3552", "" },
+
 
   
   
@@ -1068,6 +1179,666 @@ int u8g2_fnt_cnt = 0;
 
 extern void do_font_loop(cbfn_t cb);
 
+/*===================================================================*/
+/* word cloud */
+
+#define WORD_CLOUD_MAX_X 600
+
+
+struct _box_t 
+{
+  uint32_t w, h;
+};
+typedef struct _box_t box_t;
+
+struct _pos_t 
+{
+  uint32_t x, y;
+};
+typedef struct _pos_t pos_t;
+
+struct _pbox_t		// placed box
+{
+  pos_t pos;
+  int box_idx;
+};
+typedef struct _pbox_t pbox_t;
+
+#define BOX_LIST_MAX 500
+box_t box_list[BOX_LIST_MAX];
+char box_word[BOX_LIST_MAX][64];
+const uint8_t *box_font[BOX_LIST_MAX];
+int box_cnt = 0;
+
+int box_index[BOX_LIST_MAX];
+
+#define PLACE_OPTION_MAX 1000
+int place_option_cnt = 0;
+pos_t place_option_list[PLACE_OPTION_MAX];
+
+#define PLACED_BOX_MAX 1000
+int placed_box_cnt = 0;
+pbox_t placed_box_list[PLACED_BOX_MAX];
+uint32_t placed_box_area_max_x;
+uint32_t placed_box_area_max_y;
+uint32_t placed_box_area_value;
+
+/*============================================*/
+
+int place_option_find(pos_t *p)
+{
+  int i;
+  for( i = 0; i < place_option_cnt; i++ )
+  {
+    if ( place_option_list[i].x == p->x && place_option_list[i].y == p->y)
+      return i;		// place option already exists
+  }
+  return -1;
+}
+
+void place_option_add(pos_t *p)
+{
+  int i;
+  assert(place_option_cnt < PLACE_OPTION_MAX);
+  
+  if ( place_option_find(p) >= 0 )
+      return;		// place option already exists
+  
+  // the placement option also must not be part of any existing box
+  for( i = 2; i < placed_box_cnt; i++ )
+  {
+    if ( p->x >= placed_box_list[i].pos.x && p->x < placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w )
+      if ( p->y >= placed_box_list[i].pos.y && p->y < placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h )
+	return;		// place option would be inside an existing box
+  }
+  
+  // place option does not exist, add new place option
+  
+  place_option_list[place_option_cnt] = *p;
+  place_option_cnt++;
+}
+
+void place_option_by_xy(uint32_t x, uint32_t y)
+{
+  pos_t p;
+  p.x = x;
+  p.y = y;
+  place_option_add(&p);
+}
+
+void place_option_delete(int idx)
+{
+  if ( idx < 0 || idx >= place_option_cnt )
+    return;
+  for( ; idx+1 < place_option_cnt; idx++ )
+  {
+    place_option_list[idx] = place_option_list[idx+1];
+  }
+  place_option_cnt--;
+}
+
+/*============================================*/
+
+// p is copyied, b only the address is stored
+pbox_t *placed_box_push(pos_t *p, int box_idx)
+{
+  assert(placed_box_cnt < PLACED_BOX_MAX);
+
+  
+  // place the new box
+  placed_box_list[placed_box_cnt].pos = *p;
+  placed_box_list[placed_box_cnt].box_idx = box_idx;
+  placed_box_cnt++;
+  return placed_box_list+placed_box_cnt-1;
+}
+
+void placed_box_pop(void)
+{
+  assert(placed_box_cnt > 0);
+  placed_box_cnt--;
+}
+
+uint32_t placed_box_calculate_max_area(void)
+{
+  int i;
+  placed_box_area_max_y = 0;
+  placed_box_area_max_x = 0;
+  for( i = 2; i < placed_box_cnt; i++ )
+  {
+    
+    if ( placed_box_area_max_y < placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h )
+      placed_box_area_max_y = placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h;
+    if ( placed_box_area_max_x < placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w )
+      placed_box_area_max_x = placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w;
+  }
+  
+  if ( placed_box_area_max_x > WORD_CLOUD_MAX_X )
+    // weight of y is higher, so this should give a more wider picture
+    placed_box_area_value = placed_box_area_max_x*5 + placed_box_area_max_y ;
+  else
+    // weight of y is higher, so this should give a more wider picture
+    placed_box_area_value = placed_box_area_max_x + placed_box_area_max_y *5;
+  return placed_box_area_value;
+}
+
+/*============================================*/
+
+int is_intersection(pos_t *p1, box_t *b1, pos_t *p2, box_t *b2) 
+{ 
+    pos_t q1 = *p1;
+    pos_t q2 = *p2;
+    q1.x += b1->w;
+    q1.y += b1->h;
+    q2.x += b2->w;
+    q2.y += b2->h;
+  
+    if ( p1->x >= q2.x || q1.x <= p2->x )
+      return 0;
+    if ( p1->y >= q2.y || q1.y <= p2->y )
+      return 0;
+  
+    return 1; 
+} 
+
+int is_intersection_with_placed_box(pos_t *p1, box_t *b1, int idx) 
+{
+  return is_intersection(p1, b1, &(placed_box_list[idx].pos),  box_list+placed_box_list[idx].box_idx );
+}
+
+int is_any_intersection(pos_t *p1, box_t *b1)
+{
+  int i;
+  // start with the third box, because the first two are boundary boxes
+  for( i = 2; i < placed_box_cnt; i++ )
+  {
+    if ( is_intersection_with_placed_box(p1, b1, i) != 0 )
+      return 1;
+  }
+  return 0;
+}
+
+
+// add new place options by a give pbox
+void place_option_by_pbox(pbox_t *pbox)
+{
+  int i, found_i;
+  uint32_t y, x;
+  uint32_t max_y, max_x;
+  
+  // from the lower left corner, search towards the left until another box is hit.
+  y = pbox->pos.y + box_list[pbox->box_idx].h;
+  max_x = 0;
+  found_i = -1;
+  for( i = 0; i < placed_box_cnt; i++ )
+  {
+    if ( placed_box_list+i != pbox ) // do not check ourself
+    {
+      if ( placed_box_list[i].pos.x <= pbox->pos.x )
+      {
+	if ( y >=  placed_box_list[i].pos.y && y < placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h )
+	{
+	  // left box found, but is it max?
+	  // must use >= here, because the initial boxes have zero area
+	  if ( max_x <= placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w )
+	  {
+	    max_x = placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w;
+	    found_i = i;
+	  }
+	}
+      }
+    }
+  }
+  if (found_i >= 0)
+    place_option_by_xy(max_x, y);
+  
+
+  // from the upper right corner, search towards the top until another box is hit.
+  x = pbox->pos.x + box_list[pbox->box_idx].w;
+  max_y = 0;
+  found_i = -1;
+  for( i = 0; i < placed_box_cnt; i++ )
+  {
+    if ( placed_box_list+i != pbox ) // do not check ourself
+    {
+      if ( placed_box_list[i].pos.y <= pbox->pos.y )
+      {
+	if ( x >=  placed_box_list[i].pos.x && x < placed_box_list[i].pos.x + box_list[placed_box_list[i].box_idx].w )
+	{
+	  // upper box found, but is it the next ?
+	  // must use >= here, because the initial boxes have zero area
+	  if ( max_y <= placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h )
+	  {
+	    max_y = placed_box_list[i].pos.y + box_list[placed_box_list[i].box_idx].h;
+	    found_i = i;
+	  }
+	}
+      }
+    }
+  }
+  if (found_i >= 0)
+    place_option_by_xy(x, max_y);
+
+}
+
+void add_all_place_options(void)
+{
+  int i;
+  //place_option_cnt = 0;	// clear the place option list
+  for( i = 2; i < placed_box_cnt; i++ )
+  {
+    place_option_by_pbox(placed_box_list+i);
+  }
+}
+
+void show(void)
+{
+  pos_t p;
+  box_t b;
+  int i;
+  b.w = 1;
+  b.h = 1;
+  for( p.y = 0; p.y < 30; p.y++ )
+  {
+    for( p.x = 0; p.x < 60; p.x++ )
+    {
+
+      for( i = 0; i < place_option_cnt; i++ )
+      {
+	if ( place_option_list[i].x == p.x &&  place_option_list[i].y == p.y )
+	{
+	  break;
+	}
+      }
+      if ( i < place_option_cnt )
+      {
+	printf("*");
+      }
+      else
+      {
+	
+	for( i = 0; i < placed_box_cnt; i++ )
+	{
+	  if ( is_intersection_with_placed_box(&p, &b, i) != 0 )
+	    break;
+	}
+	if ( i < placed_box_cnt )
+	{
+	  printf("%c", i+'a');
+	}
+	else
+	{
+	  printf(" ");
+	}
+      }
+    }
+    printf("\n");
+  }
+}
+
+void init(void)
+{
+  pos_t p;
+  
+
+  box_list[0].w = 0x0ffffffff;
+  box_list[0].h = 0;
+
+  box_list[1].w = 0;
+  box_list[1].h = 0x0ffffffff;
+  
+  box_cnt = 2;
+  place_option_cnt = 0;
+  placed_box_cnt = 0;
+ 
+  p.x = 0;
+  p.y = 0;  
+  placed_box_push(&p, 0);
+
+  p.x = 0;
+  p.y = 0;  
+  placed_box_push(&p, 1);
+
+  // create one place option at the upper left
+  place_option_by_xy(0, 0);
+  
+}
+
+void do_best_place(int box_idx)
+{
+  int i;
+  int found_i;
+  pbox_t *pbox;
+  uint32_t value;
+  uint32_t lowest_value;
+  
+  found_i = -1;
+  lowest_value = 0x0ffffffff;
+  for( i = 0; i < place_option_cnt; i++ )
+  {
+    // check whether this placement would generate an intersection
+    if ( is_any_intersection(place_option_list+i, box_list+box_idx) == 0 )
+    {
+      // place the box at the position
+      pbox = placed_box_push(place_option_list+i, box_idx);
+      value = placed_box_calculate_max_area();
+      /*
+      if ( value == 0x0ffffffff )
+      {
+	value = pbox->pos.y;
+      }
+      else
+      */
+      {
+	value *= 8;
+	value += pbox->pos.x;
+	value += pbox->pos.y;
+      }
+      
+      // greedy algorithm: We search for the lowest area increase
+      if ( lowest_value > value )
+      {
+	lowest_value = value ;
+	found_i = i;
+      }
+      
+      placed_box_pop();
+    }
+  }
+
+  if ( found_i >= 0 )
+  {
+    
+    // now permanently place the box
+    pbox = placed_box_push(place_option_list+found_i, box_idx);
+
+    // delete the position from the place option list
+    place_option_delete(found_i);
+    
+    // calculate new place options with the new box
+    //place_option_by_pbox(pbox);
+ 
+    // recalculate all place options
+    add_all_place_options();
+  }
+  else
+  {
+    //assert(found_i >= 0 );
+  }
+}
+
+
+/*
+  Linear Congruential Generator (LCG)
+  z = (a*z + c) % m;  
+  m = 256 (8 Bit)
+  
+  for period:
+  a-1: dividable by 2
+  a-1: multiple of 4
+  c: not dividable by 2
+  
+  c = 17
+  a-1 = 64 --> a = 65
+*/
+uint8_t cloud_z = 127;	// start value
+uint8_t cloud_rnd(void) {
+/*
+  cloud_z++;
+  cloud_z = (uint8_t)((uint16_t)65*(uint16_t)cloud_z + (uint16_t)17);
+  return (uint8_t)cloud_z;
+  */
+  return rand() & 255;
+}
+
+
+
+
+//u8g2_IsAllValidUTF8
+
+char *cloud_utf8[] = 
+{
+  "µC"
+  "Numérique"
+  "像素",
+  "屏幕",
+  "图形",
+  "Ψηφιακή",
+  "Οθόνη",
+   "Γραφικά",
+   "アイコン、",
+   "ビットマップ",
+   "キャラクター、",  
+  "전자", "엔지니어", "장치", "하드웨어",
+   "Ingeniør", "Skærm",
+  "Gerät",
+  "Sprzęt",
+  "Računar", "Ugrađen",
+  "Grafică", 
+  "экран",
+   "Графика",
+   "Значок",
+   "Фонт", "екран", "рачунар", "уграђен",
+   "พิกเซล",
+   "หน้าจอ",
+   "กราฟิก",
+   "Näyttö",
+   "ĂăĚěŇň",
+   "ÄäÖöÜü",
+   "Ææ",
+   "E=mc²",
+  "Pixel",
+  "Screen",
+  "Graphics",
+  "Icon",
+  "Bitmap",
+  "Character",
+  "Glyph",
+  "Font",
+  "Display",
+  "Computer",
+  "Embedded",
+  "Electronics", 
+  "Engineer",
+  "Device",
+  "Hardware",
+  "Software",
+  "Science",
+  "Digital",
+  "Arduino",
+  "U8g2"
+};
+
+char *cloud_str[] = 
+{
+  "Pixel",
+  "Screen",
+  "Graphics",
+  "Icon",
+  "Bitmap",
+  "Character",
+  "Glyph",
+  "Font",
+  "Display",
+  "Computer",
+  "Embedded",
+  "Electronics", 
+  "Engineer",
+  "Device",
+  "Hardware",
+  "Software",
+  "Science",
+  "Digital",
+  "Arduino",
+  "U8g2"
+};
+
+char *cloud_simple[] = 
+{
+  "U8g2",
+  "Abc",
+  "XYZ",
+  "Aa",
+  "Xy"
+};
+
+
+
+void cloud_add(u8g2_t *u8g2, const uint8_t *font, char *word)
+{
+  u8g2_uint_t extra = 8;
+  u8g2_SetFont(u8g2, font);
+  box_list[box_cnt].w = u8g2_GetUTF8Width(u8g2, word) + extra; 
+  box_list[box_cnt].h = u8g2_GetAscent(u8g2) - u8g2_GetDescent(u8g2) + extra;
+  strcpy(box_word[box_cnt], word); 
+  //puts(word);
+  box_font[box_cnt] = font;
+  box_cnt++;
+}
+
+void cloud_auto_add(u8g2_t *u8g2, const uint8_t *font)
+{
+  int i, n, cnt;
+  
+  u8g2_SetFont(u8g2, font);
+  
+  
+  if ( u8g2_GetAscent(u8g2) - u8g2_GetDescent(u8g2) > 30 )
+  {
+    n = sizeof(cloud_simple)/sizeof(*cloud_simple);
+    
+    cnt = 0;
+    for( i = 0; i < n; i++ )
+    {
+      if ( u8g2_IsAllValidUTF8(u8g2, cloud_simple[i]) != 0 )
+      {
+	cnt++;
+      }
+    }
+    
+    if ( cnt > 0 )
+    {
+      
+      cnt = cloud_rnd() % cnt;
+      
+      for( i = 0; i < n; i++ )
+      {
+	if ( u8g2_IsAllValidUTF8(u8g2, cloud_simple[i]) != 0 )
+	{
+	  if ( cnt == 0 )
+	    break;
+	  cnt--;
+	}
+      }
+    }
+    
+    if ( i < n )
+    {
+      cloud_add(u8g2, font, cloud_simple[i]);
+      return;
+    }
+    
+  }
+  
+  n = sizeof(cloud_utf8)/sizeof(*cloud_utf8);
+  //printf("n=%d\n", n);
+  
+  cnt = 0;
+  for( i = 0; i < n; i++ )
+  {
+    if ( u8g2_IsAllValidUTF8(u8g2, cloud_utf8[i]) != 0 )
+    {
+      cnt++;
+    }
+  }
+  
+  if ( cnt > 0 )
+  {
+    cnt = cloud_rnd() % cnt;
+    
+    for( i = 0; i < n; i++ )
+    {
+      if ( u8g2_IsAllValidUTF8(u8g2, cloud_utf8[i]) != 0 )
+      {
+	if ( cnt == 0 )
+	  break;
+	cnt--;
+      }
+    }
+  }
+  else
+  {
+    i = n;
+  }
+  
+  if ( i < n )
+  {
+    cloud_add(u8g2, font, cloud_utf8[i]);
+    return;
+  }
+  
+  n = sizeof(cloud_str)/sizeof(*cloud_str);
+  //printf("n=%d\n", n);
+  i = cloud_rnd() % n;
+  cloud_add(u8g2, font, cloud_str[i]);
+  
+}
+
+void cloud_init(void)
+{
+  init();  
+}
+
+void cloud_calculate(uint8_t z)
+{
+  int i;
+  int a, b, t;
+  
+  cloud_z = z;
+  srand(z);
+  
+  for( i = 0; i < box_cnt; i++ )
+  {
+    box_index[i] = i;
+  }
+  
+  for ( i = 0; i < box_cnt / 2; i++ )
+  {
+    a = cloud_rnd() % (box_cnt-2);
+    a += 2;
+    b = cloud_rnd() % (box_cnt-2);
+    b += 2;
+    t = box_index[a];
+    box_index[a] = box_index[b];
+    box_index[b] = t;
+  }
+  
+  for( i = 2; i < box_cnt; i++ )
+    do_best_place(box_index[i]);  
+}
+
+
+void cloud_draw(u8g2_t *u8g2)
+{
+  int i;
+  for( i = 2; i < placed_box_cnt; i++ )
+  {
+
+
+	u8g2_SetFont(u8g2, box_font[placed_box_list[i].box_idx]);
+	u8g2_SetFontMode(u8g2, 1);
+	u8g2_DrawUTF8(u8g2, 
+	  placed_box_list[i].pos.x, 
+	  placed_box_list[i].pos.y, 
+	  box_word[placed_box_list[i].box_idx]);	
+  }
+}
+
+
+
+
+
+/*===================================================================*/
+
 
 void overview_draw_line(int i, uint16_t encoding_start, uint16_t x, uint16_t y, uint16_t w, uint16_t glyphs_per_line)
 {
@@ -1434,7 +2205,7 @@ void bdfconv(int i, int fm, char *fms, int bm, char *bms, int mm, char *mms)
   if ( mm == MM_R ) strcat(bdf_cmd, " -m '32-127>32'");
   if ( mm == MM_N ) strcat(bdf_cmd, " -m '32,42-58>42'");
   if ( mm == MM_U ) strcat(bdf_cmd, " -m '32-95>32'");
-  if ( mm == MM_E ) strcat(bdf_cmd, " -m '32-701>32,7838'");
+  if ( mm == MM_E ) strcat(bdf_cmd, " -m '32-701>32,7838,64256-64263'");
   if ( mm == MM_C ) 
   {
     strcat(bdf_cmd, " -m '");
@@ -1584,6 +2355,63 @@ void generate_font_group_md(int i, int fm, char *fms, int bm, char *bms, int mm,
   
 }
 
+#ifdef BUILD2
+
+void generate_font_group_word_cloud(int i, int fm, char *fms, int bm, char *bms, int mm, char *mms)
+{
+  static int _i = 0;
+  static int _fm = 0;
+  static int _bm = 0;
+  
+  if ( fi[i].group == current_font_group_index && fm == FM_C )
+  {
+    if ( strcmp( current_font_name, fi[i].name ) != 0 )
+    {
+      strcpy(current_font_name, fi[i].name);
+      
+      //fprintf(current_md_file, "\n");
+      //fprintf(current_md_file, "## %s\n", current_font_name);
+      //printf("## %s\n", current_font_name);      
+    }
+    else
+    {
+      if ( _i == i && _fm == fm && _bm == bm )
+      {
+      }
+      else
+      {
+	 // printf( "group %s, %s, font %s %s\n", gi[current_font_group_index].groupname, gi[current_font_group_index].reference, fi[i].name, target_font_identifier);
+	//fprintf(current_md_file, "\n");
+      }
+	
+    }
+    //fprintf(current_md_file, "![fntpic/%s.png](fntpic/%s.png)\n", target_font_identifier, target_font_identifier);
+
+    if ( _i == i )
+    {
+      //
+    }
+    else
+    {
+      //u8g2_font_list[u8g2_fnt_cnt]
+      cloud_auto_add(&u8g2, u8g2_font_list[u8g2_fnt_cnt]);
+
+      //printf( "%d: group %s, %s, font %s %s %d %s\n", i, gi[current_font_group_index].groupname, gi[current_font_group_index].reference, fi[i].name, target_font_identifier, u8g2_fnt_cnt, u8g2_font_names[u8g2_fnt_cnt]);
+    }
+    
+    _i = i;
+    _fm = fm;
+    _bm = bm;
+    
+  }
+
+  if ( fm == FM_C ) 
+  {
+    u8g2_fnt_cnt++;
+  }
+
+}
+#endif
 
 void gen_font(int i, int fm, char *fms, int bm, char *bms, int mm, char *mms, cbfn_t cb )
 {
@@ -1687,10 +2515,53 @@ void do_font_groups(cbfn_t cb)
     current_md_file = fopen(gi[current_font_group_index].mdfile, "a");
     fprintf(current_md_file, "\n");
     strcpy(current_font_name, ".");    
+#ifdef BUILD2
+    u8g2_fnt_cnt = 0;
+    u8x8_fnt_cnt = 0;
+#endif
     do_font_loop(cb);
     fclose(current_md_file);
   }
 }
+
+void do_font_groups_wc(cbfn_t cb)
+{
+  int cnt;
+  cnt = sizeof(gi)/sizeof(*gi);
+  for( current_font_group_index = 0; current_font_group_index < cnt; current_font_group_index++ )
+  {
+#ifdef BUILD2
+    u8g2_fnt_cnt = 0;
+    u8x8_fnt_cnt = 0;
+
+    u8g2_SetupBuffer_TGA(&u8g2, &u8g2_cb_r0);
+    u8x8_InitDisplay(u8g2_GetU8x8(&u8g2));
+    u8x8_SetPowerSave(u8g2_GetU8x8(&u8g2), 0);  
+    u8g2_SetFontPosTop(&u8g2);
+
+    cloud_init();
+
+    do_font_loop(cb);
+
+    cloud_calculate(4);
+    u8g2_FirstPage(&u8g2);
+    do
+    {
+      cloud_draw(&u8g2);
+      
+    } while( u8g2_NextPage(&u8g2) );
+
+
+    tga_save("font.tga");    
+    sprintf(convert_cmd, "convert font.tga -trim %s_word_cloud.png", gi[current_font_group_index].reference );
+    system(convert_cmd);
+
+    
+    printf("Group end %s\n", gi[current_font_group_index].reference);
+#endif
+  }
+}
+
 
 
 
@@ -1755,6 +2626,7 @@ int main(void)
   do_font_loop(overviewshortpic);
   do_font_list(generate_font_list);
 
+  do_font_groups_wc(generate_font_group_word_cloud);
   
 #endif
 
