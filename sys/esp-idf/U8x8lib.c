@@ -101,6 +101,7 @@ typedef struct {
 			spi_device_handle_t device;
 			uint8_t* buffer;
 			size_t bufsiz;
+			uint8_t last_dc;
 			} spi;
 		// I2C
 		struct {
@@ -116,26 +117,22 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 	switch (msg) {
 			case U8X8_MSG_GPIO_AND_DELAY_INIT:
 				for (i = 0; i < U8X8_PIN_CNT; i++) {
-						if (i != U8X8_PIN_CS && // FIXME: remove when HW SPI will work
-							i != U8X8_PIN_SPI_CLOCK &&
-							i != U8X8_PIN_SPI_DATA
-						) {
-								if (u8x8->pins[i] != U8X8_PIN_NONE) {
-										bool success = false;
-										if (i < U8X8_PIN_OUTPUT_CNT) {
-												ESP_LOGD(TAG, "setting %u as output pin", i);
-												success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
-												}
-										else {
-												ESP_LOGD(TAG, "setting %u as input pin", i);
-												success = u8x8_setpininput_espidf(u8x8->pins[i]);
-												}
-										if (!success) {
-												ESP_LOGE(TAG, "pin error");
-												return 0;
-												};
+						if (u8x8->pins[i] != U8X8_PIN_NONE) {
+								bool success = false;
+								if (i < U8X8_PIN_OUTPUT_CNT) {
+										ESP_LOGD(TAG, "setting %u as output pin", i);
+										success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
 										}
+								else {
+										ESP_LOGD(TAG, "setting %u as input pin", i);
+										success = u8x8_setpininput_espidf(u8x8->pins[i]);
+										}
+								if (!success) {
+										ESP_LOGE(TAG, "pin error");
+										return 0;
+										};
 								}
+
 						}
 				u8x8->user_ptr = malloc(sizeof(u8x8_device_info));       // FIXME: free it!
 				if (!u8x8->user_ptr) {
@@ -255,6 +252,32 @@ void hexDump(char* desc, void* addr, int len) {  // FIXME: only for debugging
 
 static const spi_host_device_t u8x8_spibuses[2] = {HSPI_HOST, VSPI_HOST};
 
+static void u8x8_byte_espidf_hw_spi_transfer(u8x8_device_info* info) {
+	if (info->spi.bufsiz == 0) { return; }
+
+	// Docs says that it's better to have 32-bit aligned memory
+	// Doing it here should make stuff faster
+	info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
+	/*
+	size_t incomplete_len = info->spi.bufsiz % 4U;
+	if (incomplete_len > 0) {
+		uint32_t* lastbyte = (uint32_t*)(info->spi.buffer - incomplete_len);
+		*lastbyte = SPI_SWAP_DATA_TX(*lastbyte, incomplete_len*8);
+		ESP_LOGI("u8x8", "Hi there! Size: %u, mistake: %u", info->spi.bufsiz, incomplete_len);
+	}
+	*/
+	spi_transaction_t transaction = {};
+	transaction.flags = 0;
+	transaction.length = (info->spi.bufsiz) * 8;   // Bits
+	transaction.tx_buffer = info->spi.buffer;
+	transaction.rx_buffer = NULL; // U8g2 don't care about feedback, bad guys!
+	ESP_LOGV(TAG, "Executing SPI transaction of size %d bytes", info->spi.bufsiz);
+	spi_device_polling_transmit(info->spi.device, &transaction);
+	heap_caps_free(info->spi.buffer);
+	info->spi.buffer = NULL;
+	info->spi.bufsiz = 0;
+	};
+
 static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, void* arg_ptr, uint8_t host)
 // It can work with any of two SPIs
 	{
@@ -262,7 +285,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 	switch (msg) {
 			case U8X8_MSG_BYTE_SEND:
 				;
-
+				ESP_LOGV(TAG, "Appending buffer");
 				// We add stuff into buffer and then send it in one transaction
 				//if (info->spi.bufsiz != 0)
 				//	hexDump("Old buf", info->spi.buffer, info->spi.bufsiz);
@@ -280,6 +303,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				info->spi.device = NULL;
 				info->spi.buffer = NULL;
 				info->spi.bufsiz = 0;
+				info->spi.last_dc = 255; // Default value, always differ from actual one
 				spi_bus_config_t busconf = {};
 				busconf.mosi_io_num = u8x8->pins[U8X8_PIN_SPI_DATA];
 				busconf.miso_io_num = -1;
@@ -300,6 +324,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				conf.command_bits = 0;
 				conf.address_bits = 0;
 				conf.dummy_bits = 0; // FIXME: Hmmm, may cause problems?
+				//conf.mode = u8x8->display_info->spi_mode;
 				conf.mode = u8x8->display_info->spi_mode;
 				conf.duty_cycle_pos = 0; // I'm not sure
 				conf.clock_speed_hz = u8x8->bus_clock;
@@ -315,37 +340,18 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				break;
 
 			case U8X8_MSG_BYTE_SET_DC:
+				ESP_LOGV(TAG, "DC value: %d", arg_int);
+				if (info->spi.last_dc != arg_int) { u8x8_byte_espidf_hw_spi_transfer(info); }
 				u8x8_gpio_SetDC(u8x8, arg_int);
 				break;
 
 			case U8X8_MSG_BYTE_START_TRANSFER:
-
+				ESP_LOGV(TAG, "SPI transaction start (formally)");
 				// Nothing to do here
 				break;
 
 			case U8X8_MSG_BYTE_END_TRANSFER:
-				;
-				// Docs says that it's better to have 32-bit aligned memory
-				// Doing it here should make stuff faster
-				info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
-				/*
-				size_t incomplete_len = info->spi.bufsiz % 4U;
-				if (incomplete_len > 0) {
-					uint32_t* lastbyte = (uint32_t*)(info->spi.buffer - incomplete_len);
-					*lastbyte = SPI_SWAP_DATA_TX(*lastbyte, incomplete_len*8);
-					ESP_LOGI("u8x8", "Hi there! Size: %u, mistake: %u", info->spi.bufsiz, incomplete_len);
-				}
-				*/
-				spi_transaction_t transaction = {};
-				transaction.flags = 0;
-				transaction.length = (info->spi.bufsiz) * 8;   // Bits
-				transaction.tx_buffer = info->spi.buffer;
-				transaction.rx_buffer = NULL; // U8g2 don't care about feedback, bad guys!
-				spi_device_polling_transmit(info->spi.device, &transaction);
-				heap_caps_free(info->spi.buffer);
-				info->spi.buffer = NULL;
-				info->spi.bufsiz = 0;
-
+				u8x8_byte_espidf_hw_spi_transfer(info);
 				break;
 			default:
 				return 0;

@@ -220,7 +220,7 @@ class U8X8 {
 					}
 			}
 		void print(const std::string& str) {
-			for (const auto& ch : str) print(ch);
+			for (const auto& ch : str) { print(ch); }
 			};
 		template <typename T> void print(T data) {
 			std::stringstream sstr;
@@ -264,7 +264,7 @@ class U8X8LOG {
 			u8log_WriteChar(&u8log, ch);
 			};
 		void print(const std::string& str) {
-			for (const auto& ch : str) print(ch);
+			for (const auto& ch : str) { print(ch); }
 			};
 		template <typename T> void print(T data) {
 			std::stringstream sstr;
