@@ -47,6 +47,9 @@ class U8X8 {
 		U8X8(void) { home();  }
 		u8x8_t* getU8x8(void) { return &u8x8; }
 
+		void sendF(const char* fmt, ...)
+			{ va_list va; va_start(va, fmt); u8x8_cad_vsendf(&u8x8, fmt, va); va_end(va); }
+
 		uint32_t getBusClock(void) { return u8x8.bus_clock; }
 		void setBusClock(uint32_t clock_speed) { u8x8.bus_clock = clock_speed; }
 
@@ -211,12 +214,12 @@ class U8X8 {
 
 		void print(const char& ch) {
 			if (ch == '\n') {
-					++ty;
+					ty += u8x8_pgm_read(u8x8.font + 3);
 					tx = 0;
 					}
 			else {
 					u8x8_DrawGlyph(&u8x8, tx, ty, ch);
-					++tx;
+					tx += u8x8_pgm_read(u8x8.font + 2);
 					}
 			}
 		void print(const std::string& str) {

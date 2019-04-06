@@ -52,6 +52,9 @@ class U8G2 {
 		u8x8_t* getU8x8(void) { return u8g2_GetU8x8(&u8g2); }
 		u8g2_t* getU8g2(void) { return &u8g2; }
 
+		void sendF(const char* fmt, ...)
+			{ va_list va; va_start(va, fmt); u8x8_cad_vsendf(u8g2_GetU8x8(&u8g2), fmt, va); va_end(va); }
+
 		uint32_t getBusClock(void) { return u8g2_GetU8x8(&u8g2)->bus_clock; }
 		void setBusClock(uint32_t clock_speed) { u8g2_GetU8x8(&u8g2)->bus_clock = clock_speed; }
 
@@ -183,6 +186,8 @@ class U8G2 {
 
 		void updateDisplayArea(uint8_t  tx, uint8_t ty, uint8_t tw, uint8_t th)
 			{ u8g2_UpdateDisplayArea(&u8g2, tx, ty, tw, th); }
+		void updateDisplay(void)
+			{ u8g2_UpdateDisplay(&u8g2); }
 
 
 		/* u8g2_hvline.c */
