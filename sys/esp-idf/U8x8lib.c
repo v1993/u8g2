@@ -202,54 +202,6 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 /*=============================================*/
 /*=== 4 WIRE HARDWARE SPI ===*/
 
-void hexDump(char* desc, void* addr, int len) {  // FIXME: only for debugging
-	int i;
-	unsigned char buff[17];
-	unsigned char* pc = (unsigned char*) addr;
-
-	// Output description if given.
-	if (desc != NULL) {
-			printf("%s:\n", desc);
-			}
-
-	// Process every byte in the data.
-	for (i = 0; i < len; i++) {
-			// Multiple of 16 means new line (with line offset).
-
-			if ((i % 16) == 0) {
-					// Just don't print ASCII for the zeroth line.
-					if (i != 0) {
-							printf("  %s\n", buff);
-							}
-
-					// Output the offset.
-					printf("  %04x ", i);
-					}
-
-			// Now the hex code for the specific character.
-			printf(" %02x", pc[i]);
-
-			// And store a printable ASCII character for later.
-			if ((pc[i] < 0x20) || (pc[i] > 0x7e)) {
-					buff[i % 16] = '.';
-					}
-			else {
-					buff[i % 16] = pc[i];
-					}
-
-			buff[(i % 16) + 1] = '\0';
-			}
-
-	// Pad out last line if not exactly 16 characters.
-	while ((i % 16) != 0) {
-			printf("   ");
-			i++;
-			}
-
-	// And print the final ASCII bit.
-	printf("  %s\n", buff);
-	}
-
 static const spi_host_device_t u8x8_spibuses[2] = {HSPI_HOST, VSPI_HOST};
 
 static void u8x8_byte_espidf_hw_spi_transfer(u8x8_device_info* info) {
@@ -311,7 +263,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				busconf.quadwp_io_num = -1;
 				busconf.quadhd_io_num = -1;
 				busconf.max_transfer_sz = 0; // FIXME: add it into config
-				busconf.flags = 0; // FIXME: add stuff here?
+				busconf.flags = 0;
 				if (u8x8->bus_clock == 0) {	/* issue 769 */
 						u8x8->bus_clock = u8x8->display_info->sck_clock_hz;
 						}
@@ -323,7 +275,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				spi_device_interface_config_t conf = {};
 				conf.command_bits = 0;
 				conf.address_bits = 0;
-				conf.dummy_bits = 0; // FIXME: Hmmm, may cause problems?
+				conf.dummy_bits = 0;
 				//conf.mode = u8x8->display_info->spi_mode;
 				conf.mode = u8x8->display_info->spi_mode;
 				conf.duty_cycle_pos = 0; // I'm not sure
