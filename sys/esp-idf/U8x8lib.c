@@ -48,7 +48,12 @@
 
 #include "esp_log.h"
 
-static const char* TAG = "U8G2";
+#define max(a,b) \
+	({ __typeof__ (a) _a = (a); \
+		__typeof__ (b) _b = (b); \
+		_a > _b ? _a : _b; })
+
+static const char* U8X8_TAG = "U8G2";
 
 /*=============================================*/
 /*=== GPIO & DELAY ===*/
@@ -120,15 +125,15 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 						if (u8x8->pins[i] != U8X8_PIN_NONE) {
 								bool success = false;
 								if (i < U8X8_PIN_OUTPUT_CNT) {
-										ESP_LOGD(TAG, "setting %u as output pin", i);
+										ESP_LOGD(U8X8_TAG, "setting %u as output pin", i);
 										success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
 										}
 								else {
-										ESP_LOGD(TAG, "setting %u as input pin", i);
+										ESP_LOGD(U8X8_TAG, "setting %u as input pin", i);
 										success = u8x8_setpininput_espidf(u8x8->pins[i]);
 										}
 								if (!success) {
-										ESP_LOGE(TAG, "pin error");
+										ESP_LOGE(U8X8_TAG, "pin setting error");
 										return 0;
 										};
 								}
@@ -136,7 +141,7 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 						}
 				u8x8->user_ptr = malloc(sizeof(u8x8_device_info));       // FIXME: free it!
 				if (!u8x8->user_ptr) {
-						ESP_LOGE(TAG, "no memory");
+						ESP_LOGE(U8X8_TAG, "no memory");
 						return 0;
 						};
 				((u8x8_device_info*) u8x8->user_ptr)->type = UNKNOWN;
@@ -207,26 +212,24 @@ static const spi_host_device_t u8x8_spibuses[2] = {HSPI_HOST, VSPI_HOST};
 static void u8x8_byte_espidf_hw_spi_transfer(u8x8_device_info* info) {
 	if (info->spi.bufsiz == 0) { return; }
 
-	// Docs says that it's better to have 32-bit aligned memory
-	// Doing it here should make stuff faster
-	info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA | MALLOC_CAP_32BIT);
-	/*
-	size_t incomplete_len = info->spi.bufsiz % 4U;
-	if (incomplete_len > 0) {
-		uint32_t* lastbyte = (uint32_t*)(info->spi.buffer - incomplete_len);
-		*lastbyte = SPI_SWAP_DATA_TX(*lastbyte, incomplete_len*8);
-		ESP_LOGI("u8x8", "Hi there! Size: %u, mistake: %u", info->spi.bufsiz, incomplete_len);
-	}
-	*/
+	if (info->spi.bufsiz > CONFIG_U8G2_SPI_MAX) {
+			ESP_LOGE(U8X8_TAG, "too big SPI transaction: %zu bytes (limit: %zu bytes)", info->spi.bufsiz, CONFIG_U8G2_SPI_MAX);
+			return;
+			}
 	spi_transaction_t transaction = {};
 	transaction.flags = 0;
 	transaction.length = (info->spi.bufsiz) * 8;   // Bits
 	transaction.tx_buffer = info->spi.buffer;
 	transaction.rx_buffer = NULL; // U8g2 don't care about feedback, bad guys!
-	ESP_LOGV(TAG, "Executing SPI transaction of size %d bytes", info->spi.bufsiz);
-	spi_device_polling_transmit(info->spi.device, &transaction);
-	heap_caps_free(info->spi.buffer);
-	info->spi.buffer = NULL;
+	ESP_LOGV(U8X8_TAG, "Executing SPI transaction of size %zu bytes", info->spi.bufsiz);
+	ESP_ERROR_CHECK_WITHOUT_ABORT(spi_device_polling_transmit(info->spi.device, &transaction));
+	if (CONFIG_U8G2_SPI_PREALLOCATE == 0) {
+			heap_caps_free(info->spi.buffer);
+			info->spi.buffer = NULL;
+			}
+	else {
+			info->spi.buffer = heap_caps_realloc(info->spi.buffer, CONFIG_U8G2_SPI_PREALLOCATE, MALLOC_CAP_DMA);
+			}
 	info->spi.bufsiz = 0;
 	};
 
@@ -237,14 +240,18 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 	switch (msg) {
 			case U8X8_MSG_BYTE_SEND:
 				;
-				ESP_LOGV(TAG, "Appending buffer");
+				ESP_LOGV(U8X8_TAG, "Appending buffer");
 				// We add stuff into buffer and then send it in one transaction
 				//if (info->spi.bufsiz != 0)
 				//	hexDump("Old buf", info->spi.buffer, info->spi.bufsiz);
 				size_t oldsize = info->spi.bufsiz;
+				uint8_t* oldptr = info->spi.buffer;
 				info->spi.bufsiz += arg_int;
 				//hexDump("Appending", arg_ptr, arg_int);
-				info->spi.buffer = heap_caps_realloc(info->spi.buffer, info->spi.bufsiz, MALLOC_CAP_DMA);
+				if (info->spi.buffer == NULL || info->spi.bufsiz > CONFIG_U8G2_SPI_PREALLOCATE) {
+						info->spi.buffer = heap_caps_realloc(info->spi.buffer, max(info->spi.bufsiz, CONFIG_U8G2_SPI_PREALLOCATE), MALLOC_CAP_DMA);
+						}
+				if (!info->spi.buffer) { if (oldptr) { heap_caps_free(oldptr); } info->spi.bufsiz = 0; return 1; };
 				memcpy(info->spi.buffer + oldsize, arg_ptr, arg_int);
 				//hexDump("New buf", info->spi.buffer, info->spi.bufsiz);
 
@@ -253,8 +260,14 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				;
 				info->type = SPI;
 				info->spi.device = NULL;
-				info->spi.buffer = NULL;
 				info->spi.bufsiz = 0;
+				if (CONFIG_U8G2_SPI_PREALLOCATE != 0) {
+						info->spi.buffer = heap_caps_malloc(CONFIG_U8G2_SPI_PREALLOCATE, MALLOC_CAP_DMA);
+						// If it returns NULL, continue. However, things will likely get bad soon…
+						}
+				else {
+						info->spi.buffer = NULL;
+						}
 				info->spi.last_dc = 255; // Default value, always differ from actual one
 				spi_bus_config_t busconf = {};
 				busconf.mosi_io_num = u8x8->pins[U8X8_PIN_SPI_DATA];
@@ -262,7 +275,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				busconf.sclk_io_num = u8x8->pins[U8X8_PIN_SPI_CLOCK];
 				busconf.quadwp_io_num = -1;
 				busconf.quadhd_io_num = -1;
-				busconf.max_transfer_sz = 0; // FIXME: add it into config
+				busconf.max_transfer_sz = CONFIG_U8G2_SPI_MAX;
 				busconf.flags = 0;
 				if (u8x8->bus_clock == 0) {	/* issue 769 */
 						u8x8->bus_clock = u8x8->display_info->sck_clock_hz;
@@ -270,7 +283,9 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				/* disable chipselect */
 				//u8x8_gpio_SetCS(u8x8, u8x8->display_info->chip_disable_level);
 
-				spi_bus_initialize(u8x8_spibuses[host], &busconf, host + 1);    // NOTE: user can set up it manually
+				if (spi_bus_initialize(u8x8_spibuses[host], &busconf, host + 1) != ESP_OK) { // NOTE: user can set up it manually
+						ESP_LOGW(U8X8_TAG, "failed to setup SPI bus. Ignore this message if you did it manually.");
+						}
 
 				spi_device_interface_config_t conf = {};
 				conf.command_bits = 0;
@@ -287,18 +302,20 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 						conf.flags |= SPI_DEVICE_POSITIVE_CS;
 						}
 				conf.queue_size = 1; // I only use polling transactions, but ok
-				ESP_ERROR_CHECK(spi_bus_add_device(u8x8_spibuses[host], &conf, & (info->spi.device)));         // FIXME: remove in destructor
+				ESP_ERROR_CHECK_WITHOUT_ABORT(spi_bus_add_device(u8x8_spibuses[host], &conf, & (info->spi.device))); // FIXME: remove in destructor
 
 				break;
 
 			case U8X8_MSG_BYTE_SET_DC:
-				ESP_LOGV(TAG, "DC value: %d", arg_int);
-				if (info->spi.last_dc != arg_int) { u8x8_byte_espidf_hw_spi_transfer(info); }
-				u8x8_gpio_SetDC(u8x8, arg_int);
+				if (u8x8->pins[U8X8_PIN_DC] != U8X8_PIN_NONE) { // 4 wire SPI only
+						ESP_LOGV(U8X8_TAG, "DC value: %d", arg_int);
+						if (info->spi.last_dc != arg_int) { u8x8_byte_espidf_hw_spi_transfer(info); }
+						u8x8_gpio_SetDC(u8x8, arg_int);
+						}
 				break;
 
 			case U8X8_MSG_BYTE_START_TRANSFER:
-				ESP_LOGV(TAG, "SPI transaction start (formally)");
+				ESP_LOGV(U8X8_TAG, "SPI transaction start (formally)");
 				// Nothing to do here
 				break;
 
@@ -352,12 +369,12 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				busconf.scl_pullup_en = GPIO_PULLUP_ENABLE;
 				busconf.master.clk_speed = u8x8->bus_clock;
 				if (i2c_param_config(port, &busconf) != ESP_OK) {
-						ESP_LOGE(TAG, "i2c_param_config failed");
+						ESP_LOGE(U8X8_TAG, "i2c_param_config failed");
 						}
 				if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) {
-						ESP_LOGE(TAG, "i2c_driver_install failed");
+						ESP_LOGE(U8X8_TAG, "i2c_driver_install failed");
 						}
-				ESP_LOGV(TAG, "HW I2C init complete");
+				ESP_LOGV(U8X8_TAG, "HW I2C init complete");
 				break;
 			case U8X8_MSG_BYTE_SET_DC:
 				break;
@@ -370,16 +387,16 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				i2c_master_start(info->i2c.cmd);
 				i2c_master_write_byte(info->i2c.cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
 				info->i2c.bufptr = info->i2c.bufstart;
-				ESP_LOGV(TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1);
+				ESP_LOGV(U8X8_TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1);
 				break;
 			case U8X8_MSG_BYTE_END_TRANSFER:
-				ESP_LOGV(TAG, "HW I2C sending");
+				ESP_LOGV(U8X8_TAG, "HW I2C sending");
 				i2c_master_stop(info->i2c.cmd);
 				esp_err_t err = i2c_master_cmd_begin(port, info->i2c.cmd, portMAX_DELAY);
 				if (err != ESP_OK) {
-						ESP_LOGE(TAG, "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
+						ESP_LOGE(U8X8_TAG, "i2c_master_cmd_begin failed: %s", esp_err_to_name(err));
 						}
-				ESP_LOGV(TAG, "HW I2C sending completed");
+				ESP_LOGV(U8X8_TAG, "HW I2C sending completed");
 				i2c_cmd_link_delete(info->i2c.cmd);
 				break;
 			default:
@@ -400,7 +417,7 @@ uint8_t u8x8_byte_espidf_hw_i2c_port1(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int
   use U8X8_PIN_NONE as value for "reset", if there is no reset line
 */
 
-void u8x8_SetPin_4Wire_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset) {
+void u8x8_SetPin_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset) {
 	u8x8_SetPin(u8x8, U8X8_PIN_SPI_CLOCK, clock);
 	u8x8_SetPin(u8x8, U8X8_PIN_SPI_DATA, data);
 	u8x8_SetPin(u8x8, U8X8_PIN_CS, cs);
@@ -408,27 +425,14 @@ void u8x8_SetPin_4Wire_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs
 	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
 	}
 
-void u8x8_SetPin_3Wire_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset) {
-	u8x8_SetPin(u8x8, U8X8_PIN_SPI_CLOCK, clock);
-	u8x8_SetPin(u8x8, U8X8_PIN_SPI_DATA, data);
-	u8x8_SetPin(u8x8, U8X8_PIN_CS, cs);
-	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
-	}
-
 /*
   use U8X8_PIN_NONE as value for "reset", if there is no reset line
 */
 
-void u8x8_SetPin_SW_I2C(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t reset) {
+void u8x8_SetPin_I2C(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t reset) {
 	u8x8_SetPin(u8x8, U8X8_PIN_I2C_CLOCK, clock);
 	u8x8_SetPin(u8x8, U8X8_PIN_I2C_DATA, data);
 	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
-	}
-
-void u8x8_SetPin_HW_I2C(u8x8_t* u8x8, uint8_t reset, uint8_t clock, uint8_t data) {
-	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
-	u8x8_SetPin(u8x8, U8X8_PIN_I2C_CLOCK, clock);
-	u8x8_SetPin(u8x8, U8X8_PIN_I2C_DATA, data);
 	}
 
 void u8x8_SetPin_8Bit_6800(u8x8_t* u8x8, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset) {

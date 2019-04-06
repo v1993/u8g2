@@ -1,0 +1,20 @@
+menu "U8g2 library"
+
+config U8G2_SPI_MAX
+	int "Max size of SPI transaction"
+	default 4194
+	range 1024 16384
+	help
+		This value controls maximal size (in bytes) of SPI transaction for U82G
+		controlled SPI bus (have no effect if you setup SPI bus manually).
+		Change this only if you get errors about too big transactions.
+
+config U8G2_SPI_PREALLOCATE
+	int "Size of preallocated buffer for SPI"
+	default 2048
+	range 0 16384
+	help
+		Size of preallocated buffer used for SPI transactions (in bytes). Bigger values
+		increase memory usage but may increase speed as well. Zero mean no preallocating.
+
+endmenu
