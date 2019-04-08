@@ -1,3 +1,5 @@
+-- Please, try to keep code compatible with lua 5.1, 5.2 and 5.3
+
 mask = function(tab)
 	local newtab = {}
 	for k,v in ipairs(tab) do
@@ -28,6 +30,22 @@ local function write_u8g2_d_memory_c(memobj)
 	u8g2_d_memory:close()
 end
 
+local function write_u8g2_d_setup_c(setupobj)
+	local u8g2_d_setup_c = assert(io.open('output/u8g2_d_setup.c', 'w'))
+
+	u8g2_d_setup_c:write([[
+/* u8g2_d_setup.c */
+/* generated code, codebuild, u8g2 project */
+
+#include "u8g2.h"
+
+]], setupobj:getImpls(), '\n', [[
+/* end of generated code */
+]])
+	u8g2_d_setup_c:close()
+end
+
+
 local function write_u8g2_h(memobj, setupobj)
 	local str = file_read('resources/Common/u8g2.template.h')
 	local u8g2_h = assert(io.open('output/u8g2.h', 'w'))
@@ -45,12 +63,18 @@ local setup = require 'resources/Common/setup'
 local memobj = memory.new()
 local setupobj = setup.new()
 
+-- Pure C part
+
 for k,v in ipairs(controllers) do
 	memobj:add(v.w, v.h)
 	setupobj:add(v)
 end
 
+-- C implementations
 write_u8g2_d_memory_c(memobj)
+write_u8g2_d_setup_c(setupobj)
+
+-- C headers
 write_u8g2_h(memobj, setupobj)
 
 --print(memobj:getDecls())
