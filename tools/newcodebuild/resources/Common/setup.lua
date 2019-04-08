@@ -20,7 +20,6 @@ local setupgen = {
 		local func_decl =
 		('%s(u8g2_t *u8g2, const u8g2_cb_t *rotation, u8x8_msg_cb byte_cb, u8x8_msg_cb gpio_and_delay_cb)')
 		:format(utils.setupFunc(controller, display, suff))
-		print(func_decl)
 		s.decls[#s.decls+1] = func_decl..';'
 		s.impls[#s.impls+1] = func_decl..'\n'..([[
 {

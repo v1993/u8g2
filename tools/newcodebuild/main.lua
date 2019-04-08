@@ -1,4 +1,9 @@
--- Please, try to keep code compatible with lua 5.1, 5.2 and 5.3
+-- Generate template code and docs for u8g2 library
+
+-- Please, try to keep this code compatible with lua 5.1, 5.2 and 5.3
+-- Avoid usage of any libraries
+
+package.path=package.path..';./?/init.lua'
 
 mask = function(tab)
 	local newtab = {}
@@ -8,73 +13,45 @@ mask = function(tab)
 	return newtab
 end
 
-local file_read = function(fname)
+file_read = function(fname)
 	local f = assert(io.open(fname, 'r'))
 	local res = f:read '*a'
 	f:close()
 	return res
 end
 
-local function write_u8g2_d_memory_c(memobj)
-	local u8g2_d_memory = assert(io.open('output/u8g2_d_memory.c', 'w'))
-
-	u8g2_d_memory:write([[
-/* u8g2_d_memory.c */
-/* generated code, codebuild, u8g2 project */
-
-#include "u8g2.h"
-
-]], memobj:getImpls(), '\n', [[
-/* end of generated code */
-]])
-	u8g2_d_memory:close()
+file_copy = function(src, dst)
+	print(('Copying `%s` to `%s`'):format(src, dst))
+	local fi = assert(io.open(src, 'r'))
+	local fo = assert(io.open(dst, 'w'))
+	fo:write(fi:read('*a'))
+	fo:close()
+	fi:close()
 end
 
-local function write_u8g2_d_setup_c(setupobj)
-	local u8g2_d_setup_c = assert(io.open('output/u8g2_d_setup.c', 'w'))
+file_tmpname = function(fname) return 'output/'..fname end
 
-	u8g2_d_setup_c:write([[
-/* u8g2_d_setup.c */
-/* generated code, codebuild, u8g2 project */
+local modules = { 'resources/Common' }
 
-#include "u8g2.h"
+local modules_loaded = {}
 
-]], setupobj:getImpls(), '\n', [[
-/* end of generated code */
-]])
-	u8g2_d_setup_c:close()
+print('Loading modules')
+
+for k, v in ipairs(modules) do
+	modules_loaded[k] = require(v)
 end
 
+print('Generating files')
 
-local function write_u8g2_h(memobj, setupobj)
-	local str = file_read('resources/Common/u8g2.template.h')
-	local u8g2_h = assert(io.open('output/u8g2.h', 'w'))
-	str = str:gsub('// U8G2_CODEBUILD_MEMORY', memobj:getDecls())
-	:gsub('// U8G2_CODEBUILD_SETUP', setupobj:getDecls())
-
-	u8g2_h:write(str)
-	u8g2_h:close()
+for k,v in ipairs(modules_loaded) do
+	v.build()
 end
 
-local controllers = require 'resources/Common/controllers'
-local memory = require 'resources/Common/memory'
-local setup = require 'resources/Common/setup'
+io.write('File generation done. Check them if you want to and press enter to install them (Ctrl+C twice to cancel)')
+io.read()
 
-local memobj = memory.new()
-local setupobj = setup.new()
-
--- Pure C part
-
-for k,v in ipairs(controllers) do
-	memobj:add(v.w, v.h)
-	setupobj:add(v)
+for k,v in ipairs(modules_loaded) do
+	v.install()
 end
-
--- C implementations
-write_u8g2_d_memory_c(memobj)
-write_u8g2_d_setup_c(setupobj)
-
--- C headers
-write_u8g2_h(memobj, setupobj)
 
 --print(memobj:getDecls())
