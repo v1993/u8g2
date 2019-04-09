@@ -76,4 +76,10 @@ local function install()
 	csrc_install 'u8g2_d_setup.c'
 end
 
-return { build = build; install = install; }
+local function clean()
+	file_tmpclean 'u8g2.h'
+	file_tmpclean 'u8g2_d_memory.c'
+	file_tmpclean 'u8g2_d_setup.c'
+end
+
+return { build = build; install = install; clean = clean; }

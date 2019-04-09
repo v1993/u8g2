@@ -28,11 +28,11 @@ local u8g2gen = {
 		local classname = ('U8G2_%s_%s_%s%s'):format(controller.name, display, suff, iface.name and '_'..iface.name or ''):upper()
 		s.decls[#s.decls+1] = ([[
 class %s: public U8G2 {
-  public: %s(const u8g2_cb_t *rotation, %s) {
-    %s(&u8g2, rotation, %s, %s);
-    %s(getU8x8(), %s);
-  }
-};]]):format(
+	public: %s(const u8g2_cb_t *rotation, %s) {
+			%s(&u8g2, rotation, %s, %s);
+			%s(getU8x8(), %s);
+			}
+	};]]):format(
 			classname,
 			classname, ifhelper:pinsTyped(),
 			utils.setupFunc(controller, display, suff), iface.comfunc, gpiofunc,

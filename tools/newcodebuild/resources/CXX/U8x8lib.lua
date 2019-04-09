@@ -26,11 +26,11 @@ local u8x8gen = {
 		local classname = ('U8X8_%s_%s%s'):format(controller.name, display, iface.name and '_'..iface.name or ''):upper()
 		s.decls[#s.decls+1] = ([[
 class %s: public U8X8 {
-  public: %s(%s) {
-    u8x8_Setup(getU8x8(), u8x8_d_%s_%s, %s, %s, %s);
-    %s(getU8x8(), %s);
-  }
-};]]):format(
+	public: %s(%s) {
+			u8x8_Setup(getU8x8(), u8x8_d_%s_%s, %s, %s, %s);
+			%s(getU8x8(), %s);
+			}
+	};]]):format(
 			classname,
 			classname, ifhelper:pinsTyped(),
 			controller.name, display, controller.cad, iface.comfunc, gpiofunc,

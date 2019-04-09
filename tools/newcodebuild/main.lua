@@ -32,9 +32,15 @@ end
 
 file_tmpname = function(fname) return 'output/'..fname end
 
+file_tmpclean = function(fname)
+	fname = file_tmpname(fname)
+	print('Removing '..fname)
+	os.remove(fname)
+end
+
 local modules = {
-'resources/C';
-'resources/Arduino';
+	'resources/C';
+	'resources/Arduino';
 }
 
 local modules_loaded = {}
@@ -45,18 +51,38 @@ for k, v in ipairs(modules) do
 	modules_loaded[k] = require(v)
 end
 
-print('Generating files')
-
-for k,v in ipairs(modules_loaded) do
-	v.build()
+local function build()
+	for k,v in ipairs(modules_loaded) do
+		v.build()
+	end
 end
 
-io.write('File generation done. Check them if you want to and press enter to install them (Ctrl+C twice to cancel)')
---io.read()
-print()
+local function install()
+	for k,v in ipairs(modules_loaded) do
+		v.install()
+	end
+end
+
+print('Generating files')
+
+if pcall(build) then
+	io.write('File generation done. Check them if you want to and press enter to install (type anything first to cancel): ')
+	local inp = io.read()
+	if inp and inp ~= '' then
+		print('Installation cancelled.')
+	else
+		if not pcall(install) then
+			print('Installation failed!')
+		end
+	end
+else
+	print('Build failed!')
+end
+
+print('Cleaning up…')
 
 for k,v in ipairs(modules_loaded) do
-	v.install()
+	v.clean()
 end
 
 --print(memobj:getDecls())
