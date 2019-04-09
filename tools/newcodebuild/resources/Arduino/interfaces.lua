@@ -92,7 +92,7 @@ local interfaces = {
 
 	COM_8080 = {
 		{
-			name = "6800";
+			name = "8080";
 			setpinfunc = "u8x8_SetPin_8Bit_6800";
 			comfunc = "u8x8_byte_arduino_8bit_8080mode";
 			pins = {'d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'enable', 'cs', 'dc', 'reset', opt = 1};

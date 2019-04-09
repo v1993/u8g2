@@ -221,7 +221,6 @@
 	};
 
 // U8G2_CODEBUILD_U8X8LOG_CLASS
-class U8X8LOG
 {
 	public:
 		u8log_t u8log;
