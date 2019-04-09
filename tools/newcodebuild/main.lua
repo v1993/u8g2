@@ -31,7 +31,10 @@ end
 
 file_tmpname = function(fname) return 'output/'..fname end
 
-local modules = { 'resources/Common' }
+local modules = {
+'resources/C';
+'resources/Arduino';
+}
 
 local modules_loaded = {}
 
@@ -48,7 +51,8 @@ for k,v in ipairs(modules_loaded) do
 end
 
 io.write('File generation done. Check them if you want to and press enter to install them (Ctrl+C twice to cancel)')
-io.read()
+--io.read()
+print()
 
 for k,v in ipairs(modules_loaded) do
 	v.install()

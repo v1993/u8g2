@@ -1,4 +1,4 @@
--- This code is part of u8g2 project and responsible for
+-- This code is part of u8g2 project and is responsible for
 -- generation of u8g2_d_memory.c and its declarations in u8g2.h
 
 local utils = require 'resources/Common/utils'

@@ -1,5 +1,3 @@
-local mask = mask
-
 local controllers = {
 	{
 		name = "ssd1305";
@@ -7,7 +5,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x32_noname";
 			"128x32_adafruit";
@@ -20,7 +18,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x32_noname";
 			"128x32_adafruit";
@@ -32,7 +30,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x64_adafruit";
 		};
@@ -44,7 +42,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x64_adafruit";
 		};
@@ -55,7 +53,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -69,7 +67,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -83,7 +81,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -98,7 +96,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -112,7 +110,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"72x40_wise";
 		};
@@ -125,7 +123,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"72x40_wise";
 		};
@@ -137,7 +135,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"64x32";
 		};
@@ -150,7 +148,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"64x32";
 		};
@@ -162,7 +160,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"64x128";
 		};
@@ -175,7 +173,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"64x128";
 		};
@@ -187,7 +185,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"seeed_96x96";
 		};
@@ -200,7 +198,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"seeed_96x96";
 		};
@@ -212,7 +210,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x128";
 			"pimoroni_128x128";
@@ -226,7 +224,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x128";
 			"pimoroni_128x128";
@@ -239,7 +237,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"160x160";
 		};
@@ -252,7 +250,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"160x160";
 		};
@@ -263,7 +261,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"256x64";
 		};
@@ -275,7 +273,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"256x64";
 		};
@@ -286,7 +284,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x32_univision";
 			"128x32_winstar";
@@ -299,7 +297,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x32_univision";
 			"128x32_winstar";
@@ -311,7 +309,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"64x48_er";
 		};
@@ -323,7 +321,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"64x48_er";
 		};
@@ -334,7 +332,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"48x64_winstar";
 		};
@@ -346,7 +344,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"48x64_winstar";
 		};
@@ -357,7 +355,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"64x32_noname";
 			"64x32_1f";
@@ -370,7 +368,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"64x32_noname";
 			"64x32_1f";
@@ -382,7 +380,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"96x16_er";
 		};
@@ -394,7 +392,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"96x16_er";
 		};
@@ -405,7 +403,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x64_noname2";
 		};
@@ -417,7 +415,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x64_noname2";
 		};
@@ -428,7 +426,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x64_noname0";
 		};
@@ -440,7 +438,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x64_noname0";
 		};
@@ -451,7 +449,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"96x96";
 		};
@@ -463,7 +461,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"96x96";
 		};
@@ -474,7 +472,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x96";
 			"128x96_xcp";
@@ -487,7 +485,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x96";
 			"128x96_xcp";
@@ -499,7 +497,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"nhd_128x64";
 		};
@@ -511,7 +509,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"nhd_128x64";
 		};
@@ -522,7 +520,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"os128064";
 		};
@@ -534,7 +532,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"os128064";
 		};
@@ -545,7 +543,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"er_256x32";
 		};
@@ -557,7 +555,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"er_256x32";
 		};
@@ -568,7 +566,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"seeed_96x96";
 		};
@@ -580,7 +578,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"seeed_96x96";
 		};
@@ -591,7 +589,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_w128128";
 			"midas_128x128";
@@ -604,7 +602,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"ea_w128128";
 			"midas_128x128";
@@ -616,7 +614,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x96_noname";
 		};
@@ -627,7 +625,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"60x32";
 		};
@@ -639,7 +637,7 @@ local controllers = {
 		cad = "u8x8_cad_ld7032_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"60x32";
 		};
@@ -651,7 +649,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		cad_shortname = "p";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"192x32";
 		};
@@ -662,7 +660,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"192x32";
 		};
@@ -674,7 +672,7 @@ local controllers = {
 		cad = "u8x8_cad_st7920_spi";
 		cad_shortname = "s";
 		genclass = true;
-		com = mask {"COM_ST7920SPI";};
+		com = {"COM_ST7920SPI";};
 		displays = {
 			"192x32";
 		};
@@ -686,7 +684,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		cad_shortname = "p";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"128x64";
 		};
@@ -697,7 +695,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"128x64";
 		};
@@ -709,7 +707,7 @@ local controllers = {
 		cad = "u8x8_cad_st7920_spi";
 		cad_shortname = "s";
 		genclass = true;
-		com = mask {"COM_ST7920SPI";};
+		com = {"COM_ST7920SPI";};
 		displays = {
 			"128x64";
 		};
@@ -720,7 +718,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"128x128";
 		};
@@ -731,7 +729,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"400x240";
 		};
@@ -742,7 +740,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"144x168";
 		};
@@ -753,7 +751,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogs102";
 		};
@@ -764,7 +762,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"mini12864";
 		};
@@ -776,7 +774,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "No HW flip";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"84x48";
 		};
@@ -788,7 +786,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "No HW flip";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"96x65";
 		};
@@ -800,7 +798,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "No HW flip";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"96x68";
 		};
@@ -811,7 +809,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx19264";
 		};
@@ -823,7 +821,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx19264";
 		};
@@ -834,7 +832,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"erc24064";
 		};
@@ -846,7 +844,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"erc24064";
 		};
@@ -857,7 +855,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"erc240120";
 		};
@@ -869,7 +867,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"erc240120";
 		};
@@ -880,7 +878,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"240x128";
 		};
@@ -892,7 +890,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"240x128";
 		};
@@ -903,7 +901,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"160x128";
 		};
@@ -915,7 +913,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "3W SPI not tested";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogxl160";
 		};
@@ -928,7 +926,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "3W SPI not tested, I2C not tested";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"ea_dogxl160";
 		};
@@ -939,7 +937,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogm240";
 		};
@@ -951,7 +949,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"ea_dogm240";
 		};
@@ -962,7 +960,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogxl240";
 		};
@@ -974,7 +972,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"ea_dogxl240";
 		};
@@ -986,7 +984,7 @@ local controllers = {
 		cad = "u8x8_cad_001";
 		note = "240x160, active high chip select";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ew50850";
 		};
@@ -999,7 +997,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "240x160, active high chip select";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"ew50850";
 		};
@@ -1010,7 +1008,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogm128";
 			"64128n";
@@ -1029,7 +1027,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"nhd_c12832";
 		};
@@ -1040,7 +1038,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"128x32";
 		};
@@ -1052,7 +1050,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"128x32";
 		};
@@ -1063,7 +1061,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"ea_dogm132";
 		};
@@ -1074,7 +1072,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"pi_132x64";
 		};
@@ -1085,7 +1083,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx12864";
 			"enh_dg128064";
@@ -1098,7 +1096,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"64x32";
 		};
@@ -1110,7 +1108,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"64x32";
 		};
@@ -1121,7 +1119,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"s028hn118a";
 		};
@@ -1132,7 +1130,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"erc240160";
 		};
@@ -1143,7 +1141,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx12864";
 		};
@@ -1155,7 +1153,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx12864";
 		};
@@ -1166,7 +1164,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx256128";
 		};
@@ -1178,7 +1176,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx256128";
 		};
@@ -1189,7 +1187,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx256160";
 			"jlx256160_alt";
@@ -1202,7 +1200,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx256160";
 		};
@@ -1213,7 +1211,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx240160";
 		};
@@ -1225,7 +1223,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx240160";
 		};
@@ -1236,7 +1234,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx25664";
 		};
@@ -1248,7 +1246,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx25664";
 		};
@@ -1259,7 +1257,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx172104";
 		};
@@ -1271,7 +1269,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx172104";
 		};
@@ -1282,7 +1280,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"jlx19296";
 		};
@@ -1294,7 +1292,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = mask {"COM_I2C;"};
+		com = {"COM_I2C;"};
 		displays = {
 			"jlx19296";
 		};
@@ -1305,7 +1303,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"tg12864r";
 		};
@@ -1316,7 +1314,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"erc19264";
 		};
@@ -1327,7 +1325,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_SED1520";};
+		com = {"COM_SED1520";};
 		displays = {
 			"122x32";
 		};
@@ -1338,7 +1336,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_SED1520";};
+		com = {"COM_SED1520";};
 		displays = {
 			"122x32";
 		};
@@ -1349,7 +1347,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_KS0108";};
+		com = {"COM_KS0108";};
 		displays = {
 			"128x64";
 		};
@@ -1360,7 +1358,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_001";
 		genclass = true;
-		com = mask {"COM_KS0108";};
+		com = {"COM_KS0108";};
 		displays = {
 			"erm19264";
 		};
@@ -1372,7 +1370,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "U8x8 not supported, no powerdown, no HW flip, no constrast";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"160x80";
 		};
@@ -1384,7 +1382,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "U8x8 not supported, no powerdown, no HW flip, no constrast";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"160x160";
 		};
@@ -1396,7 +1394,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "U8x8 not supported, no powerdown, no HW flip, no constrast";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"240x128";
 		};
@@ -1408,7 +1406,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "U8x8 not supported, no powerdown, no HW flip, no constrast";
 		genclass = true;
-		com = mask {"COM_6800";};
+		com = {"COM_6800";};
 		displays = {
 			"240x64";
 		};
@@ -1419,7 +1417,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_100";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"240x128";
 		};
@@ -1430,7 +1428,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_100";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"240x64";
 		};
@@ -1442,7 +1440,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"256x64";
 		};
@@ -1454,7 +1452,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"128x64";
 			"128x64_alt";
@@ -1467,7 +1465,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "Not tested";
 		genclass = true;
-		com = mask {"COM_8080";};
+		com = {"COM_8080";};
 		displays = {
 			"160x80";
 		};
@@ -1479,7 +1477,7 @@ local controllers = {
 		cad = "u8x8_cad_011";
 		note = "Requires U8G2_16BIT (see u8g2.h)";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"nhd_256x64";
 		};
@@ -1490,7 +1488,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_vertical_top_lsb";
 		cad = "u8x8_cad_011";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
+		com = {"COM_4WSPI";"COM_3WSPI";"COM_6800";"COM_8080";};
 		displays = {
 			"nhd_128x64";
 		};
@@ -1502,7 +1500,7 @@ local controllers = {
 		cad = "u8x8_cad_011";
 		note = "Partly supported by U8x8, no HW flip, no contrast setting";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"172x72";
 		};
@@ -1514,7 +1512,7 @@ local controllers = {
 		cad = "u8x8_cad_011";
 		note = "Partly supported by U8x8, no HW flip, no contrast setting, v2 includes an optimized LUT";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"200x200";
 			"gd_200x200";
@@ -1528,7 +1526,7 @@ local controllers = {
 		cad = "u8x8_cad_011";
 		note = "Partly supported by U8x8, no HW flip, no contrast setting, V2 produces lesser screen-flicker";
 		genclass = true;
-		com = mask {"COM_4WSPI";"COM_3WSPI";};
+		com = {"COM_4WSPI";"COM_3WSPI";};
 		displays = {
 			"296x128";
 			"v2_296x128";
@@ -1541,7 +1539,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "Not tested, might work for RA8835 and SED1335 also";
 		genclass = true;
-		com = mask {"COM_6800";"COM_8080";};
+		com = {"COM_6800";"COM_8080";};
 		displays = {
 			"240x128";
 		};
@@ -1553,7 +1551,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "Tested with RA8835";
 		genclass = true;
-		com = mask {"COM_6800";"COM_8080";};
+		com = {"COM_6800";"COM_8080";};
 		displays = {
 			"nhd_240x128";
 		};
@@ -1565,7 +1563,7 @@ local controllers = {
 		cad = "u8x8_cad_100";
 		note = "not tested";
 		genclass = true;
-		com = mask {"COM_6800";"COM_8080";};
+		com = {"COM_6800";"COM_8080";};
 		displays = {
 			"320x240";
 		};
@@ -1576,7 +1574,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_empty";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"64x8";
 		};
@@ -1587,7 +1585,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_empty";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"32x8";
 		};
@@ -1598,7 +1596,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_empty";
 		genclass = true;
-		com = mask {"COM_4WSPI";};
+		com = {"COM_4WSPI";};
 		displays = {
 			"8x8";
 		};
@@ -1609,7 +1607,7 @@ local controllers = {
 		hvline = "u8g2_ll_hvline_horizontal_right_lsb";
 		cad = "u8x8_cad_empty";
 		genclass = false;
-		com = mask {"COM_UART";};
+		com = {"COM_UART";};
 		displays = {
 			"384x240";
 		};

@@ -30,7 +30,7 @@ end
 
 
 local function write_u8g2_h(memobj, setupobj)
-	local str = file_read('resources/Common/u8g2.template.h')
+	local str = file_read('resources/C/u8g2.template.h')
 	local u8g2_h = assert(io.open(file_tmpname 'u8g2.h', 'w'))
 	str = str:gsub('// U8G2_CODEBUILD_MEMORY', memobj:getDecls())
 	:gsub('// U8G2_CODEBUILD_SETUP', setupobj:getDecls())
@@ -40,8 +40,8 @@ local function write_u8g2_h(memobj, setupobj)
 end
 
 local controllers = require 'resources/Common/controllers'
-local memory = require 'resources/Common/memory'
-local setup = require 'resources/Common/setup'
+local memory = require 'resources/C/memory'
+local setup = require 'resources/C/setup'
 
 local memobj = memory.new()
 local setupobj = setup.new()
@@ -67,7 +67,7 @@ local function csrc_install(fname)
 	file_copy(file_tmpname(fname), '../../csrc/'..fname)
 end
 
-local function install() -- TODO: write install function
+local function install()
 	csrc_install 'u8g2.h'
 	csrc_install 'u8g2_d_memory.c'
 	csrc_install 'u8g2_d_setup.c'

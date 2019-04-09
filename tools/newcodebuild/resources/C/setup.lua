@@ -1,4 +1,4 @@
--- This code is part of u8g2 project and responsible for
+-- This code is part of u8g2 project and is responsible for
 -- generation of u8g2_d_setup.c and its declarations in u8g2.h
 
 local utils = require 'resources/Common/utils'
@@ -18,7 +18,7 @@ local setupgen = {
 	end;
 	append = function(s, controller, display, suff, bufsize, pages) -- Internal part
 		local func_decl =
-		('%s(u8g2_t *u8g2, const u8g2_cb_t *rotation, u8x8_msg_cb byte_cb, u8x8_msg_cb gpio_and_delay_cb)')
+		('void %s(u8g2_t *u8g2, const u8g2_cb_t *rotation, u8x8_msg_cb byte_cb, u8x8_msg_cb gpio_and_delay_cb)')
 		:format(utils.setupFunc(controller, display, suff))
 		s.decls[#s.decls+1] = func_decl..';'
 		s.impls[#s.impls+1] = func_decl..'\n'..([[

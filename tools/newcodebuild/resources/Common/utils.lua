@@ -11,7 +11,7 @@ local function memFunc(w, h, suff)
 end
 
 local function setupFunc(controller, display, suff)
-	return ('void u8g2_Setup_%s%s_%s_%s')
+	return ('u8g2_Setup_%s%s_%s_%s')
 			:format(controller.name, controller.cad_shortname and '_'..controller.cad_shortname or '', display, suff)
 end
 
