@@ -39,8 +39,9 @@ file_tmpclean = function(fname)
 end
 
 local modules = {
-	'resources/C';
-	'resources/Arduino';
+	'resources/C'      ; -- Cross-platform part
+	'resources/Arduino'; -- C++ for Arduino HAL
+	'resources/ESP-32';  -- C++ for native ESP-IDF
 }
 
 local modules_loaded = {}

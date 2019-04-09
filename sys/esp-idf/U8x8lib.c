@@ -425,6 +425,11 @@ void u8x8_SetPin_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint
 	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
 	}
 
+
+void u8x8_SetPin_SPI_3wire(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset) {
+	u8x8_SetPin_SPI(u8x8, clock, data, cs, U8X8_PIN_NONE, reset);
+	}
+
 /*
   use U8X8_PIN_NONE as value for "reset", if there is no reset line
 */
