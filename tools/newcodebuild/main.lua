@@ -1,4 +1,5 @@
 -- Generate template code and docs for u8g2 library
+-- Originally written by Valeri Ochinski in 2019
 
 -- Please, try to keep this code compatible with lua 5.1, 5.2 and 5.3
 -- Avoid usage of any libraries

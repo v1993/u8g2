@@ -27,7 +27,7 @@ local u8g2gen = {
 		local ifhelper = ifacehelper(iface)
 		local classname = ('U8G2_%s_%s_%s%s'):format(controller.name, display, suff, iface.name and '_'..iface.name or ''):upper()
 		s.decls[#s.decls+1] = ([[
-class %s : public U8G2 {
+class %s: public U8G2 {
   public: %s(const u8g2_cb_t *rotation, %s) {
     %s(&u8g2, rotation, %s, %s);
     %s(getU8x8(), %s);
@@ -38,7 +38,6 @@ class %s : public U8G2 {
 			utils.setupFunc(controller, display, suff), iface.comfunc, gpiofunc,
 			iface.setpinfunc, ifhelper:pinsNormal()
 		);
-		print(s.decls[#s.decls])
 	end;
 	getDecls = function(s)
 		return table.concat(s.decls, '\n')
