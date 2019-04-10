@@ -18,13 +18,13 @@ local interfaces = {
 		};
 		{
 			name = "4W_HW_HSPI";
-			setpinfunc = "u8x8_SetPin_SPI";
+			setpinfunc = "u8x8_SetPin_SPI_HW";
 			comfunc = "u8x8_byte_espidf_hw_hspi";
 			pins = {'clock', 'data', 'cs', 'dc', 'reset', opt = 1};
 		};
 		{
 			name = "4W_HW_VSPI";
-			setpinfunc = "u8x8_SetPin_SPI";
+			setpinfunc = "u8x8_SetPin_SPI_HW";
 			comfunc = "u8x8_byte_espidf_hw_vspi";
 			pins = {'clock', 'data', 'cs', 'dc', 'reset', opt = 1};
 		};
@@ -48,13 +48,13 @@ local interfaces = {
 		};
 		{
 			name = "HW_HSPI";
-			setpinfunc = "u8x8_SetPin_SPI_3wire";
+			setpinfunc = "u8x8_SetPin_SPI_3wire_HW";
 			comfunc = "u8x8_byte_espidf_hw_hspi";
 			pins = {'clock', 'data', 'cs', 'reset', opt = 1};
 		};
 		{
 			name = "HW_VSPI";
-			setpinfunc = "u8x8_SetPin_SPI_3wire";
+			setpinfunc = "u8x8_SetPin_SPI_3wire_HW";
 			comfunc = "u8x8_byte_espidf_hw_vspi";
 			pins = {'clock', 'data', 'cs', 'reset', opt = 1};
 		};

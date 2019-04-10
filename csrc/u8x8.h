@@ -318,8 +318,16 @@ struct u8x8_display_info_struct
 
 #define U8X8_PIN_INPUT_CNT 6
 
+#define U8X8_PIN_GPIO_CNT (U8X8_PIN_OUTPUT_CNT+U8X8_PIN_INPUT_CNT)
+
+#define U8X8_PIN_SPI_CLOCK_HW 22 /* pins to not be touched by gpio callback */
+#define U8X8_PIN_SPI_DATA_HW 23 /* they will not affect boards where they are unused */
+#define U8X8_PIN_CS_HW 24
+
+#define U8X8_PIN_HW_CNT 3
+
 #ifdef U8X8_USE_PINS 
-#define U8X8_PIN_CNT (U8X8_PIN_OUTPUT_CNT+U8X8_PIN_INPUT_CNT)
+#define U8X8_PIN_CNT (U8X8_PIN_OUTPUT_CNT+U8X8_PIN_INPUT_CNT+U8X8_PIN_HW_CNT)
 #define U8X8_PIN_NONE 255
 #endif
 

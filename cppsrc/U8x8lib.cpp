@@ -78,7 +78,7 @@ extern "C" uint8_t u8x8_gpio_and_delay_arduino(u8x8_t *u8x8, uint8_t msg, uint8_
   {
     case U8X8_MSG_GPIO_AND_DELAY_INIT:
     
-      for( i = 0; i < U8X8_PIN_CNT; i++ )
+      for( i = 0; i < U8X8_PIN_GPIO_CNT; i++ )
 	if ( u8x8->pins[i] != U8X8_PIN_NONE )
 	{
 	  if ( i < U8X8_PIN_OUTPUT_CNT )

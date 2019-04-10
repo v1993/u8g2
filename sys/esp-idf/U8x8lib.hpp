@@ -324,13 +324,13 @@ class U8X8_SSD1305_128X32_NONAME_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1305_128X32_NONAME_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1305_128X32_NONAME_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x32_noname, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X32_NONAME_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1305_128X32_NONAME_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x32_noname, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X32_NONAME_6800: public U8X8 {
@@ -354,13 +354,13 @@ class U8X8_SSD1305_128X32_ADAFRUIT_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1305_128X32_ADAFRUIT_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1305_128X32_ADAFRUIT_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x32_adafruit, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X32_ADAFRUIT_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1305_128X32_ADAFRUIT_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x32_adafruit, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X32_ADAFRUIT_6800: public U8X8 {
@@ -384,13 +384,13 @@ class U8X8_SSD1305_128X64_ADAFRUIT_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1305_128X64_ADAFRUIT_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1305_128X64_ADAFRUIT_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x64_adafruit, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X64_ADAFRUIT_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1305_128X64_ADAFRUIT_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1305_128x64_adafruit, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1305_128X64_ADAFRUIT_6800: public U8X8 {
@@ -414,13 +414,13 @@ class U8X8_SSD1306_128X64_NONAME_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_128X64_NONAME_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_NONAME_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_noname, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_NONAME_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_NONAME_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_noname, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_NONAME_3W_SW_SPI: public U8X8 {
@@ -450,13 +450,13 @@ class U8X8_SSD1306_128X64_VCOMH0_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_128X64_VCOMH0_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_VCOMH0_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_vcomh0, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_VCOMH0_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_VCOMH0_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_vcomh0, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_VCOMH0_3W_SW_SPI: public U8X8 {
@@ -486,13 +486,13 @@ class U8X8_SSD1306_128X64_ALT0_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_128X64_ALT0_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_ALT0_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_alt0, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_ALT0_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_128X64_ALT0_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x64_alt0, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X64_ALT0_3W_SW_SPI: public U8X8 {
@@ -522,13 +522,13 @@ class U8X8_SH1106_128X64_NONAME_4W_SW_SPI: public U8X8 {
 class U8X8_SH1106_128X64_NONAME_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_NONAME_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_noname, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_NONAME_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_NONAME_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_noname, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_NONAME_3W_SW_SPI: public U8X8 {
@@ -558,13 +558,13 @@ class U8X8_SH1106_128X64_VCOMH0_4W_SW_SPI: public U8X8 {
 class U8X8_SH1106_128X64_VCOMH0_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_VCOMH0_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_vcomh0, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_VCOMH0_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_VCOMH0_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_vcomh0, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_VCOMH0_3W_SW_SPI: public U8X8 {
@@ -594,13 +594,13 @@ class U8X8_SH1106_128X64_WINSTAR_4W_SW_SPI: public U8X8 {
 class U8X8_SH1106_128X64_WINSTAR_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_WINSTAR_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_WINSTAR_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1106_128X64_WINSTAR_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_128x64_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_128X64_WINSTAR_3W_SW_SPI: public U8X8 {
@@ -630,13 +630,13 @@ class U8X8_SH1106_72X40_WISE_4W_SW_SPI: public U8X8 {
 class U8X8_SH1106_72X40_WISE_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1106_72X40_WISE_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_72x40_wise, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_72X40_WISE_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1106_72X40_WISE_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_72x40_wise, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_72X40_WISE_3W_SW_SPI: public U8X8 {
@@ -666,13 +666,13 @@ class U8X8_SH1106_64X32_4W_SW_SPI: public U8X8 {
 class U8X8_SH1106_64X32_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1106_64X32_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_64x32, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_64X32_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1106_64X32_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1106_64x32, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1106_64X32_3W_SW_SPI: public U8X8 {
@@ -702,13 +702,13 @@ class U8X8_SH1107_64X128_4W_SW_SPI: public U8X8 {
 class U8X8_SH1107_64X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1107_64X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_64x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_64X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1107_64X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_64x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_64X128_3W_SW_SPI: public U8X8 {
@@ -738,13 +738,13 @@ class U8X8_SH1107_SEEED_96X96_4W_SW_SPI: public U8X8 {
 class U8X8_SH1107_SEEED_96X96_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1107_SEEED_96X96_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_seeed_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_SEEED_96X96_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1107_SEEED_96X96_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_seeed_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_SEEED_96X96_3W_SW_SPI: public U8X8 {
@@ -774,13 +774,13 @@ class U8X8_SH1107_128X128_4W_SW_SPI: public U8X8 {
 class U8X8_SH1107_128X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1107_128X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_128X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1107_128X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_128X128_3W_SW_SPI: public U8X8 {
@@ -810,13 +810,13 @@ class U8X8_SH1107_PIMORONI_128X128_4W_SW_SPI: public U8X8 {
 class U8X8_SH1107_PIMORONI_128X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1107_PIMORONI_128X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_pimoroni_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_PIMORONI_128X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1107_PIMORONI_128X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1107_pimoroni_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1107_PIMORONI_128X128_3W_SW_SPI: public U8X8 {
@@ -846,13 +846,13 @@ class U8X8_SH1108_160X160_4W_SW_SPI: public U8X8 {
 class U8X8_SH1108_160X160_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1108_160X160_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1108_160x160, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1108_160X160_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1108_160X160_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1108_160x160, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1108_160X160_3W_SW_SPI: public U8X8 {
@@ -882,13 +882,13 @@ class U8X8_SH1122_256X64_4W_SW_SPI: public U8X8 {
 class U8X8_SH1122_256X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SH1122_256X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1122_256x64, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1122_256X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SH1122_256X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_sh1122_256x64, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SH1122_256X64_3W_SW_SPI: public U8X8 {
@@ -918,13 +918,13 @@ class U8X8_SSD1306_128X32_UNIVISION_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_128X32_UNIVISION_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_128X32_UNIVISION_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x32_univision, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X32_UNIVISION_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_128X32_UNIVISION_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x32_univision, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X32_UNIVISION_3W_SW_SPI: public U8X8 {
@@ -954,13 +954,13 @@ class U8X8_SSD1306_128X32_WINSTAR_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_128X32_WINSTAR_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_128X32_WINSTAR_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x32_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X32_WINSTAR_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_128X32_WINSTAR_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_128x32_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_128X32_WINSTAR_3W_SW_SPI: public U8X8 {
@@ -990,13 +990,13 @@ class U8X8_SSD1306_64X48_ER_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_64X48_ER_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_64X48_ER_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x48_er, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X48_ER_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_64X48_ER_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x48_er, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X48_ER_3W_SW_SPI: public U8X8 {
@@ -1026,13 +1026,13 @@ class U8X8_SSD1306_48X64_WINSTAR_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_48X64_WINSTAR_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_48X64_WINSTAR_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_48x64_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_48X64_WINSTAR_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_48X64_WINSTAR_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_48x64_winstar, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_48X64_WINSTAR_3W_SW_SPI: public U8X8 {
@@ -1062,13 +1062,13 @@ class U8X8_SSD1306_64X32_NONAME_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_64X32_NONAME_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_64X32_NONAME_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x32_noname, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X32_NONAME_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_64X32_NONAME_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x32_noname, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X32_NONAME_3W_SW_SPI: public U8X8 {
@@ -1098,13 +1098,13 @@ class U8X8_SSD1306_64X32_1F_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_64X32_1F_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_64X32_1F_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x32_1f, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X32_1F_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_64X32_1F_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_64x32_1f, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_64X32_1F_3W_SW_SPI: public U8X8 {
@@ -1134,13 +1134,13 @@ class U8X8_SSD1306_96X16_ER_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1306_96X16_ER_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1306_96X16_ER_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_96x16_er, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_96X16_ER_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1306_96X16_ER_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1306_96x16_er, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1306_96X16_ER_3W_SW_SPI: public U8X8 {
@@ -1170,13 +1170,13 @@ class U8X8_SSD1309_128X64_NONAME2_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1309_128X64_NONAME2_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1309_128X64_NONAME2_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1309_128x64_noname2, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1309_128X64_NONAME2_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1309_128X64_NONAME2_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1309_128x64_noname2, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1309_128X64_NONAME2_6800: public U8X8 {
@@ -1200,13 +1200,13 @@ class U8X8_SSD1309_128X64_NONAME0_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1309_128X64_NONAME0_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1309_128X64_NONAME0_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1309_128x64_noname0, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1309_128X64_NONAME0_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1309_128X64_NONAME0_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1309_128x64_noname0, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1309_128X64_NONAME0_6800: public U8X8 {
@@ -1230,13 +1230,13 @@ class U8X8_SSD1317_96X96_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1317_96X96_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1317_96X96_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1317_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1317_96X96_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1317_96X96_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1317_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1317_96X96_6800: public U8X8 {
@@ -1260,13 +1260,13 @@ class U8X8_SSD1318_128X96_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1318_128X96_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1318_128X96_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1318_128x96, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1318_128X96_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1318_128X96_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1318_128x96, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1318_128X96_3W_SW_SPI: public U8X8 {
@@ -1296,13 +1296,13 @@ class U8X8_SSD1318_128X96_XCP_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1318_128X96_XCP_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1318_128X96_XCP_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1318_128x96_xcp, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1318_128X96_XCP_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1318_128X96_XCP_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1318_128x96_xcp, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1318_128X96_XCP_3W_SW_SPI: public U8X8 {
@@ -1332,13 +1332,13 @@ class U8X8_SSD1325_NHD_128X64_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1325_NHD_128X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1325_NHD_128X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1325_nhd_128x64, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1325_NHD_128X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1325_NHD_128X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1325_nhd_128x64, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1325_NHD_128X64_3W_SW_SPI: public U8X8 {
@@ -1368,13 +1368,13 @@ class U8X8_SSD0323_OS128064_4W_SW_SPI: public U8X8 {
 class U8X8_SSD0323_OS128064_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD0323_OS128064_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd0323_os128064, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD0323_OS128064_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD0323_OS128064_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd0323_os128064, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD0323_OS128064_3W_SW_SPI: public U8X8 {
@@ -1404,13 +1404,13 @@ class U8X8_SSD1326_ER_256X32_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1326_ER_256X32_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1326_ER_256X32_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1326_er_256x32, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1326_ER_256X32_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1326_ER_256X32_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1326_er_256x32, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1326_ER_256X32_3W_SW_SPI: public U8X8 {
@@ -1440,13 +1440,13 @@ class U8X8_SSD1327_SEEED_96X96_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1327_SEEED_96X96_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1327_SEEED_96X96_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_seeed_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_SEEED_96X96_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1327_SEEED_96X96_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_seeed_96x96, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_SEEED_96X96_3W_SW_SPI: public U8X8 {
@@ -1476,13 +1476,13 @@ class U8X8_SSD1327_EA_W128128_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1327_EA_W128128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1327_EA_W128128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_ea_w128128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_EA_W128128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1327_EA_W128128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_ea_w128128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_EA_W128128_3W_SW_SPI: public U8X8 {
@@ -1512,13 +1512,13 @@ class U8X8_SSD1327_MIDAS_128X128_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1327_MIDAS_128X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1327_MIDAS_128X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_midas_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_MIDAS_128X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1327_MIDAS_128X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1327_midas_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1327_MIDAS_128X128_3W_SW_SPI: public U8X8 {
@@ -1548,13 +1548,13 @@ class U8X8_SSD1329_128X96_NONAME_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1329_128X96_NONAME_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1329_128X96_NONAME_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1329_128x96_noname, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1329_128X96_NONAME_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1329_128X96_NONAME_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1329_128x96_noname, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1329_128X96_NONAME_6800: public U8X8 {
@@ -1578,13 +1578,13 @@ class U8X8_LD7032_60X32_4W_SW_SPI: public U8X8 {
 class U8X8_LD7032_60X32_4W_HW_HSPI: public U8X8 {
 	public: U8X8_LD7032_60X32_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ld7032_60x32, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LD7032_60X32_4W_HW_VSPI: public U8X8 {
 	public: U8X8_LD7032_60X32_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ld7032_60x32, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7920_192X32_8080: public U8X8 {
@@ -1608,13 +1608,13 @@ class U8X8_ST7920_192X32_SW_SPI: public U8X8 {
 class U8X8_ST7920_192X32_HW_HSPI: public U8X8 {
 	public: U8X8_ST7920_192X32_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7920_192x32, u8x8_cad_st7920_spi, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI_3wire(getU8x8(), clock, data, cs, reset);
+			u8x8_SetPin_SPI_3wire_HW(getU8x8(), clock, data, cs, reset);
 			}
 	};
 class U8X8_ST7920_192X32_HW_VSPI: public U8X8 {
 	public: U8X8_ST7920_192X32_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7920_192x32, u8x8_cad_st7920_spi, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI_3wire(getU8x8(), clock, data, cs, reset);
+			u8x8_SetPin_SPI_3wire_HW(getU8x8(), clock, data, cs, reset);
 			}
 	};
 class U8X8_ST7920_128X64_8080: public U8X8 {
@@ -1638,13 +1638,13 @@ class U8X8_ST7920_128X64_SW_SPI: public U8X8 {
 class U8X8_ST7920_128X64_HW_HSPI: public U8X8 {
 	public: U8X8_ST7920_128X64_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7920_128x64, u8x8_cad_st7920_spi, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI_3wire(getU8x8(), clock, data, cs, reset);
+			u8x8_SetPin_SPI_3wire_HW(getU8x8(), clock, data, cs, reset);
 			}
 	};
 class U8X8_ST7920_128X64_HW_VSPI: public U8X8 {
 	public: U8X8_ST7920_128X64_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7920_128x64, u8x8_cad_st7920_spi, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI_3wire(getU8x8(), clock, data, cs, reset);
+			u8x8_SetPin_SPI_3wire_HW(getU8x8(), clock, data, cs, reset);
 			}
 	};
 class U8X8_LS013B7DH03_128X128_4W_SW_SPI: public U8X8 {
@@ -1656,13 +1656,13 @@ class U8X8_LS013B7DH03_128X128_4W_SW_SPI: public U8X8 {
 class U8X8_LS013B7DH03_128X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_LS013B7DH03_128X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls013b7dh03_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LS013B7DH03_128X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_LS013B7DH03_128X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls013b7dh03_128x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LS027B7DH01_400X240_4W_SW_SPI: public U8X8 {
@@ -1674,13 +1674,13 @@ class U8X8_LS027B7DH01_400X240_4W_SW_SPI: public U8X8 {
 class U8X8_LS027B7DH01_400X240_4W_HW_HSPI: public U8X8 {
 	public: U8X8_LS027B7DH01_400X240_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls027b7dh01_400x240, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LS027B7DH01_400X240_4W_HW_VSPI: public U8X8 {
 	public: U8X8_LS027B7DH01_400X240_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls027b7dh01_400x240, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LS013B7DH05_144X168_4W_SW_SPI: public U8X8 {
@@ -1692,13 +1692,13 @@ class U8X8_LS013B7DH05_144X168_4W_SW_SPI: public U8X8 {
 class U8X8_LS013B7DH05_144X168_4W_HW_HSPI: public U8X8 {
 	public: U8X8_LS013B7DH05_144X168_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls013b7dh05_144x168, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_LS013B7DH05_144X168_4W_HW_VSPI: public U8X8 {
 	public: U8X8_LS013B7DH05_144X168_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ls013b7dh05_144x168, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1701_EA_DOGS102_4W_SW_SPI: public U8X8 {
@@ -1710,13 +1710,13 @@ class U8X8_UC1701_EA_DOGS102_4W_SW_SPI: public U8X8 {
 class U8X8_UC1701_EA_DOGS102_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1701_EA_DOGS102_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1701_ea_dogs102, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1701_EA_DOGS102_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1701_EA_DOGS102_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1701_ea_dogs102, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1701_EA_DOGS102_3W_SW_SPI: public U8X8 {
@@ -1746,13 +1746,13 @@ class U8X8_UC1701_MINI12864_4W_SW_SPI: public U8X8 {
 class U8X8_UC1701_MINI12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1701_MINI12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1701_mini12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1701_MINI12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1701_MINI12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1701_mini12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1701_MINI12864_3W_SW_SPI: public U8X8 {
@@ -1782,13 +1782,13 @@ class U8X8_PCD8544_84X48_4W_SW_SPI: public U8X8 {
 class U8X8_PCD8544_84X48_4W_HW_HSPI: public U8X8 {
 	public: U8X8_PCD8544_84X48_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_pcd8544_84x48, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_PCD8544_84X48_4W_HW_VSPI: public U8X8 {
 	public: U8X8_PCD8544_84X48_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_pcd8544_84x48, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_PCD8544_84X48_3W_SW_SPI: public U8X8 {
@@ -1806,13 +1806,13 @@ class U8X8_PCF8812_96X65_4W_SW_SPI: public U8X8 {
 class U8X8_PCF8812_96X65_4W_HW_HSPI: public U8X8 {
 	public: U8X8_PCF8812_96X65_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_pcf8812_96x65, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_PCF8812_96X65_4W_HW_VSPI: public U8X8 {
 	public: U8X8_PCF8812_96X65_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_pcf8812_96x65, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_PCF8812_96X65_3W_SW_SPI: public U8X8 {
@@ -1830,13 +1830,13 @@ class U8X8_HX1230_96X68_4W_SW_SPI: public U8X8 {
 class U8X8_HX1230_96X68_4W_HW_HSPI: public U8X8 {
 	public: U8X8_HX1230_96X68_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_hx1230_96x68, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_HX1230_96X68_4W_HW_VSPI: public U8X8 {
 	public: U8X8_HX1230_96X68_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_hx1230_96x68, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_HX1230_96X68_3W_SW_SPI: public U8X8 {
@@ -1854,13 +1854,13 @@ class U8X8_UC1604_JLX19264_4W_SW_SPI: public U8X8 {
 class U8X8_UC1604_JLX19264_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1604_JLX19264_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1604_jlx19264, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1604_JLX19264_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1604_JLX19264_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1604_jlx19264, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1604_JLX19264_3W_SW_SPI: public U8X8 {
@@ -1890,13 +1890,13 @@ class U8X8_UC1608_ERC24064_4W_SW_SPI: public U8X8 {
 class U8X8_UC1608_ERC24064_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1608_ERC24064_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_erc24064, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_ERC24064_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1608_ERC24064_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_erc24064, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_ERC24064_3W_SW_SPI: public U8X8 {
@@ -1926,13 +1926,13 @@ class U8X8_UC1608_ERC240120_4W_SW_SPI: public U8X8 {
 class U8X8_UC1608_ERC240120_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1608_ERC240120_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_erc240120, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_ERC240120_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1608_ERC240120_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_erc240120, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_ERC240120_3W_SW_SPI: public U8X8 {
@@ -1962,13 +1962,13 @@ class U8X8_UC1608_240X128_4W_SW_SPI: public U8X8 {
 class U8X8_UC1608_240X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1608_240X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_240x128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_240X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1608_240X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1608_240x128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1608_240X128_3W_SW_SPI: public U8X8 {
@@ -1998,13 +1998,13 @@ class U8X8_UC1638_160X128_4W_SW_SPI: public U8X8 {
 class U8X8_UC1638_160X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1638_160X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1638_160x128, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1638_160X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1638_160X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1638_160x128, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1638_160X128_3W_SW_SPI: public U8X8 {
@@ -2034,13 +2034,13 @@ class U8X8_UC1610_EA_DOGXL160_4W_SW_SPI: public U8X8 {
 class U8X8_UC1610_EA_DOGXL160_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1610_EA_DOGXL160_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1610_ea_dogxl160, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1610_EA_DOGXL160_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1610_EA_DOGXL160_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1610_ea_dogxl160, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1610_EA_DOGXL160_3W_SW_SPI: public U8X8 {
@@ -2070,13 +2070,13 @@ class U8X8_UC1611_EA_DOGM240_4W_SW_SPI: public U8X8 {
 class U8X8_UC1611_EA_DOGM240_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1611_EA_DOGM240_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ea_dogm240, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EA_DOGM240_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1611_EA_DOGM240_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ea_dogm240, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EA_DOGM240_3W_SW_SPI: public U8X8 {
@@ -2106,13 +2106,13 @@ class U8X8_UC1611_EA_DOGXL240_4W_SW_SPI: public U8X8 {
 class U8X8_UC1611_EA_DOGXL240_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1611_EA_DOGXL240_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ea_dogxl240, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EA_DOGXL240_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1611_EA_DOGXL240_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ea_dogxl240, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EA_DOGXL240_3W_SW_SPI: public U8X8 {
@@ -2142,13 +2142,13 @@ class U8X8_UC1611_EW50850_4W_SW_SPI: public U8X8 {
 class U8X8_UC1611_EW50850_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1611_EW50850_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ew50850, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EW50850_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1611_EW50850_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1611_ew50850, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1611_EW50850_3W_SW_SPI: public U8X8 {
@@ -2178,13 +2178,13 @@ class U8X8_ST7565_EA_DOGM128_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_EA_DOGM128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_EA_DOGM128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_ea_dogm128, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_EA_DOGM128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_EA_DOGM128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_ea_dogm128, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_EA_DOGM128_3W_SW_SPI: public U8X8 {
@@ -2214,13 +2214,13 @@ class U8X8_ST7565_64128N_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_64128N_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_64128N_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_64128n, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_64128N_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_64128N_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_64128n, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_64128N_3W_SW_SPI: public U8X8 {
@@ -2250,13 +2250,13 @@ class U8X8_ST7565_ZOLEN_128X64_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_ZOLEN_128X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_ZOLEN_128X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_zolen_128x64, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ZOLEN_128X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_ZOLEN_128X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_zolen_128x64, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ZOLEN_128X64_3W_SW_SPI: public U8X8 {
@@ -2286,13 +2286,13 @@ class U8X8_ST7565_LM6059_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_LM6059_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_LM6059_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_lm6059, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_LM6059_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_LM6059_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_lm6059, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_LM6059_3W_SW_SPI: public U8X8 {
@@ -2322,13 +2322,13 @@ class U8X8_ST7565_LX12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_LX12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_LX12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_lx12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_LX12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_LX12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_lx12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_LX12864_3W_SW_SPI: public U8X8 {
@@ -2358,13 +2358,13 @@ class U8X8_ST7565_ERC12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_ERC12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_ERC12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_erc12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ERC12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_ERC12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_erc12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ERC12864_3W_SW_SPI: public U8X8 {
@@ -2394,13 +2394,13 @@ class U8X8_ST7565_ERC12864_ALT_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_ERC12864_ALT_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_ERC12864_ALT_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_erc12864_alt, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ERC12864_ALT_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_ERC12864_ALT_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_erc12864_alt, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_ERC12864_ALT_3W_SW_SPI: public U8X8 {
@@ -2430,13 +2430,13 @@ class U8X8_ST7565_NHD_C12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_NHD_C12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_NHD_C12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_nhd_c12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_NHD_C12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_NHD_C12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_nhd_c12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_NHD_C12864_3W_SW_SPI: public U8X8 {
@@ -2466,13 +2466,13 @@ class U8X8_ST7565_JLX12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_JLX12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_JLX12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_JLX12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_JLX12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_JLX12864_3W_SW_SPI: public U8X8 {
@@ -2502,13 +2502,13 @@ class U8X8_ST7565_NHD_C12832_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_NHD_C12832_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_NHD_C12832_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_nhd_c12832, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_NHD_C12832_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_NHD_C12832_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_nhd_c12832, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_NHD_C12832_3W_SW_SPI: public U8X8 {
@@ -2538,13 +2538,13 @@ class U8X8_UC1601_128X32_4W_SW_SPI: public U8X8 {
 class U8X8_UC1601_128X32_4W_HW_HSPI: public U8X8 {
 	public: U8X8_UC1601_128X32_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1601_128x32, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1601_128X32_4W_HW_VSPI: public U8X8 {
 	public: U8X8_UC1601_128X32_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_uc1601_128x32, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_UC1601_128X32_3W_SW_SPI: public U8X8 {
@@ -2574,13 +2574,13 @@ class U8X8_ST7565_EA_DOGM132_4W_SW_SPI: public U8X8 {
 class U8X8_ST7565_EA_DOGM132_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7565_EA_DOGM132_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_ea_dogm132, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_EA_DOGM132_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7565_EA_DOGM132_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7565_ea_dogm132, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7565_EA_DOGM132_3W_SW_SPI: public U8X8 {
@@ -2610,13 +2610,13 @@ class U8X8_ST7567_PI_132X64_4W_SW_SPI: public U8X8 {
 class U8X8_ST7567_PI_132X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7567_PI_132X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_pi_132x64, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_PI_132X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7567_PI_132X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_pi_132x64, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_PI_132X64_6800: public U8X8 {
@@ -2640,13 +2640,13 @@ class U8X8_ST7567_JLX12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7567_JLX12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7567_JLX12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_JLX12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7567_JLX12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_JLX12864_6800: public U8X8 {
@@ -2670,13 +2670,13 @@ class U8X8_ST7567_ENH_DG128064_4W_SW_SPI: public U8X8 {
 class U8X8_ST7567_ENH_DG128064_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7567_ENH_DG128064_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_enh_dg128064, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_ENH_DG128064_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7567_ENH_DG128064_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_enh_dg128064, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_ENH_DG128064_6800: public U8X8 {
@@ -2700,13 +2700,13 @@ class U8X8_ST7567_ENH_DG128064I_4W_SW_SPI: public U8X8 {
 class U8X8_ST7567_ENH_DG128064I_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7567_ENH_DG128064I_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_enh_dg128064i, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_ENH_DG128064I_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7567_ENH_DG128064I_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_enh_dg128064i, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_ENH_DG128064I_6800: public U8X8 {
@@ -2730,13 +2730,13 @@ class U8X8_ST7567_64X32_4W_SW_SPI: public U8X8 {
 class U8X8_ST7567_64X32_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7567_64X32_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_64x32, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_64X32_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7567_64X32_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7567_64x32, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7567_64X32_6800: public U8X8 {
@@ -2760,13 +2760,13 @@ class U8X8_ST7586S_S028HN118A_4W_SW_SPI: public U8X8 {
 class U8X8_ST7586S_S028HN118A_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7586S_S028HN118A_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7586s_s028hn118a, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7586S_S028HN118A_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7586S_S028HN118A_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7586s_s028hn118a, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7586S_ERC240160_4W_SW_SPI: public U8X8 {
@@ -2778,13 +2778,13 @@ class U8X8_ST7586S_ERC240160_4W_SW_SPI: public U8X8 {
 class U8X8_ST7586S_ERC240160_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7586S_ERC240160_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7586s_erc240160, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7586S_ERC240160_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7586S_ERC240160_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7586s_erc240160, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7586S_ERC240160_3W_SW_SPI: public U8X8 {
@@ -2814,13 +2814,13 @@ class U8X8_ST7588_JLX12864_4W_SW_SPI: public U8X8 {
 class U8X8_ST7588_JLX12864_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST7588_JLX12864_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7588_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7588_JLX12864_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST7588_JLX12864_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st7588_jlx12864, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST7588_JLX12864_3W_SW_SPI: public U8X8 {
@@ -2850,13 +2850,13 @@ class U8X8_ST75256_JLX256128_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX256128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256128, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256128, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256128_3W_SW_SPI: public U8X8 {
@@ -2886,13 +2886,13 @@ class U8X8_ST75256_JLX256160_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX256160_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256160_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256160, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256160_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256160_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256160, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256160_3W_SW_SPI: public U8X8 {
@@ -2922,13 +2922,13 @@ class U8X8_ST75256_JLX256160_ALT_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX256160_ALT_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256160_ALT_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256160_alt, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256160_ALT_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX256160_ALT_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx256160_alt, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX256160_ALT_3W_SW_SPI: public U8X8 {
@@ -2958,13 +2958,13 @@ class U8X8_ST75256_JLX240160_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX240160_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX240160_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx240160, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX240160_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX240160_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx240160, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX240160_3W_SW_SPI: public U8X8 {
@@ -2994,13 +2994,13 @@ class U8X8_ST75256_JLX25664_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX25664_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX25664_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx25664, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX25664_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX25664_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx25664, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX25664_3W_SW_SPI: public U8X8 {
@@ -3030,13 +3030,13 @@ class U8X8_ST75256_JLX172104_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX172104_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX172104_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx172104, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX172104_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX172104_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx172104, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX172104_3W_SW_SPI: public U8X8 {
@@ -3066,13 +3066,13 @@ class U8X8_ST75256_JLX19296_4W_SW_SPI: public U8X8 {
 class U8X8_ST75256_JLX19296_4W_HW_HSPI: public U8X8 {
 	public: U8X8_ST75256_JLX19296_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx19296, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX19296_4W_HW_VSPI: public U8X8 {
 	public: U8X8_ST75256_JLX19296_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_st75256_jlx19296, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_ST75256_JLX19296_3W_SW_SPI: public U8X8 {
@@ -3102,13 +3102,13 @@ class U8X8_NT7534_TG12864R_4W_SW_SPI: public U8X8 {
 class U8X8_NT7534_TG12864R_4W_HW_HSPI: public U8X8 {
 	public: U8X8_NT7534_TG12864R_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_nt7534_tg12864r, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_NT7534_TG12864R_4W_HW_VSPI: public U8X8 {
 	public: U8X8_NT7534_TG12864R_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_nt7534_tg12864r, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_NT7534_TG12864R_6800: public U8X8 {
@@ -3132,13 +3132,13 @@ class U8X8_IST3020_ERC19264_4W_SW_SPI: public U8X8 {
 class U8X8_IST3020_ERC19264_4W_HW_HSPI: public U8X8 {
 	public: U8X8_IST3020_ERC19264_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ist3020_erc19264, u8x8_cad_001, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IST3020_ERC19264_4W_HW_VSPI: public U8X8 {
 	public: U8X8_IST3020_ERC19264_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ist3020_erc19264, u8x8_cad_001, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IST3020_ERC19264_6800: public U8X8 {
@@ -3246,13 +3246,13 @@ class U8X8_SSD1322_NHD_256X64_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1322_NHD_256X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1322_NHD_256X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1322_nhd_256x64, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1322_NHD_256X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1322_NHD_256X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1322_nhd_256x64, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1322_NHD_256X64_3W_SW_SPI: public U8X8 {
@@ -3282,13 +3282,13 @@ class U8X8_SSD1322_NHD_128X64_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1322_NHD_128X64_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1322_NHD_128X64_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1322_nhd_128x64, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1322_NHD_128X64_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1322_NHD_128X64_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1322_nhd_128x64, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1322_NHD_128X64_3W_SW_SPI: public U8X8 {
@@ -3318,13 +3318,13 @@ class U8X8_SSD1606_172X72_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1606_172X72_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1606_172X72_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1606_172x72, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1606_172X72_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1606_172X72_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1606_172x72, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1606_172X72_3W_SW_SPI: public U8X8 {
@@ -3342,13 +3342,13 @@ class U8X8_SSD1607_200X200_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1607_200X200_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1607_200X200_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_200X200_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1607_200X200_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_200X200_3W_SW_SPI: public U8X8 {
@@ -3366,13 +3366,13 @@ class U8X8_SSD1607_GD_200X200_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1607_GD_200X200_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1607_GD_200X200_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_gd_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_GD_200X200_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1607_GD_200X200_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_gd_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_GD_200X200_3W_SW_SPI: public U8X8 {
@@ -3390,13 +3390,13 @@ class U8X8_SSD1607_WS_200X200_4W_SW_SPI: public U8X8 {
 class U8X8_SSD1607_WS_200X200_4W_HW_HSPI: public U8X8 {
 	public: U8X8_SSD1607_WS_200X200_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_ws_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_WS_200X200_4W_HW_VSPI: public U8X8 {
 	public: U8X8_SSD1607_WS_200X200_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_ssd1607_ws_200x200, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_SSD1607_WS_200X200_3W_SW_SPI: public U8X8 {
@@ -3414,13 +3414,13 @@ class U8X8_IL3820_296X128_4W_SW_SPI: public U8X8 {
 class U8X8_IL3820_296X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_IL3820_296X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_il3820_296x128, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IL3820_296X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_IL3820_296X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_il3820_296x128, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IL3820_296X128_3W_SW_SPI: public U8X8 {
@@ -3438,13 +3438,13 @@ class U8X8_IL3820_V2_296X128_4W_SW_SPI: public U8X8 {
 class U8X8_IL3820_V2_296X128_4W_HW_HSPI: public U8X8 {
 	public: U8X8_IL3820_V2_296X128_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_il3820_v2_296x128, u8x8_cad_011, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IL3820_V2_296X128_4W_HW_VSPI: public U8X8 {
 	public: U8X8_IL3820_V2_296X128_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_il3820_v2_296x128, u8x8_cad_011, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_IL3820_V2_296X128_3W_SW_SPI: public U8X8 {
@@ -3498,13 +3498,13 @@ class U8X8_MAX7219_64X8_4W_SW_SPI: public U8X8 {
 class U8X8_MAX7219_64X8_4W_HW_HSPI: public U8X8 {
 	public: U8X8_MAX7219_64X8_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_64x8, u8x8_cad_empty, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_MAX7219_64X8_4W_HW_VSPI: public U8X8 {
 	public: U8X8_MAX7219_64X8_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_64x8, u8x8_cad_empty, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_MAX7219_32X8_4W_SW_SPI: public U8X8 {
@@ -3516,13 +3516,13 @@ class U8X8_MAX7219_32X8_4W_SW_SPI: public U8X8 {
 class U8X8_MAX7219_32X8_4W_HW_HSPI: public U8X8 {
 	public: U8X8_MAX7219_32X8_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_32x8, u8x8_cad_empty, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_MAX7219_32X8_4W_HW_VSPI: public U8X8 {
 	public: U8X8_MAX7219_32X8_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_32x8, u8x8_cad_empty, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_MAX7219_8X8_4W_SW_SPI: public U8X8 {
@@ -3534,13 +3534,13 @@ class U8X8_MAX7219_8X8_4W_SW_SPI: public U8X8 {
 class U8X8_MAX7219_8X8_4W_HW_HSPI: public U8X8 {
 	public: U8X8_MAX7219_8X8_4W_HW_HSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_8x8, u8x8_cad_empty, u8x8_byte_espidf_hw_hspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 class U8X8_MAX7219_8X8_4W_HW_VSPI: public U8X8 {
 	public: U8X8_MAX7219_8X8_4W_HW_VSPI(uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8x8_Setup(getU8x8(), u8x8_d_max7219_8x8, u8x8_cad_empty, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
-			u8x8_SetPin_SPI(getU8x8(), clock, data, cs, dc, reset);
+			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
 			}
 	};
 

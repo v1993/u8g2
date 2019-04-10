@@ -122,15 +122,15 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 	uint8_t i;
 	switch (msg) {
 			case U8X8_MSG_GPIO_AND_DELAY_INIT:
-				for (i = 0; i < U8X8_PIN_CNT; i++) {
+				for (i = 0; i < U8X8_PIN_GPIO_CNT; i++) {
 						if (u8x8->pins[i] != U8X8_PIN_NONE) {
 								bool success = false;
 								if (i < U8X8_PIN_OUTPUT_CNT) {
-										ESP_LOGD(U8X8_TAG, "setting %u as output pin", i);
+										ESP_LOGD(U8X8_TAG, "setting %u as output pin", u8x8->pins[i]);
 										success = u8x8_setpinoutput_espidf(u8x8->pins[i]);
 										}
 								else {
-										ESP_LOGD(U8X8_TAG, "setting %u as input pin", i);
+										ESP_LOGD(U8X8_TAG, "setting %u as input pin", u8x8->pins[i]);
 										success = u8x8_setpininput_espidf(u8x8->pins[i]);
 										}
 								if (!success) {
@@ -293,9 +293,9 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 						}
 				info->spi.last_dc = 255; // Default value, always differ from actual one
 				spi_bus_config_t busconf = {};
-				busconf.mosi_io_num = u8x8->pins[U8X8_PIN_SPI_DATA];
+				busconf.mosi_io_num = u8x8->pins[U8X8_PIN_SPI_DATA_HW];
 				busconf.miso_io_num = -1;
-				busconf.sclk_io_num = u8x8->pins[U8X8_PIN_SPI_CLOCK];
+				busconf.sclk_io_num = u8x8->pins[U8X8_PIN_SPI_CLOCK_HW];
 				busconf.quadwp_io_num = -1;
 				busconf.quadhd_io_num = -1;
 				busconf.max_transfer_sz = CONFIG_U8G2_SPI_MAX;
@@ -314,18 +314,17 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				conf.command_bits = 0;
 				conf.address_bits = 0;
 				conf.dummy_bits = 0;
-				//conf.mode = u8x8->display_info->spi_mode;
 				conf.mode = u8x8->display_info->spi_mode;
 				conf.duty_cycle_pos = 0; // I'm not sure
 				conf.clock_speed_hz = u8x8->bus_clock;
 				conf.input_delay_ns = 0;
-				conf.spics_io_num = u8x8->pins[U8X8_PIN_CS];
+				conf.spics_io_num = u8x8->pins[U8X8_PIN_CS_HW];
 				conf.flags = SPI_DEVICE_NO_DUMMY;
 				if (u8x8->display_info->chip_enable_level) {
 						conf.flags |= SPI_DEVICE_POSITIVE_CS;
 						}
 				conf.queue_size = 1; // I only use polling transactions, but ok
-				ESP_ERROR_CHECK_WITHOUT_ABORT(spi_bus_add_device(u8x8_spibuses[host], &conf, & (info->spi.device))); // FIXME: remove in destructor
+				ESP_ERROR_CHECK_WITHOUT_ABORT(spi_bus_add_device(u8x8_spibuses[host], &conf, & (info->spi.device)));
 
 				break;
 
@@ -448,9 +447,20 @@ void u8x8_SetPin_SPI(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint
 	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
 	}
 
+void u8x8_SetPin_SPI_HW(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset) {
+	u8x8_SetPin(u8x8, U8X8_PIN_SPI_CLOCK_HW, clock);
+	u8x8_SetPin(u8x8, U8X8_PIN_SPI_DATA_HW, data);
+	u8x8_SetPin(u8x8, U8X8_PIN_CS_HW, cs);
+	u8x8_SetPin(u8x8, U8X8_PIN_DC, dc);
+	u8x8_SetPin(u8x8, U8X8_PIN_RESET, reset);
+	}
 
 void u8x8_SetPin_SPI_3wire(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset) {
 	u8x8_SetPin_SPI(u8x8, clock, data, cs, U8X8_PIN_NONE, reset);
+	}
+
+void u8x8_SetPin_SPI_3wire_HW(u8x8_t* u8x8, uint8_t clock, uint8_t data, uint8_t cs, uint8_t reset) {
+	u8x8_SetPin_SPI_HW(u8x8, clock, data, cs, U8X8_PIN_NONE, reset);
 	}
 
 /*
