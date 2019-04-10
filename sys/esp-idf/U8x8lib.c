@@ -110,6 +110,7 @@ typedef struct {
 			} spi;
 		// I2C
 		struct {
+			i2c_port_t port;
 			i2c_cmd_handle_t cmd;
 			uint8_t* bufstart; // Always points to same place
 			uint8_t* bufptr;
@@ -139,12 +140,34 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 								}
 
 						}
-				u8x8->user_ptr = malloc(sizeof(u8x8_device_info));       // FIXME: free it!
+				u8x8->user_ptr = malloc(sizeof(u8x8_device_info));
 				if (!u8x8->user_ptr) {
 						ESP_LOGE(U8X8_TAG, "no memory");
 						return 0;
 						};
 				((u8x8_device_info*) u8x8->user_ptr)->type = UNKNOWN;
+				break;
+
+			case U8X8_MSG_GPIO_AND_DELAY_FREE:
+				;
+				u8x8_device_info* info = u8x8->user_ptr;
+				if (!info) { break; }
+				switch (info->type) {
+						case I2C:
+							// NOTE: possible info->i2c.cmd leak in case of something?
+							if (info->i2c.port != I2C_NUM_MAX) i2c_driver_delete(info->i2c.port);
+							if (info->i2c.bufstart) free(info->i2c.bufstart);
+							break;
+						case SPI:
+							// NOTE: we don't free bus; user can set up it manually and should deinit it manually too (if need to)
+							if (info->spi.buffer) heap_caps_free(info->spi.buffer);
+
+							spi_bus_remove_device(info->spi.device);
+							break;
+						case UNKNOWN:
+							break; // It is eiter SW or bad object
+						};
+				free(info); // We check it for NULL in the beginning
 				break;
 
 			case U8X8_MSG_DELAY_NANO:
@@ -284,7 +307,7 @@ static uint8_t u8x8_byte_espidf_hw_spi_universal(u8x8_t* u8x8, uint8_t msg, uint
 				//u8x8_gpio_SetCS(u8x8, u8x8->display_info->chip_disable_level);
 
 				if (spi_bus_initialize(u8x8_spibuses[host], &busconf, host + 1) != ESP_OK) { // NOTE: user can set up it manually
-						ESP_LOGW(U8X8_TAG, "failed to setup SPI bus. Ignore this message if you did it manually.");
+						ESP_LOGI(U8X8_TAG, "failed to setup SPI bus. Ignore this message if you did it manually.");
 						}
 
 				spi_device_interface_config_t conf = {};
@@ -350,15 +373,14 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				break;
 			case U8X8_MSG_BYTE_INIT:
 				info->type = I2C;
+				info->i2c.port = I2C_NUM_MAX; // In case of failure
 				info->i2c.bufstart = malloc(32);    // It should be enough
+				if (!info->i2c.bufstart) return 0; // We are in trouble, my friend…
 
 				if (u8x8->bus_clock == 0) {	/* issue 769 */
 						u8x8->bus_clock = u8x8->display_info->i2c_bus_clock_100kHz * 100000UL;
 						}
-				/* for ESP8266/ESP32, Wire.begin has two more arguments: clock and data */
-				// second argument for the wire lib is the clock pin. In u8g2, the first argument of the  clock pin in the clock/data pair
-				//Wire.begin(u8x8->pins[U8X8_PIN_I2C_DATA], u8x8->pins[U8X8_PIN_I2C_CLOCK]);
-				//break;
+
 				gpio_reset_pin(u8x8->pins[U8X8_PIN_I2C_DATA]);
 				gpio_reset_pin(u8x8->pins[U8X8_PIN_I2C_CLOCK]);
 				i2c_config_t busconf;
@@ -374,6 +396,7 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) {
 						ESP_LOGE(U8X8_TAG, "i2c_driver_install failed");
 						}
+				info->i2c.port = port;
 				ESP_LOGV(U8X8_TAG, "HW I2C init complete");
 				break;
 			case U8X8_MSG_BYTE_SET_DC:

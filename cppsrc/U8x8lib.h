@@ -155,7 +155,8 @@ class U8X8: public Print
 	public:
 		uint8_t tx, ty;
 
-		U8X8(void) { home();  }
+		U8X8() { home();  }
+		~U8X8() { u8x8_gpio_Free(getU8x8()); }
 		u8x8_t* getU8x8(void) { return &u8x8; }
 
 		void sendF(const char* fmt, ...)

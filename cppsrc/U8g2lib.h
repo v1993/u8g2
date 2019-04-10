@@ -56,7 +56,8 @@ class U8G2: public Print
 	public:
 		u8g2_uint_t tx, ty;
 
-		U8G2(void) { cpp_next_cb = u8x8_ascii_next; home(); }
+		U8G2() { cpp_next_cb = u8x8_ascii_next; home(); }
+		~U8G2() { u8x8_gpio_Free(getU8x8()); }
 		u8x8_t* getU8x8(void) { return u8g2_GetU8x8(&u8g2); }
 		u8g2_t* getU8g2(void) { return &u8g2; }
 
@@ -10089,3 +10090,4 @@ class U8G2_BITMAP: public U8G2 {
 #endif /* _U8G2LIB_HH */
 
 // kate: indent-mode cstyle; indent-width 4; replace-tabs off; tab-width 4; 
+

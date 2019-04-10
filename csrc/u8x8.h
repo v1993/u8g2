@@ -700,6 +700,9 @@ uint8_t u8x8_byte_sed1520(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_
 /* delay of one i2c unit, should be 5us for 100K, and 1.25us for 400K */
 #define U8X8_MSG_DELAY_I2C		45
 
+/* free any resources you have previously acquired (no-op in most cases) */
+#define U8X8_MSG_GPIO_AND_DELAY_FREE 46
+
 #define U8X8_MSG_GPIO(x) (64+(x))
 #ifdef U8X8_USE_PINS 
 #define u8x8_GetPinIndex(u8x8, msg) ((msg)&0x3f)
@@ -738,7 +741,7 @@ uint8_t u8x8_byte_sed1520(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_
 
 
 #define u8x8_gpio_Init(u8x8) ((u8x8)->gpio_and_delay_cb((u8x8), U8X8_MSG_GPIO_AND_DELAY_INIT, 0, NULL ))
-
+#define u8x8_gpio_Free(u8x8) ((u8x8)->gpio_and_delay_cb((u8x8), U8X8_MSG_GPIO_AND_DELAY_FREE, 0, NULL ))
 
 /*
 #define u8x8_gpio_SetDC(u8x8, v) ((u8x8)->gpio_and_delay_cb((u8x8), U8X8_MSG_GPIO_DC, (v), NULL ))
