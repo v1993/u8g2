@@ -23,8 +23,14 @@ local function setupFunc(controller, display, suff)
 			:format(controller.name, controller.cad_shortname and '_'..controller.cad_shortname or '', display, suff)
 end
 
+local function u8x8DisplayCB(controller, display)
+	return ('u8x8_d_%s_%s')
+		:format(controller.name, display)
+end
+
 return {
 	mode_iter = mode_iter;
 	memFunc = memFunc;
 	setupFunc = setupFunc;
+	u8x8DisplayCB = u8x8DisplayCB;
 }

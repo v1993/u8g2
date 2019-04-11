@@ -1,9 +1,9 @@
 -- This code is part of u8g2 project and is responsible for
--- generation of U8G2 docs for C part (all uCs)
+-- generation of U8X8 docs for C part (all uCs)
 
 local utils = require 'resources/Common/utils'
 
-local u8g2setupcgen = {
+local u8x8setupcgen = {
 	add = function(s, controller, interfaces) -- Main wrapper. Interfaces are uC-specific but use same format.
 		if not controller.genclass then
 			return
@@ -26,9 +26,7 @@ local u8g2setupcgen = {
 					end
 
 					for k, iface in ipairs(ifacelist) do
-						for suff, bufsize in utils.mode_iter(controller.w, controller.h) do
-							s:appendReference(controller, display, iface, suff, bufsize, interfaces.gpiofunc)
-						end
+						s:appendReference(controller, display, iface, interfaces.gpiofunc)
 					end
 				end
 			end
@@ -43,14 +41,13 @@ local u8g2setupcgen = {
 			display
 		)
 	end;
-	appendReference = function(s, controller, display, iface, suff, bufsize, gpiofunc)
-		s.references[#s.references+1] = ('| %s(u8g2, rotation, %s, %s) | %s buffer, size = %d bytes |')
+	appendReference = function(s, controller, display, iface, gpiofunc)
+		s.references[#s.references+1] = ('| u8x8_Setup(u8x8, %s, %s, %s, %s); |')
 		:format(
-			utils.setupFunc(controller, display, suff),
+			utils.u8x8DisplayCB(controller, display),
+			controller.cad,
 			iface.comfunc,
-			gpiofunc,
-			(suff == 'f' and 'full' or 'page'),
-			bufsize
+			gpiofunc
 		)
 	end;
 	getHeaders = function(s)
@@ -61,11 +58,11 @@ local u8g2setupcgen = {
 	end;
 }
 
-local newu8g2setupc = function()
+local newu8x8setupc = function()
 	return setmetatable({
 		headers = {};
 		references = {}
-	}, { __index = u8g2setupcgen })
+	}, { __index = u8x8setupcgen })
 end
 
-return { new = newu8g2setupc }
+return { new = newu8x8setupc }

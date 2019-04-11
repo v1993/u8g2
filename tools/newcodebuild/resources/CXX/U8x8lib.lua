@@ -27,13 +27,13 @@ local u8x8gen = {
 		s.decls[#s.decls+1] = ([[
 class %s: public U8X8 {
 	public: %s(%s) {
-			u8x8_Setup(getU8x8(), u8x8_d_%s_%s, %s, %s, %s);
+			u8x8_Setup(getU8x8(), %s, %s, %s, %s);
 			%s(getU8x8(), %s);
 			}
 	};]]):format(
 			classname,
 			classname, ifhelper:pinsTyped(),
-			controller.name, display, controller.cad, iface.comfunc, gpiofunc,
+			utils.u8x8DisplayCB(controller, display), controller.cad, iface.comfunc, gpiofunc,
 			iface.setpinfunc, ifhelper:pinsNormal()
 		);
 	end;
