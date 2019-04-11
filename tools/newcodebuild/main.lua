@@ -1,17 +1,22 @@
 -- Generate template code and docs for u8g2 library
 -- Originally written by Valeri Ochinski in 2019
 
--- Please, try to keep this code compatible with lua 5.1, 5.2 and 5.3
+-- Please, try to keep this code compatible with luajit, lua 5.2 and lua 5.3
 -- Avoid usage of any libraries
 
 package.path=package.path..';./?/init.lua'
 
-mask = function(tab)
-	local newtab = {}
-	for k,v in ipairs(tab) do
-		newtab[v] = true
+if not ({xpcall(function(inp) return inp; end, print, true)})[2] then -- xpcall don't support args passtrough
+	io.stderr('Lua 5.1 is not supported. Try newer version or LuaJIT.')
+	return 1
+end
+
+local function pcall_message(func, ...) -- Print useful info into console if pcall failed
+	local ok, err = xpcall(func, debug.traceback, ...)
+	if not ok then
+		io.stderr:write(err, '\n')
 	end
-	return newtab
+	return ok, err
 end
 
 file_read = function(fname)
@@ -40,8 +45,9 @@ end
 
 local modules = {
 	'resources/C'      ; -- Cross-platform part
+	'resources/Docs'   ; -- Various docs for wiki
 	'resources/Arduino'; -- C++ for Arduino HAL
-	'resources/ESP-32';  -- C++ for native ESP-IDF
+	'resources/ESP-32' ; -- C++ for native ESP-IDF
 }
 
 local modules_loaded = {}
@@ -66,13 +72,13 @@ end
 
 print('Generating files')
 
-if pcall(build) then
+if pcall_message(build) then
 	io.write('File generation done. Check them if you want to and press enter to install (type anything first to cancel): ')
 	local inp = io.read()
 	if inp and inp ~= '' then
 		print('Installation cancelled.')
 	else
-		if not pcall(install) then
+		if not pcall_message(install) then
 			print('Installation failed!')
 		end
 	end

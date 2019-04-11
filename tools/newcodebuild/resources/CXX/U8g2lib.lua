@@ -14,7 +14,7 @@ local u8g2gen = {
 			for k, ifname in ipairs(controller.com) do
 				local ifacelist = interfaces[ifname]
 				if ifacelist then -- If this interface is available on uC
-					for suff in utils.mode_iter(0, 0) do
+					for suff in utils.mode_iter(controller.w, controller.h) do
 						for k, iface in ipairs(ifacelist) do
 							s:append(controller, display, iface, suff, interfaces.gpiofunc)
 						end

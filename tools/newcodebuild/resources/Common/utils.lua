@@ -1,8 +1,16 @@
-local mode_iter = function(w, h) -- for pref, bufsize, pages in mode_iter(w, h) do
+local mode_iter = function(w, h) -- for suff, bufsize, pages in mode_iter(w, h) do
+	local buf1 = w*8
+	local buf2 = w*2*8
+	local buff = w*h*8
 	return coroutine.wrap(function()
-		coroutine.yield("1", w*8, 1)
-		coroutine.yield("2", w*2*8, 2)
-		coroutine.yield("f", w*h*8, h)
+		-- Who need page buffer when full one is same?
+		if buf1 < buff then
+			coroutine.yield("1", buf1, 1)
+			if buf2 < buff then
+				coroutine.yield("2", buf2, 2)
+			end
+		end
+		coroutine.yield("f", buff, h)
 	end)
 end
 
