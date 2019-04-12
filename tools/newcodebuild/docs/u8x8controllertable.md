@@ -6,7 +6,7 @@ Please note that full framebuffer mode is always available.
 # Table
 
 Controller/display|`1` buffer|`2` buffer|4WSPI|3WSPI|ST7920SPI|I2C|6800|8080|KS0108|SED1520|UART
----|---|---|---|---|---|---|---|---|---|---|---
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 ssd1305 128x32_noname|☑|☑|☑|☐|☐|☐|☑|☑|☐|☐|☐
 ssd1305 128x32_adafruit|☑|☑|☑|☐|☐|☐|☑|☑|☐|☐|☐
 ssd1305 128x64_adafruit|☑|☑|☑|☐|☐|☐|☑|☑|☐|☐|☐

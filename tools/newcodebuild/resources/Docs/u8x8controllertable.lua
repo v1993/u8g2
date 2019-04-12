@@ -54,10 +54,9 @@ local function tabgen(controllers)
 			headers[#headers+1] = ifacename:sub(5) -- Cut 'COM_' part
 		end
 		addres(table.concat(headers, '|'))
-		local rowcnt = #headers
-		local separator = {}
-		for i=1,rowcnt do
-			separator[i] = '---'
+		local separator = {'---'}
+		for i=1,#headers-1 do
+			separator[i] = ':---:'
 		end
 		addres(table.concat(separator, '|'))
 	end
