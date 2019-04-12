@@ -18,7 +18,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x32_noname";
 			"128x32_adafruit";
@@ -42,7 +42,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x64_adafruit";
 		};
@@ -67,7 +67,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -96,7 +96,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x64_noname";
 			"128x64_vcomh0";
@@ -123,7 +123,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"72x40_wise";
 		};
@@ -148,7 +148,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"64x32";
 		};
@@ -173,7 +173,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"64x128";
 		};
@@ -198,7 +198,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"seeed_96x96";
 		};
@@ -224,7 +224,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x128";
 			"pimoroni_128x128";
@@ -250,7 +250,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "Not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"160x160";
 		};
@@ -273,7 +273,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"256x64";
 		};
@@ -297,7 +297,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x32_univision";
 			"128x32_winstar";
@@ -321,7 +321,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"64x48_er";
 		};
@@ -344,7 +344,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"48x64_winstar";
 		};
@@ -368,7 +368,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"64x32_noname";
 			"64x32_1f";
@@ -392,7 +392,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"96x16_er";
 		};
@@ -415,7 +415,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x64_noname2";
 		};
@@ -438,7 +438,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x64_noname0";
 		};
@@ -461,7 +461,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"96x96";
 		};
@@ -485,7 +485,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_fast_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x96";
 			"128x96_xcp";
@@ -509,7 +509,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"nhd_128x64";
 		};
@@ -532,7 +532,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"os128064";
 		};
@@ -555,7 +555,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"er_256x32";
 		};
@@ -578,7 +578,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"seeed_96x96";
 		};
@@ -602,7 +602,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"ea_w128128";
 			"midas_128x128";
@@ -637,7 +637,7 @@ local controllers = {
 		cad = "u8x8_cad_ld7032_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"60x32";
 		};
@@ -821,7 +821,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx19264";
 		};
@@ -844,7 +844,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"erc24064";
 		};
@@ -867,7 +867,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"erc240120";
 		};
@@ -890,7 +890,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"240x128";
 		};
@@ -926,7 +926,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "3W SPI not tested, I2C not tested";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"ea_dogxl160";
 		};
@@ -949,7 +949,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"ea_dogm240";
 		};
@@ -972,7 +972,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"ea_dogxl240";
 		};
@@ -997,7 +997,7 @@ local controllers = {
 		cad_shortname = "i2c";
 		note = "240x160, active high chip select";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"ew50850";
 		};
@@ -1050,7 +1050,7 @@ local controllers = {
 		cad = "u8x8_cad_uc16xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"128x32";
 		};
@@ -1108,7 +1108,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"64x32";
 		};
@@ -1153,7 +1153,7 @@ local controllers = {
 		cad = "u8x8_cad_ssd13xx_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx12864";
 		};
@@ -1176,7 +1176,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx256128";
 		};
@@ -1200,7 +1200,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx256160";
 		};
@@ -1223,7 +1223,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx240160";
 		};
@@ -1246,7 +1246,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx25664";
 		};
@@ -1269,7 +1269,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx172104";
 		};
@@ -1292,7 +1292,7 @@ local controllers = {
 		cad = "u8x8_cad_st75256_i2c";
 		cad_shortname = "i2c";
 		genclass = true;
-		com = {"COM_I2C;"};
+		com = {"COM_I2C"};
 		displays = {
 			"jlx19296";
 		};

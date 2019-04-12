@@ -597,6 +597,114 @@ class U8G2_SSD1305_128X32_ADAFRUIT_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1305_128X32_NONAME_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_NONAME_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_NONAME_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X32_ADAFRUIT_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X32_ADAFRUIT_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x32_adafruit_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1305_128X64_ADAFRUIT_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1305_128X64_ADAFRUIT_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1305_128x64_adafruit_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -685,6 +793,60 @@ class U8G2_SSD1305_128X64_ADAFRUIT_F_8080: public U8G2 {
 	public: U8G2_SSD1305_128X64_ADAFRUIT_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1305_128x64_adafruit_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1305_128X64_ADAFRUIT_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1305_128X64_ADAFRUIT_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1305_i2c_128x64_adafruit_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1306_128X64_NONAME_1_4W_SW_SPI: public U8G2 {
@@ -1011,6 +1173,168 @@ class U8G2_SSD1306_128X64_ALT0_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1306_128X64_NONAME_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_NONAME_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_NONAME_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_VCOMH0_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_VCOMH0_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X64_ALT0_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X64_ALT0_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x64_alt0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1106_128X64_NONAME_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1106_128X64_NONAME_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1106_128x64_noname_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -1335,6 +1659,168 @@ class U8G2_SH1106_128X64_WINSTAR_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SH1106_128X64_NONAME_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_NONAME_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_NONAME_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_VCOMH0_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_VCOMH0_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_vcomh0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_128X64_WINSTAR_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_128X64_WINSTAR_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_128x64_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1106_72X40_WISE_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1106_72X40_WISE_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1106_72x40_wise_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -1441,6 +1927,60 @@ class U8G2_SH1106_72X40_WISE_F_8080: public U8G2 {
 	public: U8G2_SH1106_72X40_WISE_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1106_72x40_wise_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_72X40_WISE_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_72X40_WISE_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_72x40_wise_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SH1106_64X32_1_4W_SW_SPI: public U8G2 {
@@ -1551,6 +2091,60 @@ class U8G2_SH1106_64X32_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SH1106_64X32_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_64X32_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_64X32_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_64X32_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_64X32_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_64X32_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_64X32_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1106_64X32_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1106_64X32_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1106_64X32_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1106_64X32_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1106_i2c_64x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1107_64X128_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1107_64X128_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1107_64x128_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -1659,6 +2253,60 @@ class U8G2_SH1107_64X128_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SH1107_64X128_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_64X128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_64X128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_64X128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_64X128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_64X128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_64X128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_64X128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_64X128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_64X128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_64X128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_64x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1107_SEEED_96X96_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1107_SEEED_96X96_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1107_seeed_96x96_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -1765,6 +2413,60 @@ class U8G2_SH1107_SEEED_96X96_F_8080: public U8G2 {
 	public: U8G2_SH1107_SEEED_96X96_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1107_seeed_96x96_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_SEEED_96X96_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_SEEED_96X96_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SH1107_128X128_1_4W_SW_SPI: public U8G2 {
@@ -1983,6 +2685,114 @@ class U8G2_SH1107_PIMORONI_128X128_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SH1107_128X128_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_128X128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_128X128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_128X128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_128X128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_128X128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_128X128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_128X128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_128X128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_128X128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_128X128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1107_PIMORONI_128X128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1107_PIMORONI_128X128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1107_i2c_pimoroni_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1108_160X160_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1108_160X160_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1108_160x160_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -2091,6 +2901,60 @@ class U8G2_SH1108_160X160_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SH1108_160X160_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1108_160X160_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1108_160X160_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1108_160X160_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1108_160X160_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1108_160X160_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1108_160X160_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1108_160X160_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1108_160X160_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1108_160X160_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1108_160X160_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1108_i2c_160x160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SH1122_256X64_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SH1122_256X64_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1122_256x64_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -2197,6 +3061,60 @@ class U8G2_SH1122_256X64_F_8080: public U8G2 {
 	public: U8G2_SH1122_256X64_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_sh1122_256x64_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SH1122_256X64_1_SW_I2C: public U8G2 {
+	public: U8G2_SH1122_256X64_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1122_256X64_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1122_256X64_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_2_SW_I2C: public U8G2 {
+	public: U8G2_SH1122_256X64_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1122_256X64_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1122_256X64_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_F_SW_I2C: public U8G2 {
+	public: U8G2_SH1122_256X64_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SH1122_256X64_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SH1122_256X64_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SH1122_256X64_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_sh1122_i2c_256x64_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1306_128X32_UNIVISION_1_4W_SW_SPI: public U8G2 {
@@ -2415,6 +3333,114 @@ class U8G2_SSD1306_128X32_WINSTAR_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1306_128X32_UNIVISION_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_univision_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_128X32_WINSTAR_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_128X32_WINSTAR_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_128x32_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1306_64X48_ER_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1306_64X48_ER_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1306_64x48_er_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -2523,6 +3549,60 @@ class U8G2_SSD1306_64X48_ER_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1306_64X48_ER_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X48_ER_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X48_ER_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x48_er_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1306_48X64_WINSTAR_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1306_48X64_WINSTAR_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1306_48x64_winstar_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -2629,6 +3709,60 @@ class U8G2_SSD1306_48X64_WINSTAR_F_8080: public U8G2 {
 	public: U8G2_SSD1306_48X64_WINSTAR_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1306_48x64_winstar_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_48X64_WINSTAR_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_48X64_WINSTAR_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_48x64_winstar_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1306_64X32_NONAME_1_4W_SW_SPI: public U8G2 {
@@ -2847,6 +3981,114 @@ class U8G2_SSD1306_64X32_1F_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1306_64X32_NONAME_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_NONAME_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_NONAME_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_noname_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_64X32_1F_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_64X32_1F_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_64x32_1f_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1306_96X16_ER_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1306_96X16_ER_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1306_96x16_er_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -2917,6 +4159,42 @@ class U8G2_SSD1306_96X16_ER_F_8080: public U8G2 {
 	public: U8G2_SSD1306_96X16_ER_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1306_96x16_er_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1306_96X16_ER_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1306_96X16_ER_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1306_i2c_96x16_er_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1309_128X64_NONAME2_1_4W_SW_SPI: public U8G2 {
@@ -3009,6 +4287,60 @@ class U8G2_SSD1309_128X64_NONAME2_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1309_128X64_NONAME2_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME2_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME2_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname2_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1309_128X64_NONAME0_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1309_128X64_NONAME0_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1309_128x64_noname0_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -3099,6 +4431,60 @@ class U8G2_SSD1309_128X64_NONAME0_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1309_128X64_NONAME0_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1309_128X64_NONAME0_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1309_128X64_NONAME0_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1309_i2c_128x64_noname0_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1317_96X96_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1317_96X96_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1317_96x96_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -3187,6 +4573,60 @@ class U8G2_SSD1317_96X96_F_8080: public U8G2 {
 	public: U8G2_SSD1317_96X96_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1317_96x96_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1317_96X96_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1317_96X96_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1317_96X96_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1317_96X96_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1317_96X96_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1317_96X96_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1317_96X96_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1317_96X96_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1317_96X96_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1317_96X96_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1317_i2c_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1318_128X96_1_4W_SW_SPI: public U8G2 {
@@ -3405,6 +4845,114 @@ class U8G2_SSD1318_128X96_XCP_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1318_128X96_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1318_128X96_XCP_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1318_128X96_XCP_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1318_i2c_128x96_xcp_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1325_NHD_128X64_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1325_NHD_128X64_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1325_nhd_128x64_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -3511,6 +5059,60 @@ class U8G2_SSD1325_NHD_128X64_F_8080: public U8G2 {
 	public: U8G2_SSD1325_NHD_128X64_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1325_nhd_128x64_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1325_NHD_128X64_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1325_NHD_128X64_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1325_i2c_nhd_128x64_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD0323_OS128064_1_4W_SW_SPI: public U8G2 {
@@ -3621,6 +5223,60 @@ class U8G2_SSD0323_OS128064_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD0323_OS128064_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD0323_OS128064_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD0323_OS128064_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD0323_OS128064_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD0323_OS128064_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD0323_OS128064_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD0323_OS128064_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD0323_OS128064_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD0323_OS128064_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD0323_OS128064_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD0323_OS128064_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd0323_i2c_os128064_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1326_ER_256X32_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1326_ER_256X32_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1326_er_256x32_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -3729,6 +5385,60 @@ class U8G2_SSD1326_ER_256X32_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1326_ER_256X32_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1326_ER_256X32_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1326_ER_256X32_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1326_i2c_er_256x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1327_SEEED_96X96_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1327_SEEED_96X96_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1327_seeed_96x96_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -3835,6 +5545,60 @@ class U8G2_SSD1327_SEEED_96X96_F_8080: public U8G2 {
 	public: U8G2_SSD1327_SEEED_96X96_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1327_seeed_96x96_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_SEEED_96X96_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_SEEED_96X96_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_seeed_96x96_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_SSD1327_EA_W128128_1_4W_SW_SPI: public U8G2 {
@@ -4053,6 +5817,114 @@ class U8G2_SSD1327_MIDAS_128X128_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_SSD1327_EA_W128128_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_EA_W128128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_EA_W128128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_ea_w128128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_1_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_2_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_F_SW_I2C: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_SSD1327_MIDAS_128X128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_SSD1327_MIDAS_128X128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ssd1327_i2c_midas_128x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_SSD1329_128X96_NONAME_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_SSD1329_128X96_NONAME_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ssd1329_128x96_noname_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -4195,6 +6067,60 @@ class U8G2_LD7032_60X32_F_4W_HW_VSPI: public U8G2 {
 	public: U8G2_LD7032_60X32_F_4W_HW_VSPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_ld7032_60x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_vspi, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_SPI_HW(getU8x8(), clock, data, cs, dc, reset);
+			}
+	};
+class U8G2_LD7032_60X32_1_SW_I2C: public U8G2 {
+	public: U8G2_LD7032_60X32_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_LD7032_60X32_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_LD7032_60X32_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_2_SW_I2C: public U8G2 {
+	public: U8G2_LD7032_60X32_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_LD7032_60X32_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_LD7032_60X32_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_F_SW_I2C: public U8G2 {
+	public: U8G2_LD7032_60X32_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_LD7032_60X32_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_LD7032_60X32_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_LD7032_60X32_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_ld7032_i2c_60x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_ST7920_192X32_1_8080: public U8G2 {
@@ -5079,6 +7005,60 @@ class U8G2_UC1604_JLX19264_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_UC1604_JLX19264_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1604_JLX19264_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1604_JLX19264_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1604_JLX19264_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1604_JLX19264_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1604_JLX19264_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1604_JLX19264_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1604_JLX19264_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1604_JLX19264_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1604_JLX19264_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1604_JLX19264_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1604_i2c_jlx19264_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_UC1608_ERC24064_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_UC1608_ERC24064_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1608_erc24064_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -5185,6 +7165,60 @@ class U8G2_UC1608_ERC24064_F_8080: public U8G2 {
 	public: U8G2_UC1608_ERC24064_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1608_erc24064_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC24064_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC24064_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC24064_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC24064_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC24064_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC24064_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC24064_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC24064_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC24064_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC24064_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc24064_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_UC1608_ERC240120_1_4W_SW_SPI: public U8G2 {
@@ -5295,6 +7329,60 @@ class U8G2_UC1608_ERC240120_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_UC1608_ERC240120_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC240120_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC240120_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC240120_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC240120_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC240120_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC240120_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_ERC240120_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_ERC240120_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_ERC240120_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_ERC240120_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_erc240120_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_UC1608_240X128_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_UC1608_240X128_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1608_240x128_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -5401,6 +7489,60 @@ class U8G2_UC1608_240X128_F_8080: public U8G2 {
 	public: U8G2_UC1608_240X128_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1608_240x128_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_UC1608_240X128_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_240X128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_240X128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_240X128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_240X128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_240X128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_240X128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1608_240X128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1608_240X128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1608_240X128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1608_240X128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1608_i2c_240x128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_UC1638_160X128_1_4W_SW_SPI: public U8G2 {
@@ -5619,6 +7761,60 @@ class U8G2_UC1610_EA_DOGXL160_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_UC1610_EA_DOGXL160_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1610_EA_DOGXL160_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1610_EA_DOGXL160_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1610_i2c_ea_dogxl160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_UC1611_EA_DOGM240_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_UC1611_EA_DOGM240_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1611_ea_dogm240_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -5725,6 +7921,60 @@ class U8G2_UC1611_EA_DOGM240_F_8080: public U8G2 {
 	public: U8G2_UC1611_EA_DOGM240_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1611_ea_dogm240_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGM240_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGM240_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogm240_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_UC1611_EA_DOGXL240_1_4W_SW_SPI: public U8G2 {
@@ -5835,6 +8085,60 @@ class U8G2_UC1611_EA_DOGXL240_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_UC1611_EA_DOGXL240_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EA_DOGXL240_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EA_DOGXL240_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ea_dogxl240_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_UC1611_EW50850_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_UC1611_EW50850_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1611_ew50850_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -5941,6 +8245,60 @@ class U8G2_UC1611_EW50850_F_8080: public U8G2 {
 	public: U8G2_UC1611_EW50850_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_uc1611_ew50850_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EW50850_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EW50850_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EW50850_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EW50850_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EW50850_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EW50850_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1611_EW50850_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1611_EW50850_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1611_EW50850_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1611_EW50850_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1611_i2c_ew50850_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_ST7565_EA_DOGM128_1_4W_SW_SPI: public U8G2 {
@@ -7131,6 +9489,60 @@ class U8G2_UC1601_128X32_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_UC1601_128X32_1_SW_I2C: public U8G2 {
+	public: U8G2_UC1601_128X32_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1601_128X32_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1601_128X32_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_2_SW_I2C: public U8G2 {
+	public: U8G2_UC1601_128X32_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1601_128X32_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1601_128X32_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_F_SW_I2C: public U8G2 {
+	public: U8G2_UC1601_128X32_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_UC1601_128X32_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_UC1601_128X32_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_UC1601_128X32_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_uc1601_i2c_128x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST7565_EA_DOGM132_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST7565_EA_DOGM132_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st7565_ea_dogm132_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -7689,6 +10101,60 @@ class U8G2_ST7567_64X32_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_ST7567_64X32_1_SW_I2C: public U8G2 {
+	public: U8G2_ST7567_64X32_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7567_64X32_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7567_64X32_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_2_SW_I2C: public U8G2 {
+	public: U8G2_ST7567_64X32_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7567_64X32_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7567_64X32_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_F_SW_I2C: public U8G2 {
+	public: U8G2_ST7567_64X32_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7567_64X32_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7567_64X32_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7567_64X32_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7567_i2c_64x32_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST7586S_S028HN118A_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST7586S_S028HN118A_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st7586s_s028hn118a_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -7959,6 +10425,60 @@ class U8G2_ST7588_JLX12864_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_ST7588_JLX12864_1_SW_I2C: public U8G2 {
+	public: U8G2_ST7588_JLX12864_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7588_JLX12864_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7588_JLX12864_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_2_SW_I2C: public U8G2 {
+	public: U8G2_ST7588_JLX12864_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7588_JLX12864_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7588_JLX12864_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_F_SW_I2C: public U8G2 {
+	public: U8G2_ST7588_JLX12864_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST7588_JLX12864_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST7588_JLX12864_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST7588_JLX12864_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st7588_i2c_jlx12864_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST75256_JLX256128_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST75256_JLX256128_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx256128_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -8065,6 +10585,60 @@ class U8G2_ST75256_JLX256128_F_8080: public U8G2 {
 	public: U8G2_ST75256_JLX256128_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx256128_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256128_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256128_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256128_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256128_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256128_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256128_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256128_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256128_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256128_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256128_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256128_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_ST75256_JLX256160_1_4W_SW_SPI: public U8G2 {
@@ -8283,6 +10857,60 @@ class U8G2_ST75256_JLX256160_ALT_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_ST75256_JLX256160_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256160_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256160_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256160_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256160_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256160_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256160_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX256160_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX256160_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX256160_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX256160_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx256160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST75256_JLX240160_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST75256_JLX240160_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx240160_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -8389,6 +11017,60 @@ class U8G2_ST75256_JLX240160_F_8080: public U8G2 {
 	public: U8G2_ST75256_JLX240160_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx240160_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX240160_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX240160_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX240160_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX240160_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX240160_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX240160_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX240160_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX240160_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX240160_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX240160_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx240160_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_ST75256_JLX25664_1_4W_SW_SPI: public U8G2 {
@@ -8499,6 +11181,60 @@ class U8G2_ST75256_JLX25664_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_ST75256_JLX25664_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX25664_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX25664_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX25664_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX25664_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX25664_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX25664_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX25664_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX25664_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX25664_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX25664_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx25664_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST75256_JLX172104_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST75256_JLX172104_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx172104_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -8607,6 +11343,60 @@ class U8G2_ST75256_JLX172104_F_8080: public U8G2 {
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
 			}
 	};
+class U8G2_ST75256_JLX172104_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX172104_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX172104_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX172104_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX172104_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX172104_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX172104_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX172104_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX172104_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX172104_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX172104_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx172104_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
 class U8G2_ST75256_JLX19296_1_4W_SW_SPI: public U8G2 {
 	public: U8G2_ST75256_JLX19296_1_4W_SW_SPI(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx19296_1(&u8g2, rotation, u8x8_byte_4wire_sw_spi, u8x8_gpio_and_delay_espidf);
@@ -8713,6 +11503,60 @@ class U8G2_ST75256_JLX19296_F_8080: public U8G2 {
 	public: U8G2_ST75256_JLX19296_F_8080(const u8g2_cb_t *rotation, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t enable, uint8_t cs, uint8_t dc, uint8_t reset = U8X8_PIN_NONE) {
 			u8g2_Setup_st75256_jlx19296_f(&u8g2, rotation, u8x8_byte_8bit_8080mode, u8x8_gpio_and_delay_espidf);
 			u8x8_SetPin_8Bit_8080(getU8x8(), d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_1_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX19296_1_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_1(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_1_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX19296_1_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_1_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX19296_1_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_1(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_2_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX19296_2_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_2(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_2_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX19296_2_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_2_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX19296_2_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_2(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_F_SW_I2C: public U8G2 {
+	public: U8G2_ST75256_JLX19296_F_SW_I2C(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_f(&u8g2, rotation, u8x8_byte_sw_i2c, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_F_HW_I2C_PORT0: public U8G2 {
+	public: U8G2_ST75256_JLX19296_F_HW_I2C_PORT0(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port0, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
+			}
+	};
+class U8G2_ST75256_JLX19296_F_HW_I2C_PORT1: public U8G2 {
+	public: U8G2_ST75256_JLX19296_F_HW_I2C_PORT1(const u8g2_cb_t *rotation, uint8_t clock, uint8_t data, uint8_t reset = U8X8_PIN_NONE) {
+			u8g2_Setup_st75256_i2c_jlx19296_f(&u8g2, rotation, u8x8_byte_espidf_hw_i2c_port1, u8x8_gpio_and_delay_espidf);
+			u8x8_SetPin_I2C(getU8x8(), clock, data, reset);
 			}
 	};
 class U8G2_NT7534_TG12864R_1_4W_SW_SPI: public U8G2 {

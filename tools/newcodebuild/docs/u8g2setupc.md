@@ -5,40 +5,76 @@
   * [Setup Function Reference](#setup-function-reference)
     * [SSD1305 128X32_NONAME](#ssd1305-128x32_noname)
     * [SSD1305 128X32_ADAFRUIT](#ssd1305-128x32_adafruit)
+    * [SSD1305 128X32_NONAME](#ssd1305-128x32_noname)
+    * [SSD1305 128X32_ADAFRUIT](#ssd1305-128x32_adafruit)
     * [SSD1305 128X64_ADAFRUIT](#ssd1305-128x64_adafruit)
+    * [SSD1305 128X64_ADAFRUIT](#ssd1305-128x64_adafruit)
+    * [SSD1306 128X64_NONAME](#ssd1306-128x64_noname)
+    * [SSD1306 128X64_VCOMH0](#ssd1306-128x64_vcomh0)
+    * [SSD1306 128X64_ALT0](#ssd1306-128x64_alt0)
     * [SSD1306 128X64_NONAME](#ssd1306-128x64_noname)
     * [SSD1306 128X64_VCOMH0](#ssd1306-128x64_vcomh0)
     * [SSD1306 128X64_ALT0](#ssd1306-128x64_alt0)
     * [SH1106 128X64_NONAME](#sh1106-128x64_noname)
     * [SH1106 128X64_VCOMH0](#sh1106-128x64_vcomh0)
     * [SH1106 128X64_WINSTAR](#sh1106-128x64_winstar)
+    * [SH1106 128X64_NONAME](#sh1106-128x64_noname)
+    * [SH1106 128X64_VCOMH0](#sh1106-128x64_vcomh0)
+    * [SH1106 128X64_WINSTAR](#sh1106-128x64_winstar)
+    * [SH1106 72X40_WISE](#sh1106-72x40_wise)
     * [SH1106 72X40_WISE](#sh1106-72x40_wise)
     * [SH1106 64X32](#sh1106-64x32)
+    * [SH1106 64X32](#sh1106-64x32)
     * [SH1107 64X128](#sh1107-64x128)
+    * [SH1107 64X128](#sh1107-64x128)
+    * [SH1107 SEEED_96X96](#sh1107-seeed_96x96)
     * [SH1107 SEEED_96X96](#sh1107-seeed_96x96)
     * [SH1107 128X128](#sh1107-128x128)
     * [SH1107 PIMORONI_128X128](#sh1107-pimoroni_128x128)
+    * [SH1107 128X128](#sh1107-128x128)
+    * [SH1107 PIMORONI_128X128](#sh1107-pimoroni_128x128)
     * [SH1108 160X160](#sh1108-160x160)
+    * [SH1108 160X160](#sh1108-160x160)
+    * [SH1122 256X64](#sh1122-256x64)
     * [SH1122 256X64](#sh1122-256x64)
     * [SSD1306 128X32_UNIVISION](#ssd1306-128x32_univision)
     * [SSD1306 128X32_WINSTAR](#ssd1306-128x32_winstar)
+    * [SSD1306 128X32_UNIVISION](#ssd1306-128x32_univision)
+    * [SSD1306 128X32_WINSTAR](#ssd1306-128x32_winstar)
     * [SSD1306 64X48_ER](#ssd1306-64x48_er)
+    * [SSD1306 64X48_ER](#ssd1306-64x48_er)
+    * [SSD1306 48X64_WINSTAR](#ssd1306-48x64_winstar)
     * [SSD1306 48X64_WINSTAR](#ssd1306-48x64_winstar)
     * [SSD1306 64X32_NONAME](#ssd1306-64x32_noname)
     * [SSD1306 64X32_1F](#ssd1306-64x32_1f)
+    * [SSD1306 64X32_NONAME](#ssd1306-64x32_noname)
+    * [SSD1306 64X32_1F](#ssd1306-64x32_1f)
+    * [SSD1306 96X16_ER](#ssd1306-96x16_er)
     * [SSD1306 96X16_ER](#ssd1306-96x16_er)
     * [SSD1309 128X64_NONAME2](#ssd1309-128x64_noname2)
+    * [SSD1309 128X64_NONAME2](#ssd1309-128x64_noname2)
     * [SSD1309 128X64_NONAME0](#ssd1309-128x64_noname0)
+    * [SSD1309 128X64_NONAME0](#ssd1309-128x64_noname0)
+    * [SSD1317 96X96](#ssd1317-96x96)
     * [SSD1317 96X96](#ssd1317-96x96)
     * [SSD1318 128X96](#ssd1318-128x96)
     * [SSD1318 128X96_XCP](#ssd1318-128x96_xcp)
+    * [SSD1318 128X96](#ssd1318-128x96)
+    * [SSD1318 128X96_XCP](#ssd1318-128x96_xcp)
+    * [SSD1325 NHD_128X64](#ssd1325-nhd_128x64)
     * [SSD1325 NHD_128X64](#ssd1325-nhd_128x64)
     * [SSD0323 OS128064](#ssd0323-os128064)
+    * [SSD0323 OS128064](#ssd0323-os128064)
     * [SSD1326 ER_256X32](#ssd1326-er_256x32)
+    * [SSD1326 ER_256X32](#ssd1326-er_256x32)
+    * [SSD1327 SEEED_96X96](#ssd1327-seeed_96x96)
     * [SSD1327 SEEED_96X96](#ssd1327-seeed_96x96)
     * [SSD1327 EA_W128128](#ssd1327-ea_w128128)
     * [SSD1327 MIDAS_128X128](#ssd1327-midas_128x128)
+    * [SSD1327 EA_W128128](#ssd1327-ea_w128128)
+    * [SSD1327 MIDAS_128X128](#ssd1327-midas_128x128)
     * [SSD1329 128X96_NONAME](#ssd1329-128x96_noname)
+    * [LD7032 60X32](#ld7032-60x32)
     * [LD7032 60X32](#ld7032-60x32)
     * [ST7920 192X32](#st7920-192x32)
     * [ST7920 192X32](#st7920-192x32)
@@ -55,13 +91,21 @@
     * [PCF8812 96X65](#pcf8812-96x65)
     * [HX1230 96X68](#hx1230-96x68)
     * [UC1604 JLX19264](#uc1604-jlx19264)
+    * [UC1604 JLX19264](#uc1604-jlx19264)
+    * [UC1608 ERC24064](#uc1608-erc24064)
     * [UC1608 ERC24064](#uc1608-erc24064)
     * [UC1608 ERC240120](#uc1608-erc240120)
+    * [UC1608 ERC240120](#uc1608-erc240120)
+    * [UC1608 240X128](#uc1608-240x128)
     * [UC1608 240X128](#uc1608-240x128)
     * [UC1638 160X128](#uc1638-160x128)
     * [UC1610 EA_DOGXL160](#uc1610-ea_dogxl160)
+    * [UC1610 EA_DOGXL160](#uc1610-ea_dogxl160)
+    * [UC1611 EA_DOGM240](#uc1611-ea_dogm240)
     * [UC1611 EA_DOGM240](#uc1611-ea_dogm240)
     * [UC1611 EA_DOGXL240](#uc1611-ea_dogxl240)
+    * [UC1611 EA_DOGXL240](#uc1611-ea_dogxl240)
+    * [UC1611 EW50850](#uc1611-ew50850)
     * [UC1611 EW50850](#uc1611-ew50850)
     * [ST7565 EA_DOGM128](#st7565-ea_dogm128)
     * [ST7565 64128N](#st7565-64128n)
@@ -74,21 +118,30 @@
     * [ST7565 JLX12864](#st7565-jlx12864)
     * [ST7565 NHD_C12832](#st7565-nhd_c12832)
     * [UC1601 128X32](#uc1601-128x32)
+    * [UC1601 128X32](#uc1601-128x32)
     * [ST7565 EA_DOGM132](#st7565-ea_dogm132)
     * [ST7567 PI_132X64](#st7567-pi_132x64)
     * [ST7567 JLX12864](#st7567-jlx12864)
     * [ST7567 ENH_DG128064](#st7567-enh_dg128064)
     * [ST7567 ENH_DG128064I](#st7567-enh_dg128064i)
     * [ST7567 64X32](#st7567-64x32)
+    * [ST7567 64X32](#st7567-64x32)
     * [ST7586S S028HN118A](#st7586s-s028hn118a)
     * [ST7586S ERC240160](#st7586s-erc240160)
     * [ST7588 JLX12864](#st7588-jlx12864)
+    * [ST7588 JLX12864](#st7588-jlx12864)
+    * [ST75256 JLX256128](#st75256-jlx256128)
     * [ST75256 JLX256128](#st75256-jlx256128)
     * [ST75256 JLX256160](#st75256-jlx256160)
     * [ST75256 JLX256160_ALT](#st75256-jlx256160_alt)
+    * [ST75256 JLX256160](#st75256-jlx256160)
+    * [ST75256 JLX240160](#st75256-jlx240160)
     * [ST75256 JLX240160](#st75256-jlx240160)
     * [ST75256 JLX25664](#st75256-jlx25664)
+    * [ST75256 JLX25664](#st75256-jlx25664)
     * [ST75256 JLX172104](#st75256-jlx172104)
+    * [ST75256 JLX172104](#st75256-jlx172104)
+    * [ST75256 JLX19296](#st75256-jlx19296)
     * [ST75256 JLX19296](#st75256-jlx19296)
     * [NT7534 TG12864R](#nt7534-tg12864r)
     * [IST3020 ERC19264](#ist3020-erc19264)
@@ -198,6 +251,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1305_128x32_adafruit_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1305_128x32_adafruit_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 512 bytes |
 
+## SSD1305 128X32_NONAME
+| Controller "ssd1305", Display "128x32_noname" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1305_i2c_128x32_noname_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1305_i2c_128x32_noname_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1305_i2c_128x32_noname_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 512 bytes |
+
+## SSD1305 128X32_ADAFRUIT
+| Controller "ssd1305", Display "128x32_adafruit" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1305_i2c_128x32_adafruit_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1305_i2c_128x32_adafruit_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1305_i2c_128x32_adafruit_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 512 bytes |
+
 ## SSD1305 128X64_ADAFRUIT
 | Controller "ssd1305", Display "128x64_adafruit" | Descirption |
 |---|---|
@@ -210,6 +277,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1305_128x64_adafruit_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_ssd1305_128x64_adafruit_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1305_128x64_adafruit_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
+
+## SSD1305 128X64_ADAFRUIT
+| Controller "ssd1305", Display "128x64_adafruit" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1305_i2c_128x64_adafruit_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1305_i2c_128x64_adafruit_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1305_i2c_128x64_adafruit_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
 
 ## SSD1306 128X64_NONAME
 | Controller "ssd1306", Display "128x64_noname" | Descirption |
@@ -259,6 +333,27 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_128x64_alt0_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1306_128x64_alt0_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SSD1306 128X64_NONAME
+| Controller "ssd1306", Display "128x64_noname" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_128x64_noname_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_noname_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_noname_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
+## SSD1306 128X64_VCOMH0
+| Controller "ssd1306", Display "128x64_vcomh0" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_128x64_vcomh0_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_vcomh0_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_vcomh0_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
+## SSD1306 128X64_ALT0
+| Controller "ssd1306", Display "128x64_alt0" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_128x64_alt0_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_alt0_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1306_i2c_128x64_alt0_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SH1106 128X64_NONAME
 | Controller "sh1106", Display "128x64_noname" | Descirption |
 |---|---|
@@ -307,6 +402,27 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1106_128x64_winstar_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_sh1106_128x64_winstar_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SH1106 128X64_NONAME
+| Controller "sh1106", Display "128x64_noname" | Descirption |
+|---|---|
+| u8g2_Setup_sh1106_i2c_128x64_noname_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_noname_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_noname_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
+## SH1106 128X64_VCOMH0
+| Controller "sh1106", Display "128x64_vcomh0" | Descirption |
+|---|---|
+| u8g2_Setup_sh1106_i2c_128x64_vcomh0_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_vcomh0_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_vcomh0_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
+## SH1106 128X64_WINSTAR
+| Controller "sh1106", Display "128x64_winstar" | Descirption |
+|---|---|
+| u8g2_Setup_sh1106_i2c_128x64_winstar_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_winstar_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1106_i2c_128x64_winstar_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SH1106 72X40_WISE
 | Controller "sh1106", Display "72x40_wise" | Descirption |
 |---|---|
@@ -322,6 +438,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1106_72x40_wise_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 72 bytes |
 | u8g2_Setup_sh1106_72x40_wise_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 144 bytes |
 | u8g2_Setup_sh1106_72x40_wise_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 360 bytes |
+
+## SH1106 72X40_WISE
+| Controller "sh1106", Display "72x40_wise" | Descirption |
+|---|---|
+| u8g2_Setup_sh1106_i2c_72x40_wise_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 72 bytes |
+| u8g2_Setup_sh1106_i2c_72x40_wise_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 144 bytes |
+| u8g2_Setup_sh1106_i2c_72x40_wise_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 360 bytes |
 
 ## SH1106 64X32
 | Controller "sh1106", Display "64x32" | Descirption |
@@ -339,6 +462,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1106_64x32_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_sh1106_64x32_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 256 bytes |
 
+## SH1106 64X32
+| Controller "sh1106", Display "64x32" | Descirption |
+|---|---|
+| u8g2_Setup_sh1106_i2c_64x32_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_sh1106_i2c_64x32_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1106_i2c_64x32_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 256 bytes |
+
 ## SH1107 64X128
 | Controller "sh1107", Display "64x128" | Descirption |
 |---|---|
@@ -355,6 +485,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1107_64x128_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_sh1107_64x128_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SH1107 64X128
+| Controller "sh1107", Display "64x128" | Descirption |
+|---|---|
+| u8g2_Setup_sh1107_i2c_64x128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_sh1107_i2c_64x128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1107_i2c_64x128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SH1107 SEEED_96X96
 | Controller "sh1107", Display "seeed_96x96" | Descirption |
 |---|---|
@@ -370,6 +507,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1107_seeed_96x96_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 96 bytes |
 | u8g2_Setup_sh1107_seeed_96x96_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 192 bytes |
 | u8g2_Setup_sh1107_seeed_96x96_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1152 bytes |
+
+## SH1107 SEEED_96X96
+| Controller "sh1107", Display "seeed_96x96" | Descirption |
+|---|---|
+| u8g2_Setup_sh1107_i2c_seeed_96x96_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 96 bytes |
+| u8g2_Setup_sh1107_i2c_seeed_96x96_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 192 bytes |
+| u8g2_Setup_sh1107_i2c_seeed_96x96_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1152 bytes |
 
 ## SH1107 128X128
 | Controller "sh1107", Display "128x128" | Descirption |
@@ -403,6 +547,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1107_pimoroni_128x128_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_sh1107_pimoroni_128x128_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2048 bytes |
 
+## SH1107 128X128
+| Controller "sh1107", Display "128x128" | Descirption |
+|---|---|
+| u8g2_Setup_sh1107_i2c_128x128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1107_i2c_128x128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1107_i2c_128x128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
+
+## SH1107 PIMORONI_128X128
+| Controller "sh1107", Display "pimoroni_128x128" | Descirption |
+|---|---|
+| u8g2_Setup_sh1107_i2c_pimoroni_128x128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_sh1107_i2c_pimoroni_128x128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1107_i2c_pimoroni_128x128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
+
 ## SH1108 160X160
 | Controller "sh1108", Display "160x160" | Descirption |
 |---|---|
@@ -419,6 +577,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1108_160x160_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 320 bytes |
 | u8g2_Setup_sh1108_160x160_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 3200 bytes |
 
+## SH1108 160X160
+| Controller "sh1108", Display "160x160" | Descirption |
+|---|---|
+| u8g2_Setup_sh1108_i2c_160x160_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 160 bytes |
+| u8g2_Setup_sh1108_i2c_160x160_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 320 bytes |
+| u8g2_Setup_sh1108_i2c_160x160_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 3200 bytes |
+
 ## SH1122 256X64
 | Controller "sh1122", Display "256x64" | Descirption |
 |---|---|
@@ -434,6 +599,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_sh1122_256x64_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_sh1122_256x64_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 512 bytes |
 | u8g2_Setup_sh1122_256x64_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2048 bytes |
+
+## SH1122 256X64
+| Controller "sh1122", Display "256x64" | Descirption |
+|---|---|
+| u8g2_Setup_sh1122_i2c_256x64_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_sh1122_i2c_256x64_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 512 bytes |
+| u8g2_Setup_sh1122_i2c_256x64_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
 
 ## SSD1306 128X32_UNIVISION
 | Controller "ssd1306", Display "128x32_univision" | Descirption |
@@ -467,6 +639,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_128x32_winstar_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1306_128x32_winstar_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 512 bytes |
 
+## SSD1306 128X32_UNIVISION
+| Controller "ssd1306", Display "128x32_univision" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_128x32_univision_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_128x32_univision_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1306_i2c_128x32_univision_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 512 bytes |
+
+## SSD1306 128X32_WINSTAR
+| Controller "ssd1306", Display "128x32_winstar" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_128x32_winstar_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_128x32_winstar_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1306_i2c_128x32_winstar_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 512 bytes |
+
 ## SSD1306 64X48_ER
 | Controller "ssd1306", Display "64x48_er" | Descirption |
 |---|---|
@@ -483,6 +669,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_64x48_er_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_ssd1306_64x48_er_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 384 bytes |
 
+## SSD1306 64X48_ER
+| Controller "ssd1306", Display "64x48_er" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_64x48_er_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_ssd1306_i2c_64x48_er_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_64x48_er_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 384 bytes |
+
 ## SSD1306 48X64_WINSTAR
 | Controller "ssd1306", Display "48x64_winstar" | Descirption |
 |---|---|
@@ -498,6 +691,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_48x64_winstar_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 48 bytes |
 | u8g2_Setup_ssd1306_48x64_winstar_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 96 bytes |
 | u8g2_Setup_ssd1306_48x64_winstar_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 384 bytes |
+
+## SSD1306 48X64_WINSTAR
+| Controller "ssd1306", Display "48x64_winstar" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_48x64_winstar_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 48 bytes |
+| u8g2_Setup_ssd1306_i2c_48x64_winstar_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 96 bytes |
+| u8g2_Setup_ssd1306_i2c_48x64_winstar_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 384 bytes |
 
 ## SSD1306 64X32_NONAME
 | Controller "ssd1306", Display "64x32_noname" | Descirption |
@@ -531,6 +731,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_64x32_1f_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_ssd1306_64x32_1f_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 256 bytes |
 
+## SSD1306 64X32_NONAME
+| Controller "ssd1306", Display "64x32_noname" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_64x32_noname_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_ssd1306_i2c_64x32_noname_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_64x32_noname_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 256 bytes |
+
+## SSD1306 64X32_1F
+| Controller "ssd1306", Display "64x32_1f" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_64x32_1f_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_ssd1306_i2c_64x32_1f_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1306_i2c_64x32_1f_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 256 bytes |
+
 ## SSD1306 96X16_ER
 | Controller "ssd1306", Display "96x16_er" | Descirption |
 |---|---|
@@ -542,6 +756,12 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1306_96x16_er_f(u8g2, rotation, u8x8_byte_8bit_6800mode, uC specific) | full buffer, size = 192 bytes |
 | u8g2_Setup_ssd1306_96x16_er_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 96 bytes |
 | u8g2_Setup_ssd1306_96x16_er_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 192 bytes |
+
+## SSD1306 96X16_ER
+| Controller "ssd1306", Display "96x16_er" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1306_i2c_96x16_er_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 96 bytes |
+| u8g2_Setup_ssd1306_i2c_96x16_er_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 192 bytes |
 
 ## SSD1309 128X64_NONAME2
 | Controller "ssd1309", Display "128x64_noname2" | Descirption |
@@ -556,6 +776,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1309_128x64_noname2_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1309_128x64_noname2_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SSD1309 128X64_NONAME2
+| Controller "ssd1309", Display "128x64_noname2" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1309_i2c_128x64_noname2_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1309_i2c_128x64_noname2_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1309_i2c_128x64_noname2_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SSD1309 128X64_NONAME0
 | Controller "ssd1309", Display "128x64_noname0" | Descirption |
 |---|---|
@@ -569,6 +796,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1309_128x64_noname0_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1309_128x64_noname0_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SSD1309 128X64_NONAME0
+| Controller "ssd1309", Display "128x64_noname0" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1309_i2c_128x64_noname0_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1309_i2c_128x64_noname0_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1309_i2c_128x64_noname0_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SSD1317 96X96
 | Controller "ssd1317", Display "96x96" | Descirption |
 |---|---|
@@ -581,6 +815,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1317_96x96_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 96 bytes |
 | u8g2_Setup_ssd1317_96x96_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 192 bytes |
 | u8g2_Setup_ssd1317_96x96_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1152 bytes |
+
+## SSD1317 96X96
+| Controller "ssd1317", Display "96x96" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1317_i2c_96x96_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 96 bytes |
+| u8g2_Setup_ssd1317_i2c_96x96_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 192 bytes |
+| u8g2_Setup_ssd1317_i2c_96x96_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1152 bytes |
 
 ## SSD1318 128X96
 | Controller "ssd1318", Display "128x96" | Descirption |
@@ -614,6 +855,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1318_128x96_xcp_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1318_128x96_xcp_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1536 bytes |
 
+## SSD1318 128X96
+| Controller "ssd1318", Display "128x96" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1318_i2c_128x96_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1318_i2c_128x96_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1318_i2c_128x96_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1536 bytes |
+
+## SSD1318 128X96_XCP
+| Controller "ssd1318", Display "128x96_xcp" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1318_i2c_128x96_xcp_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1318_i2c_128x96_xcp_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1318_i2c_128x96_xcp_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1536 bytes |
+
 ## SSD1325 NHD_128X64
 | Controller "ssd1325", Display "nhd_128x64" | Descirption |
 |---|---|
@@ -629,6 +884,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1325_nhd_128x64_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_ssd1325_nhd_128x64_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1325_nhd_128x64_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
+
+## SSD1325 NHD_128X64
+| Controller "ssd1325", Display "nhd_128x64" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1325_i2c_nhd_128x64_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1325_i2c_nhd_128x64_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1325_i2c_nhd_128x64_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
 
 ## SSD0323 OS128064
 | Controller "ssd0323", Display "os128064" | Descirption |
@@ -646,6 +908,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd0323_os128064_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd0323_os128064_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SSD0323 OS128064
+| Controller "ssd0323", Display "os128064" | Descirption |
+|---|---|
+| u8g2_Setup_ssd0323_i2c_os128064_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd0323_i2c_os128064_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd0323_i2c_os128064_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SSD1326 ER_256X32
 | Controller "ssd1326", Display "er_256x32" | Descirption |
 |---|---|
@@ -662,6 +931,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1326_er_256x32_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 512 bytes |
 | u8g2_Setup_ssd1326_er_256x32_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## SSD1326 ER_256X32
+| Controller "ssd1326", Display "er_256x32" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1326_i2c_er_256x32_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1326_i2c_er_256x32_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 512 bytes |
+| u8g2_Setup_ssd1326_i2c_er_256x32_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## SSD1327 SEEED_96X96
 | Controller "ssd1327", Display "seeed_96x96" | Descirption |
 |---|---|
@@ -677,6 +953,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1327_seeed_96x96_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 96 bytes |
 | u8g2_Setup_ssd1327_seeed_96x96_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 192 bytes |
 | u8g2_Setup_ssd1327_seeed_96x96_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1152 bytes |
+
+## SSD1327 SEEED_96X96
+| Controller "ssd1327", Display "seeed_96x96" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1327_i2c_seeed_96x96_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 96 bytes |
+| u8g2_Setup_ssd1327_i2c_seeed_96x96_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 192 bytes |
+| u8g2_Setup_ssd1327_i2c_seeed_96x96_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1152 bytes |
 
 ## SSD1327 EA_W128128
 | Controller "ssd1327", Display "ea_w128128" | Descirption |
@@ -710,6 +993,20 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ssd1327_midas_128x128_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_ssd1327_midas_128x128_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2048 bytes |
 
+## SSD1327 EA_W128128
+| Controller "ssd1327", Display "ea_w128128" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1327_i2c_ea_w128128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1327_i2c_ea_w128128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1327_i2c_ea_w128128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
+
+## SSD1327 MIDAS_128X128
+| Controller "ssd1327", Display "midas_128x128" | Descirption |
+|---|---|
+| u8g2_Setup_ssd1327_i2c_midas_128x128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ssd1327_i2c_midas_128x128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_ssd1327_i2c_midas_128x128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
+
 ## SSD1329 128X96_NONAME
 | Controller "ssd1329", Display "128x96_noname" | Descirption |
 |---|---|
@@ -729,6 +1026,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_ld7032_60x32_1(u8g2, rotation, u8x8_byte_4wire_sw_spi, uC specific) | page buffer, size = 64 bytes |
 | u8g2_Setup_ld7032_60x32_2(u8g2, rotation, u8x8_byte_4wire_sw_spi, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_ld7032_60x32_f(u8g2, rotation, u8x8_byte_4wire_sw_spi, uC specific) | full buffer, size = 256 bytes |
+
+## LD7032 60X32
+| Controller "ld7032", Display "60x32" | Descirption |
+|---|---|
+| u8g2_Setup_ld7032_i2c_60x32_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_ld7032_i2c_60x32_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_ld7032_i2c_60x32_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 256 bytes |
 
 ## ST7920 192X32
 | Controller "st7920", Display "192x32" | Descirption |
@@ -871,6 +1175,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1604_jlx19264_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 384 bytes |
 | u8g2_Setup_uc1604_jlx19264_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1536 bytes |
 
+## UC1604 JLX19264
+| Controller "uc1604", Display "jlx19264" | Descirption |
+|---|---|
+| u8g2_Setup_uc1604_i2c_jlx19264_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 192 bytes |
+| u8g2_Setup_uc1604_i2c_jlx19264_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 384 bytes |
+| u8g2_Setup_uc1604_i2c_jlx19264_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1536 bytes |
+
 ## UC1608 ERC24064
 | Controller "uc1608", Display "erc24064" | Descirption |
 |---|---|
@@ -886,6 +1197,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1608_erc24064_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 240 bytes |
 | u8g2_Setup_uc1608_erc24064_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1608_erc24064_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1920 bytes |
+
+## UC1608 ERC24064
+| Controller "uc1608", Display "erc24064" | Descirption |
+|---|---|
+| u8g2_Setup_uc1608_i2c_erc24064_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1608_i2c_erc24064_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1608_i2c_erc24064_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1920 bytes |
 
 ## UC1608 ERC240120
 | Controller "uc1608", Display "erc240120" | Descirption |
@@ -903,6 +1221,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1608_erc240120_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1608_erc240120_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 3600 bytes |
 
+## UC1608 ERC240120
+| Controller "uc1608", Display "erc240120" | Descirption |
+|---|---|
+| u8g2_Setup_uc1608_i2c_erc240120_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1608_i2c_erc240120_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1608_i2c_erc240120_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 3600 bytes |
+
 ## UC1608 240X128
 | Controller "uc1608", Display "240x128" | Descirption |
 |---|---|
@@ -918,6 +1243,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1608_240x128_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 240 bytes |
 | u8g2_Setup_uc1608_240x128_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1608_240x128_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 3840 bytes |
+
+## UC1608 240X128
+| Controller "uc1608", Display "240x128" | Descirption |
+|---|---|
+| u8g2_Setup_uc1608_i2c_240x128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1608_i2c_240x128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1608_i2c_240x128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 3840 bytes |
 
 ## UC1638 160X128
 | Controller "uc1638", Display "160x128" | Descirption |
@@ -951,6 +1283,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1610_ea_dogxl160_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 320 bytes |
 | u8g2_Setup_uc1610_ea_dogxl160_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2080 bytes |
 
+## UC1610 EA_DOGXL160
+| Controller "uc1610", Display "ea_dogxl160" | Descirption |
+|---|---|
+| u8g2_Setup_uc1610_i2c_ea_dogxl160_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 160 bytes |
+| u8g2_Setup_uc1610_i2c_ea_dogxl160_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 320 bytes |
+| u8g2_Setup_uc1610_i2c_ea_dogxl160_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2080 bytes |
+
 ## UC1611 EA_DOGM240
 | Controller "uc1611", Display "ea_dogm240" | Descirption |
 |---|---|
@@ -966,6 +1305,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1611_ea_dogm240_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 240 bytes |
 | u8g2_Setup_uc1611_ea_dogm240_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1611_ea_dogm240_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1920 bytes |
+
+## UC1611 EA_DOGM240
+| Controller "uc1611", Display "ea_dogm240" | Descirption |
+|---|---|
+| u8g2_Setup_uc1611_i2c_ea_dogm240_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1611_i2c_ea_dogm240_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1611_i2c_ea_dogm240_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1920 bytes |
 
 ## UC1611 EA_DOGXL240
 | Controller "uc1611", Display "ea_dogxl240" | Descirption |
@@ -983,6 +1329,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1611_ea_dogxl240_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1611_ea_dogxl240_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 3840 bytes |
 
+## UC1611 EA_DOGXL240
+| Controller "uc1611", Display "ea_dogxl240" | Descirption |
+|---|---|
+| u8g2_Setup_uc1611_i2c_ea_dogxl240_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1611_i2c_ea_dogxl240_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1611_i2c_ea_dogxl240_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 3840 bytes |
+
 ## UC1611 EW50850
 | Controller "uc1611", Display "ew50850" | Descirption |
 |---|---|
@@ -998,6 +1351,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1611_ew50850_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 240 bytes |
 | u8g2_Setup_uc1611_ew50850_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_uc1611_ew50850_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 4800 bytes |
+
+## UC1611 EW50850
+| Controller "uc1611", Display "ew50850" | Descirption |
+|---|---|
+| u8g2_Setup_uc1611_i2c_ew50850_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_uc1611_i2c_ew50850_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_uc1611_i2c_ew50850_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 4800 bytes |
 
 ## ST7565 EA_DOGM128
 | Controller "st7565", Display "ea_dogm128" | Descirption |
@@ -1175,6 +1535,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_uc1601_128x32_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_uc1601_128x32_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 512 bytes |
 
+## UC1601 128X32
+| Controller "uc1601", Display "128x32" | Descirption |
+|---|---|
+| u8g2_Setup_uc1601_i2c_128x32_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_uc1601_i2c_128x32_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_uc1601_i2c_128x32_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 512 bytes |
+
 ## ST7565 EA_DOGM132
 | Controller "st7565", Display "ea_dogm132" | Descirption |
 |---|---|
@@ -1256,6 +1623,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st7567_64x32_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 128 bytes |
 | u8g2_Setup_st7567_64x32_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 256 bytes |
 
+## ST7567 64X32
+| Controller "st7567", Display "64x32" | Descirption |
+|---|---|
+| u8g2_Setup_st7567_i2c_64x32_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 64 bytes |
+| u8g2_Setup_st7567_i2c_64x32_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_st7567_i2c_64x32_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 256 bytes |
+
 ## ST7586S S028HN118A
 | Controller "st7586s", Display "s028hn118a" | Descirption |
 |---|---|
@@ -1295,6 +1669,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st7588_jlx12864_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_st7588_jlx12864_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 1024 bytes |
 
+## ST7588 JLX12864
+| Controller "st7588", Display "jlx12864" | Descirption |
+|---|---|
+| u8g2_Setup_st7588_i2c_jlx12864_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 128 bytes |
+| u8g2_Setup_st7588_i2c_jlx12864_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_st7588_i2c_jlx12864_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 1024 bytes |
+
 ## ST75256 JLX256128
 | Controller "st75256", Display "jlx256128" | Descirption |
 |---|---|
@@ -1310,6 +1691,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx256128_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 256 bytes |
 | u8g2_Setup_st75256_jlx256128_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 512 bytes |
 | u8g2_Setup_st75256_jlx256128_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 4096 bytes |
+
+## ST75256 JLX256128
+| Controller "st75256", Display "jlx256128" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx256128_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_st75256_i2c_jlx256128_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 512 bytes |
+| u8g2_Setup_st75256_i2c_jlx256128_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 4096 bytes |
 
 ## ST75256 JLX256160
 | Controller "st75256", Display "jlx256160" | Descirption |
@@ -1343,6 +1731,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx256160_alt_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 512 bytes |
 | u8g2_Setup_st75256_jlx256160_alt_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 5120 bytes |
 
+## ST75256 JLX256160
+| Controller "st75256", Display "jlx256160" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx256160_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_st75256_i2c_jlx256160_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 512 bytes |
+| u8g2_Setup_st75256_i2c_jlx256160_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 5120 bytes |
+
 ## ST75256 JLX240160
 | Controller "st75256", Display "jlx240160" | Descirption |
 |---|---|
@@ -1358,6 +1753,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx240160_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 240 bytes |
 | u8g2_Setup_st75256_jlx240160_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 480 bytes |
 | u8g2_Setup_st75256_jlx240160_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 4800 bytes |
+
+## ST75256 JLX240160
+| Controller "st75256", Display "jlx240160" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx240160_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 240 bytes |
+| u8g2_Setup_st75256_i2c_jlx240160_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 480 bytes |
+| u8g2_Setup_st75256_i2c_jlx240160_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 4800 bytes |
 
 ## ST75256 JLX25664
 | Controller "st75256", Display "jlx25664" | Descirption |
@@ -1375,6 +1777,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx25664_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 512 bytes |
 | u8g2_Setup_st75256_jlx25664_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2048 bytes |
 
+## ST75256 JLX25664
+| Controller "st75256", Display "jlx25664" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx25664_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 256 bytes |
+| u8g2_Setup_st75256_i2c_jlx25664_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 512 bytes |
+| u8g2_Setup_st75256_i2c_jlx25664_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2048 bytes |
+
 ## ST75256 JLX172104
 | Controller "st75256", Display "jlx172104" | Descirption |
 |---|---|
@@ -1391,6 +1800,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx172104_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 352 bytes |
 | u8g2_Setup_st75256_jlx172104_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2288 bytes |
 
+## ST75256 JLX172104
+| Controller "st75256", Display "jlx172104" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx172104_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 176 bytes |
+| u8g2_Setup_st75256_i2c_jlx172104_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 352 bytes |
+| u8g2_Setup_st75256_i2c_jlx172104_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2288 bytes |
+
 ## ST75256 JLX19296
 | Controller "st75256", Display "jlx19296" | Descirption |
 |---|---|
@@ -1406,6 +1822,13 @@ The last argument is discussed here: [Porting-to-new-MCU-platform](Porting-to-ne
 | u8g2_Setup_st75256_jlx19296_1(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 192 bytes |
 | u8g2_Setup_st75256_jlx19296_2(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | page buffer, size = 384 bytes |
 | u8g2_Setup_st75256_jlx19296_f(u8g2, rotation, u8x8_byte_8bit_8080mode, uC specific) | full buffer, size = 2304 bytes |
+
+## ST75256 JLX19296
+| Controller "st75256", Display "jlx19296" | Descirption |
+|---|---|
+| u8g2_Setup_st75256_i2c_jlx19296_1(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 192 bytes |
+| u8g2_Setup_st75256_i2c_jlx19296_2(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | page buffer, size = 384 bytes |
+| u8g2_Setup_st75256_i2c_jlx19296_f(u8g2, rotation, u8x8_byte_sw_i2c, uC specific) | full buffer, size = 2304 bytes |
 
 ## NT7534 TG12864R
 | Controller "nt7534", Display "tg12864r" | Descirption |

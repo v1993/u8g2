@@ -38,6 +38,7 @@ local function tabgen(controllers)
 			local id = getnam(controller, display)
 			local row = getfield(id)
 			for k, ifacename in ipairs(controller.com) do
+				print(ifacename)
 				row[ifacename] = true
 			end
 			for suff in utils.mode_iter(controller.w, controller.h) do
