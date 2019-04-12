@@ -31,6 +31,13 @@ local function write_u8g2setupcpp_md(ifacedocsArduino, ifacedocsESP32)
 	u8g2setupcpp_md:close()
 end
 
+local function write_u8x8controllertable_md(controllers)
+	local contrtabgen = require 'resources/Docs/u8x8controllertable'
+	local file = assert(io.open(file_tmpname 'u8x8controllertable.md', 'w'))
+	file:write(contrtabgen(controllers))
+	file:close()
+end
+
 local controllers = require 'resources/Common/controllers'
 local interfaces = require 'resources/Docs/interfaces'
 local u8x8setupc  = require 'resources/Docs/u8x8setupc'
@@ -53,6 +60,7 @@ local function build()
 	ifacedocsESP32:add(require 'resources/ESP-32/interfaces')
 
 	write_u8g2setupcpp_md(ifacedocsArduino, ifacedocsESP32)
+	write_u8x8controllertable_md(controllers)
 end
 
 local function docs_install(fname)
@@ -63,12 +71,14 @@ local function install()
 	docs_install 'u8x8setupc.md'
 	docs_install 'u8g2setupc.md'
 	docs_install 'u8g2setupcpp.md'
+	docs_install 'u8x8controllertable.md'
 end
 
 local function clean()
 	file_tmpclean 'u8x8setupc.md'
 	file_tmpclean 'u8g2setupc.md'
 	file_tmpclean 'u8g2setupcpp.md'
+	file_tmpclean 'u8x8controllertable.md'
 end
 
 return { build = build; install = install; clean = clean; }
