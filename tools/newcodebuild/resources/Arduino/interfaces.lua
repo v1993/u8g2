@@ -2,7 +2,6 @@
 -- Notes:
 -- GPIO callback is common for all uC interfaces
 -- pins - Used everywhere, opt sets count of optional pins
--- docname - Override `name` in C++ docs (or use it if `name` is empty on propourse)
 -- docpins - Override auto-generated pins description for docs
 
 local interfaces = {
