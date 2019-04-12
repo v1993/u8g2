@@ -56,7 +56,7 @@ local function tabgen(controllers)
 		addres(table.concat(headers, '|'))
 		local separator = {'---'}
 		for i=1,#headers-1 do
-			separator[i] = ':---:'
+			separator[i+1] = ':---:'
 		end
 		addres(table.concat(separator, '|'))
 	end
