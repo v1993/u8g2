@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 -- Generate template code and docs for u8g2 library
 -- Originally written by Valeri Ochinski in 2019
 

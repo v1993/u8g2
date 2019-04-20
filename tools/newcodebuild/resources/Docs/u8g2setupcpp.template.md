@@ -18,7 +18,7 @@ To setup u8g2, use the correct constructor for your display.
 The constructor name defines display type, controller, RAM buffer size and communication protocol.
 If your display is not exactly available, try a constructor with the same display controller name.
 
-The arguments of the constructor define the rotation of the display and how the display is connected to the Arduino board.
+The arguments of the constructor define the rotation of the display and how the display is connected to the your board.
 This is the "Hello World" example for the Arduino C++ interface:
 
 ```CXX
@@ -122,7 +122,7 @@ The software emulated display rotation is the first argument of the constructor.
 | `U8G2_R3` | 270 degree clockwise rotation |
 | `U8G2_MIRROR` | No rotation, landscape, display content is mirrored (v2.6.x) |
 
-If supported `U8G2_R2` is identical to `u8g2::setFlipMode(1)`.
+If supported, `U8G2_R2` is identical to `u8g2::setFlipMode(1)`.
 
 ## Wiring
 
@@ -134,7 +134,7 @@ If supported `U8G2_R2` is identical to `u8g2::setFlipMode(1)`.
 | cs | Chip select line | CS | 
 | dc | Data/command selection line (register select) | D/C, A0, RS, ... |
 | enable | "Write" for the 8080 interface, "enable" for the 6800 interface | 8080: WR, 6800: E |
-| reset | Reset line | |
+| reset | Reset line | RES |
 
 In some cases a pin is not required, although it is mentioned as non-optional in the constructor. In this case, use `U8X8_PIN_NONE` instead of the pin number. Example: `cs` pin for the ST7920 8080 interface.
 

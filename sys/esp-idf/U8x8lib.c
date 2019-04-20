@@ -228,7 +228,7 @@ uint8_t u8x8_gpio_and_delay_espidf(u8x8_t* u8x8, uint8_t msg, uint8_t arg_int, U
 	}
 
 /*=============================================*/
-/*=== 4 WIRE HARDWARE SPI ===*/
+/*=== HARDWARE SPI ===*/
 
 static const spi_host_device_t u8x8_spibuses[2] = {HSPI_HOST, VSPI_HOST};
 
@@ -391,9 +391,11 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				busconf.master.clk_speed = u8x8->bus_clock;
 				if (i2c_param_config(port, &busconf) != ESP_OK) {
 						ESP_LOGE(U8X8_TAG, "i2c_param_config failed");
+						return 1;
 						}
 				if (i2c_driver_install(port, I2C_MODE_MASTER, 0, 0, 0) != ESP_OK) {
 						ESP_LOGE(U8X8_TAG, "i2c_driver_install failed");
+						return 1;
 						}
 				info->i2c.port = port;
 				ESP_LOGV(U8X8_TAG, "HW I2C init complete");
@@ -407,7 +409,7 @@ static uint8_t u8x8_byte_espidf_hw_i2c_universal(u8x8_t* u8x8, uint8_t msg, uint
 				//Wire.beginTransmission(u8x8_GetI2CAddress(u8x8)>>1);
 				info->i2c.cmd = i2c_cmd_link_create();
 				i2c_master_start(info->i2c.cmd);
-				i2c_master_write_byte(info->i2c.cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true);
+				i2c_master_write_byte(info->i2c.cmd, u8x8_GetI2CAddress(u8x8) | I2C_MASTER_WRITE, true); // TODO: make last param configurable
 				info->i2c.bufptr = info->i2c.bufstart;
 				ESP_LOGV(U8X8_TAG, "Display addr: %03X", u8x8_GetI2CAddress(u8x8) >> 1);
 				break;
